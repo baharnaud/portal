@@ -1,0 +1,26 @@
+buildOption fonctionnalité-a-propos-de-la-page (
+    name: Fonctionnalité: A propos de la page
+    status {
+        status: include
+    }
+    advanced {
+        featureIdentifier: APPLICATION_ABOUT_PAGE
+    }
+    comments {
+        comments: A propos de cette page d'application.
+    }
+)
+
+buildOption fonctionnalité-informations-en-retour (
+    name: Fonctionnalité: Informations en retour
+    status {
+        status: include
+    }
+    advanced {
+        featureIdentifier: APPLICATION_FEEDBACK
+    }
+    comments {
+        comments: Indiquez un mécanisme permettant aux utilisateurs finals de publier des commentaires généraux à l'intention des administrateurs et des développeurs de l'application.
+    }
+)
+

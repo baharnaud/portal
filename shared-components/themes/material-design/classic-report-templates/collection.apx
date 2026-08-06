@@ -1,0 +1,85 @@
+classicReportTemplate collection (
+    name: Collection
+    templateClass: horizontalBorder
+    type: namedColumn
+    reportTemplate {
+        top:
+            ```html
+            <ul class="collection #COMPONENT_CSS_CLASSES#">
+            <li class="collection-header">
+                <h4>#REGION_TITLE#</h4>
+            </li>
+            ```
+        bottom: </ul>
+    }
+    rowTemplate1 {
+        template:
+            ```html
+            <li class="collection-item">
+                #TEXT#
+                <span class="new badge truncate">#BADGE#</span>
+                <a href="#SECONDARY_LINK#" class="secondary-content">
+                    <i class="fa #SECONDARY_ICON_CSS_CLASSES#" aria-hidden="true"></i>
+                </a>
+            </li>
+            ```
+        conditionType: plsqlExpression
+        plsqlExpression: :NEW_BADGE is not null
+    }
+    rowTemplate2 {
+        template:
+            ```html
+            <li class="collection-item">
+                #TEXT#
+                <span class="new badge truncate">#BADGE#</span>
+                <a href="#SECONDARY_LINK#" class="secondary-content">
+                    <i class="fa #SECONDARY_ICON_CSS_CLASSES#" aria-hidden="true"></i>
+                </a>
+            </li>
+            ```
+        conditionType: plsqlExpression
+        plsqlExpression: :NEW_BADGE is not null
+    }
+    rowTemplate3 {
+        template:
+            ```html
+            <li class="collection-item">
+                #TEXT#
+                <span class="badge truncate">#BADGE#</span>
+                <a href="#SECONDARY_LINK#" class="secondary-content">
+                    <i class="fa #SECONDARY_ICON_CSS_CLASSES#" aria-hidden="true"></i>
+                </a>
+            </li>
+            ```
+        conditionType: plsqlExpression
+        plsqlExpression: :NEW_BADGE is null
+    }
+    rowTemplate4 {
+        template:
+            ```html
+            <li class="collection-item">
+                #TEXT#
+                <span class="badge truncate">#BADGE#</span>
+                <a href="#SECONDARY_LINK#" class="secondary-content">
+                    <i class="fa #SECONDARY_ICON_CSS_CLASSES#" aria-hidden="true"></i>
+                </a>
+            </li>
+            ```
+    }
+    advanced {
+        identifier: COLLECTION
+    }
+
+    templateOption with-header (
+        name: With Header
+        sequence: 1
+        appearance {
+            cssClasses: with-header
+        }
+        advanced {
+            identifier: WITH_HEADER
+        }
+    )
+
+)
+

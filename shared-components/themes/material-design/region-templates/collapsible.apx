@@ -1,0 +1,76 @@
+regionTemplate collapsible (
+    name: Collapsible
+    templateClass: listRegionWithIcon
+    templateOptions {
+        preset: ma-collapsible-accordion
+    }
+    region {
+        template: <ul id="#REGION_STATIC_ID#" class="ma-region collapsible #REGION_CSS_CLASSES#" #REGION_ATTRIBUTES#>#SUB_REGION_HEADERS##SUB_REGIONS#</ul>
+    }
+    subRegions {
+        template:
+            ```html
+            <li id="#SUB_REGION_ID#">
+              <div class="collapsible-header">#SUB_REGION_TITLE#</div>
+              <div class="collapsible-body">#SUB_REGION#</div>
+            </li>
+            ```
+    }
+    advanced {
+        identifier: COLLAPSIBLE
+    }
+
+    templateOption popout (
+        name: Popout
+        sequence: 1
+        appearance {
+            cssClasses: popout
+        }
+        advanced {
+            identifier: POPOUT
+        }
+    )
+
+    templateOption accordion (
+        name: Accordion
+        group: @region/collapsible-behavior
+        sequence: 1
+        appearance {
+            cssClasses: ma-collapsible-accordion
+        }
+        advanced {
+            identifier: ACCORDION
+        }
+    )
+
+    templateOption expandable (
+        name: Expandable
+        group: @region/collapsible-behavior
+        sequence: 2
+        appearance {
+            cssClasses: ma-collapsible-expandable
+        }
+        advanced {
+            identifier: EXPANDABLE
+        }
+    )
+
+    slot regionBody (
+        name: Region Body
+        staticId: BODY
+        supports {
+            items: true
+            buttons: true
+        }
+    )
+
+    slot subRegions (
+        name: Sub Regions
+        staticId: SUB_REGIONS
+        gridLayout {
+            gridSupport: false
+        }
+    )
+
+)
+

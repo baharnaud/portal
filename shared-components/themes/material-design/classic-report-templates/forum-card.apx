@@ -1,0 +1,25 @@
+classicReportTemplate forum-card (
+    name: Forum Card
+    templateClass: standard
+    type: namedColumn
+    reportTemplate {
+        top: " "
+        bottom: " "
+    }
+    rowTemplate1 {
+        template:
+            ```html
+            <div class="cards card-1 m-linkitem">
+                    <h3><a href="#FORUM_LINK#" alt="">#TITLE#</a></h3>
+                    <p><a href="#LAST_POST_LINK#" alt="">#LAST_POST#</a></p>
+                </div>
+            
+            
+            
+            ```
+    }
+    advanced {
+        identifier: FORUM_CARD
+    }
+)
+

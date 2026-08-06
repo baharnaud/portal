@@ -1,0 +1,22 @@
+classicReportTemplate carousel-2 (
+    name: Carousel
+    type: namedColumn
+    reportTemplate {
+        top: <div class="carousel carousel-slider #COMPONENT_CSS_CLASSES#">
+        bottom: </div>
+    }
+    rowTemplate1 {
+        template:
+            ```html
+            <div class="carousel-item promo center-align">
+              <i class="#ICON_CSS_CLASSES#" aria-hidden="true"></i>
+              <div class="promo-caption">#TITLE#</div>
+              <div class="light m-t-1">#BODY#</div>
+            </div>
+            ```
+    }
+    advanced {
+        identifier: CAROUSEL
+    }
+)
+

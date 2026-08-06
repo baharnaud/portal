@@ -1,0 +1,93 @@
+buttonTemplate text (
+    name: Text
+    templateClass: button
+    templateOptions {
+        preset: [
+            btn
+            waves-effect waves-light
+        ]
+    }
+    button {
+        normal:
+            ```html
+            <button type="button" onclick="#JAVASCRIPT#" id="#BUTTON_ID#" class="ma-button #BUTTON_CSS_CLASSES#" #BUTTON_ATTRIBUTES#>
+            	<span class="ma-button-label">#LABEL#</span>
+            </button>
+            ```
+        hot:
+            ```html
+            <a href="#LINK#" id="#BUTTON_ID#" class="ma-button ma-button-hot #BUTTON_CSS_CLASSES#" #BUTTON_ATTRIBUTES#>
+            	<span class="ma-button-label">#LABEL#</span>
+            </a>
+            ```
+    }
+    advanced {
+        identifier: TEXT
+    }
+
+    templateOption button-block (
+        name: Full Column Width
+        sequence: 1
+        appearance {
+            cssClasses: ma-btn-block
+        }
+        help {
+            helpText: This makes the button to be 100% of the width of it's container.
+        }
+        advanced {
+            identifier: BUTTON_BLOCK
+        }
+    )
+
+    templateOption inline-button (
+        name: Inline (Next to an item)
+        sequence: 2
+        appearance {
+            cssClasses: ma-btn-inline
+        }
+        advanced {
+            identifier: INLINE_BUTTON
+        }
+    )
+
+    templateOption flat (
+        name: Flat
+        group: @button/type
+        sequence: 2
+        appearance {
+            cssClasses: btn-flat
+        }
+        advanced {
+            identifier: FLAT
+        }
+    )
+
+    templateOption outline (
+        name: Outlined
+        group: @button/type
+        sequence: 3
+        appearance {
+            cssClasses: [
+                btn
+                btn-outlined
+            ]
+        }
+        advanced {
+            identifier: OUTLINE
+        }
+    )
+
+    templateOption raised (
+        name: Raised
+        group: @button/type
+        sequence: 1
+        appearance {
+            cssClasses: btn
+        }
+        advanced {
+            identifier: RAISED
+        }
+    )
+
+)
+

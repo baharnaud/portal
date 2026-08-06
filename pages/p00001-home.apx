@@ -1,0 +1,853 @@
+page 1 (
+    name: Page d'accueil
+    alias: HOME
+    title: Servive en Ligne
+    appearance {
+        pageTemplate: @minimal-no-navigation
+        templateOptions: #DEFAULT#
+    }
+    navigation {
+        cursorFocus: doNotFocusCursor
+        warnOnUnsavedChanges: false
+    }
+    css {
+        inline:
+            ```css
+            .t-HeroRegion-title {
+              margin: auto;
+              font-size: 30px;
+              font-style: oblique;
+              font-weight: bold;
+              text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 
+              0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 
+              0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 
+              0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
+            }
+            .t-Header-branding, .t-HeroRegion-icon {
+                background-color: #0076df;
+                background: #0070ff;
+            }
+            #main {
+              background: #0ddbfd08;
+            }
+            .a-IRR-singleRow-value {
+              color: blue;
+              font-size: 16px;
+              font-weight: bold;
+              font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            }
+            .a-IRR-singleRow-name{
+              color: #000;
+              font-size: 16px;
+              font-weight: bold;
+              font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+            }
+            #regionN {
+                border: 1px solid rgb(96, 204, 236);
+                border-radius: 15px;
+            }
+            
+            /* DESIGN du bouton <Se créer>*/
+            .t-BreadcrumbRegion-buttons {
+                /* position: relative; */
+                transform: translate(-50%,-50%);
+                /* margin-left: 30%; */
+                margin-right: -25%;
+            }
+            #CREER {
+                /* position: absolute; */
+                text-align: center;
+                width: 220px;
+                padding: 10px;
+                font-size: 16px;
+                color: #15f4ee;
+                font-family: poppins;
+                font-weight: 300;
+                border: 5px solid #15f4ee;
+                text-transform: uppercase;
+                /* letter-spacing: 8px; */
+                cursor: pointer;
+                border-radius: 100px;
+                transition: 1.5s;
+            }
+            #CONNEXION {
+                    /* position: absolute; */
+                text-align: center;
+                width: 220px;
+                padding: 10px;
+                font-size: 16px;
+                color: #0df1b8;
+                font-family: poppins;
+                font-weight: 300;
+                border: 5px solid #0df1b8;
+                text-transform: uppercase;
+                /* letter-spacing: 8px; */
+                cursor: pointer;
+                border-radius: 100px;
+                transition: 1.5s;
+                background-color: transparent;
+            }
+            #CREER:hover {
+                box-shadow: 0 5px 50px 0 #15f4ee inset, 0 5px 50px 0 #15f4ee,
+                            0 5px 50px 0 #15f4ee inset, 0 5px 50px 0 #15f4ee;
+                text-shadow: 0 0 5px #15f4ee,0 0 5px #15f4ee;
+            }
+            #CONNEXION:hover {
+                box-shadow: 0 5px 50px 0 #0df1b8 inset, 0 5px 50px 0 #0df1b8,
+                            0 5px 50px 0 #0df1b8 inset, 0 5px 50px 0 #0df1b8;
+                text-shadow: 0 0 5px #0df1b8,0 0 5px #0df1b8;
+            }
+            
+            /* DESIGN Grand Titre */
+            .t-BreadcrumbRegion-breadcrumb .h2{
+               color: #b3ffab;
+            }
+            .trait {
+                width: 200px;
+                height: 2px;
+                background-image: linear-gradient(-225deg, #231557 0%, #44107A 29%, #FF1361 67%, #FFF800 100%);
+                /* background-color: #15f4ee; */
+            }
+            ```
+    }
+    security {
+        authentication: public
+        formAutoComplete: false
+    }
+
+    region liste-des-postes-vacants (
+        name: Liste des Postes Vacants
+        type: breadcrumb
+        source {
+            breadcrumb: @breadcrumb
+        }
+        layout {
+            sequence: 10
+            slot: breadcrumbBar
+        }
+        appearance {
+            template: @title-bar
+            templateOptions: [
+                #DEFAULT#
+                t-BreadcrumbRegion--useBreadcrumbTitle
+            ]
+            icon: fa-rub
+        }
+        componentAppearance {
+            breadcrumbTemplate: @breadcrumb
+            templateOptions: #DEFAULT#
+        }
+    )
+
+    region nouveau (
+        name: Nouveau
+        type: interactiveReport
+        source {
+            location: localDatabase
+            type: sqlQuery
+            sqlQuery:
+                ```sql
+                select apex_item.checkbox(1, 'V'||REC_POSTE_VACAN.ID||' '||'P'||CONTACT_POSTE.IDPOSTE) selected,
+                       REC_POSTE_VACAN.ID,
+                       REC_POSTE_VACAN.IDPLAN_RECRUTEMENT,
+                       CONTACT_POSTE.LIBELLE,
+                       CONTACT_POSTE.IDPOSTE,
+                       rec.DATE_DEBUT,
+                       rec.DATE_CLOTURE,
+                       REC_DEMANDE_PERS.QUALIFICATION_MIN,
+                       REC_DEMANDE_PERS.QUALIFICATION_MAX,   
+                       REC_DEMANDE_PERS.NBR_ANNEE_EXPERIENCE ,
+                       rec.DESCIPTION_OFFRE	,
+                       rec.DESCRITION_POSTULE
+                
+                  from REC_POSTE_VACAN, REC_DEMANDE_PERS, CONTACT_POSTE, REC_PLAN_RECRUTEMENT rec
+                 where rec.IDREC_PLAN_RECRUTEMENT = REC_POSTE_VACAN.IDPLAN_RECRUTEMENT
+                 and REC_DEMANDE_PERS.IDREC_DEMANDE_PERS = REC_POSTE_VACAN.IDDEMANDE
+                 and REC_DEMANDE_PERS.IDPOSTE = CONTACT_POSTE.IDPOSTE
+                and rec.STATUT = 'v'
+                and instr(rec.TYPE_CANDIDATURE,'externe')>0
+                ```
+        }
+        layout {
+            sequence: 20
+            slot: body
+            startNewRow: false
+            columnSpan: 10
+        }
+        appearance {
+            template: @interactive-report
+            templateOptions: #DEFAULT#
+        }
+        serverSideCondition {
+            type: never
+        }
+        pagination {
+            type: rowRangesXToY
+        }
+        performance {
+            maxRowsToProcess: 1000000
+        }
+        advanced {
+            savedReportMappingIdentifier: 291402892843264124
+        }
+
+        column DATE_CLOTURE (
+            type: plainText
+            heading {
+                heading: Date Cloture
+                alignment: center
+            }
+            layout {
+                sequence: 80
+                columnAlignment: center
+            }
+            source {
+                dataType: DATE
+            }
+            advanced {
+                endUserAlias: G
+            }
+        )
+
+        column DATE_DEBUT (
+            type: plainText
+            heading {
+                heading: Date Debut
+                alignment: center
+            }
+            layout {
+                sequence: 70
+                columnAlignment: center
+            }
+            source {
+                dataType: DATE
+            }
+            advanced {
+                endUserAlias: F
+            }
+        )
+
+        column DESCIPTION_OFFRE (
+            type: plainText
+            heading {
+                heading: Desciption Offre
+                alignment: center
+            }
+            layout {
+                sequence: 120
+                columnAlignment: center
+            }
+            source {
+                dataType: STRING
+            }
+            advanced {
+                endUserAlias: K
+            }
+            security {
+                escapeSpecialChars: false
+            }
+        )
+
+        column DESCRITION_POSTULE (
+            type: plainText
+            heading {
+                heading: Descrition Postule
+                alignment: center
+            }
+            layout {
+                sequence: 130
+                columnAlignment: center
+            }
+            source {
+                dataType: STRING
+            }
+            advanced {
+                endUserAlias: L
+            }
+            security {
+                escapeSpecialChars: false
+            }
+        )
+
+        column ID (
+            type: hidden
+            heading {
+                heading: Id
+            }
+            layout {
+                sequence: 10
+            }
+            source {
+                dataType: NUMBER
+            }
+            advanced {
+                endUserAlias: B
+            }
+        )
+
+        column IDPLAN_RECRUTEMENT (
+            type: plainTextBasedOnLov
+            heading {
+                heading: Plan Recrutement
+                alignment: center
+            }
+            lov {
+                lov: @rec-plan-recrutement
+            }
+            layout {
+                sequence: 40
+                columnAlignment: center
+            }
+            source {
+                dataType: NUMBER
+            }
+            advanced {
+                endUserAlias: C
+            }
+        )
+
+        column IDPOSTE (
+            type: plainTextBasedOnLov
+            heading {
+                heading: Poste
+                alignment: center
+            }
+            lov {
+                lov: @poste-adherent
+            }
+            layout {
+                sequence: 60
+                columnAlignment: center
+            }
+            source {
+                dataType: NUMBER
+            }
+            advanced {
+                endUserAlias: E
+            }
+        )
+
+        column LIBELLE (
+            type: plainText
+            heading {
+                heading: Libelle
+                alignment: center
+            }
+            layout {
+                sequence: 50
+                columnAlignment: center
+            }
+            source {
+                dataType: STRING
+            }
+            advanced {
+                endUserAlias: D
+            }
+        )
+
+        column NBR_ANNEE_EXPERIENCE (
+            type: plainText
+            heading {
+                heading: Nbr Annee Experience
+                alignment: center
+            }
+            layout {
+                sequence: 110
+                columnAlignment: center
+            }
+            source {
+                dataType: NUMBER
+            }
+            advanced {
+                endUserAlias: J
+            }
+        )
+
+        column QUALIFICATION_MAX (
+            type: plainText
+            heading {
+                heading: Qualification Max
+                alignment: center
+            }
+            layout {
+                sequence: 100
+                columnAlignment: center
+            }
+            source {
+                dataType: NUMBER
+            }
+            advanced {
+                endUserAlias: I
+            }
+        )
+
+        column QUALIFICATION_MIN (
+            type: plainText
+            heading {
+                heading: Qualification Min
+                alignment: center
+            }
+            layout {
+                sequence: 90
+                columnAlignment: center
+            }
+            source {
+                dataType: NUMBER
+            }
+            advanced {
+                endUserAlias: H
+            }
+        )
+
+        column SELECTED (
+            type: hidden
+            heading {
+                heading: Selected
+            }
+            layout {
+                sequence: 20
+            }
+            source {
+                dataType: STRING
+            }
+            advanced {
+                endUserAlias: A
+            }
+        )
+
+        page {
+            size: a4
+            units: millimeters
+            width: 297
+            height: 210
+            borderWidth: 0.5
+            borderColor: #666666
+        }
+        pageHeader {
+            pageHeaderText: Nouveau
+        }
+
+        savedReport 2923045 (
+            visibility: primaryDefault
+            view {
+                rowsPerPage: 50
+            }
+
+            displayColumn DATE_CLOTURE (
+                sequence: 7
+            )
+
+            displayColumn DATE_DEBUT (
+                sequence: 6
+            )
+
+            displayColumn DESCIPTION_OFFRE (
+                sequence: 11
+            )
+
+            displayColumn DESCRITION_POSTULE (
+                sequence: 12
+            )
+
+            displayColumn ID (
+                sequence: 1
+            )
+
+            displayColumn IDPLAN_RECRUTEMENT (
+                sequence: 3
+            )
+
+            displayColumn IDPOSTE (
+                sequence: 5
+            )
+
+            displayColumn LIBELLE (
+                sequence: 4
+            )
+
+            displayColumn NBR_ANNEE_EXPERIENCE (
+                sequence: 10
+            )
+
+            displayColumn QUALIFICATION_MAX (
+                sequence: 9
+            )
+
+            displayColumn QUALIFICATION_MIN (
+                sequence: 8
+            )
+
+            displayColumn SELECTED (
+                sequence: 2
+            )
+
+        )
+
+    )
+
+    region nouveau-2 (
+        name: Nouveau
+        type: classicReport
+        source {
+            location: localDatabase
+            type: sqlQuery
+            sqlQuery:
+                ```sql
+                select apex_item.checkbox(1, 'V'||REC_POSTE_VACAN.ID||' '||'P'||(select IDFONCTION from FONCTION where IDFONCTION = REC_DEMANDE_PERS.IDFONCTION) ) selected,
+                       REC_POSTE_VACAN.ID,
+                       REC_POSTE_VACAN.IDPLAN_RECRUTEMENT,
+                       (CASE
+                            When REC_DEMANDE_PERS.POSTE_FONCTION = 'f' Then (select LIBELLE from FONCTION where IDFONCTION = REC_DEMANDE_PERS.IDFONCTION)
+                            When REC_DEMANDE_PERS.POSTE_FONCTION = 'p' Then (select LIBELLE from CONTACT_POSTE where IDPOSTE = REC_DEMANDE_PERS.IDPOSTE)
+                       END) Poste_Fonction,
+                       (CASE
+                            When REC_DEMANDE_PERS.POSTE_FONCTION = 'f' Then (select IDFONCTION from FONCTION where IDFONCTION = REC_DEMANDE_PERS.IDFONCTION)
+                            When REC_DEMANDE_PERS.POSTE_FONCTION = 'p' Then (select IDPOSTE from CONTACT_POSTE where IDPOSTE = REC_DEMANDE_PERS.IDPOSTE)
+                       END) idposte_idFonction,
+                       rec.DATE_DEBUT,
+                       rec.DATEFIN,
+                       rec.DATE_CLOTURE,
+                       REC_DEMANDE_PERS.QUALIFICATION_MIN,
+                       REC_DEMANDE_PERS.QUALIFICATION_MAX,   
+                       REC_DEMANDE_PERS.NBR_ANNEE_EXPERIENCE ,
+                       rec.DESCIPTION_OFFRE	,
+                       rec.DESCRITION_POSTULE
+                
+                  from REC_POSTE_VACAN, REC_DEMANDE_PERS, REC_PLAN_RECRUTEMENT rec
+                 where rec.IDREC_PLAN_RECRUTEMENT = REC_POSTE_VACAN.IDPLAN_RECRUTEMENT
+                 and REC_DEMANDE_PERS.IDREC_DEMANDE_PERS = REC_POSTE_VACAN.IDDEMANDE
+                and rec.STATUT = 'v'
+                and instr(rec.TYPE_CANDIDATURE,'externe')>0
+                and to_date(rec.DATE_CLOTURE) > sysdate
+                ```
+        }
+        layout {
+            sequence: 20
+            parentRegion: @nouveaun
+            slot: subRegions
+            startNewRow: false
+        }
+        appearance {
+            template: @interactive-report
+            templateOptions: #DEFAULT#
+        }
+        componentAppearance {
+            template: @standard
+            templateOptions: [
+                #DEFAULT#
+                t-Report--altRowsDefault
+                t-Report--rowHighlight
+            ]
+        }
+        pagination {
+            type: nextAndPreviousLinks
+        }
+
+        column DATEFIN (
+            reportColumnQueryId: 7
+            derivedColumn: N
+            heading {
+                heading: <b style="color: rgb(96, 204, 236)">Date de fin</b>
+                alignment: center
+            }
+            layout {
+                sequence: 70
+                columnAlignment: center
+            }
+        )
+
+        column DATE_CLOTURE (
+            reportColumnQueryId: 8
+            derivedColumn: N
+            heading {
+                heading: <b style="color: rgb(96, 204, 236)">Date Cloture</b>
+                alignment: center
+            }
+            layout {
+                sequence: 80
+            }
+        )
+
+        column DATE_DEBUT (
+            reportColumnQueryId: 6
+            derivedColumn: N
+            heading {
+                heading: <b style="color: rgb(96, 204, 236)">Date Debut</b>
+                alignment: center
+            }
+            layout {
+                sequence: 60
+            }
+        )
+
+        column DESCIPTION_OFFRE (
+            reportColumnQueryId: 12
+            derivedColumn: N
+            heading {
+                heading: <b style="color: rgb(96, 204, 236)">Desciption Offre</b>
+                alignment: center
+            }
+            layout {
+                sequence: 120
+                columnAlignment: center
+            }
+            security {
+                escapeSpecialChars: false
+            }
+        )
+
+        column DESCRITION_POSTULE (
+            reportColumnQueryId: 13
+            derivedColumn: N
+            heading {
+                heading: <b style="color: rgb(96, 204, 236)">Descrition Postule</b>
+                alignment: center
+            }
+            layout {
+                sequence: 130
+                columnAlignment: center
+            }
+            security {
+                escapeSpecialChars: false
+            }
+        )
+
+        column ID (
+            reportColumnQueryId: 2
+            derivedColumn: N
+            type: hidden
+            layout {
+                sequence: 20
+            }
+        )
+
+        column IDPLAN_RECRUTEMENT (
+            reportColumnQueryId: 3
+            derivedColumn: N
+            type: plainTextBasedOnLov
+            heading {
+                heading: <b style="color: rgb(96, 204, 236)">Plan Recrutement</b>
+                alignment: center
+            }
+            lov {
+                type: sharedComponent
+                lov: @rec-plan-recrutement
+            }
+            layout {
+                sequence: 30
+            }
+        )
+
+        column IDPOSTE_IDFONCTION (
+            reportColumnQueryId: 5
+            derivedColumn: N
+            type: hidden
+            layout {
+                sequence: 150
+            }
+        )
+
+        column NBR_ANNEE_EXPERIENCE (
+            reportColumnQueryId: 11
+            derivedColumn: N
+            heading {
+                heading: <b style="color: rgb(96, 204, 236)">Nbr Annee Experience</b>
+                alignment: center
+            }
+            layout {
+                sequence: 110
+                columnAlignment: center
+            }
+        )
+
+        column POSTE_FONCTION (
+            reportColumnQueryId: 4
+            derivedColumn: N
+            heading {
+                heading: <b style="color: rgb(96, 204, 236)">Poste / Fonction</b>
+                alignment: center
+            }
+            layout {
+                sequence: 140
+            }
+        )
+
+        column QUALIFICATION_MAX (
+            reportColumnQueryId: 10
+            derivedColumn: N
+            type: plainTextBasedOnLov
+            heading {
+                heading: <b style="color: rgb(96, 204, 236)">Qualification Max</b>
+                alignment: center
+            }
+            lov {
+                type: sharedComponent
+                lov: @diplôme
+            }
+            layout {
+                sequence: 100
+                columnAlignment: center
+            }
+        )
+
+        column QUALIFICATION_MIN (
+            reportColumnQueryId: 9
+            derivedColumn: N
+            type: plainTextBasedOnLov
+            heading {
+                heading: <b style="color: rgb(96, 204, 236)">Qualification Min</b>
+                alignment: center
+            }
+            lov {
+                type: sharedComponent
+                lov: @diplôme
+            }
+            layout {
+                sequence: 90
+                columnAlignment: center
+            }
+        )
+
+        column SELECTED (
+            reportColumnQueryId: 1
+            derivedColumn: N
+            type: hidden
+            layout {
+                sequence: 10
+            }
+            security {
+                escapeSpecialChars: false
+            }
+        )
+
+    )
+
+    region nouveaun (
+        name: NouveauN
+        type: staticContent
+        layout {
+            sequence: 40
+            slot: body
+        }
+        appearance {
+            template: @standard
+            templateOptions: [
+                #DEFAULT#
+                t-Region--removeHeader js-removeLandmark
+                t-Region--scrollBody
+            ]
+        }
+        advanced {
+            htmlDomId: regionN
+            regionDisplaySelector: true
+        }
+    )
+
+    region recherche (
+        name: Recherche
+        type: smartFilters
+        source {
+            filteredRegion: @nouveau-2
+        }
+        layout {
+            sequence: 10
+            slot: body
+            column: 2
+            columnSpan: 10
+        }
+        appearance {
+            template: @standard
+            templateOptions: [
+                #DEFAULT#
+                t-Region--removeHeader js-removeLandmark
+                t-Region--scrollBody
+            ]
+        }
+        advanced {
+            regionDisplaySelector: true
+        }
+        settings {
+            compactNosThreshold: 10000
+            showTotalRowCount: true
+            totalRowCountLabel: "Total : "
+        }
+
+        filter P1_SEARCH (
+            type: search
+            label {
+                label: Rechercher
+            }
+            layout {
+                sequence: 10
+            }
+        )
+
+    )
+
+    button connexion (
+        buttonName: Connexion
+        label: Connexion
+        layout {
+            sequence: 30
+            region: @liste-des-postes-vacants
+            slot: next
+        }
+        appearance {
+            buttonTemplate: @text-with-icon
+            hot: true
+            templateOptions: [
+                #DEFAULT#
+                t-Button--simple
+                t-Button--iconLeft
+                t-Button--hoverIconPush
+            ]
+            icon: fa-arrows-h
+        }
+        behavior {
+            action: redirectOtherApp
+            target: {
+                app: 101
+                page: 9999
+                clearCache: 9999
+            }
+            warnOnUnsavedChanges: doNotCheck
+        }
+        advanced {
+            htmlDomId: CONNEXION
+        }
+    )
+
+    button crer (
+        buttonName: Crer
+        label: Créer un compte
+        layout {
+            sequence: 10
+            region: @liste-des-postes-vacants
+            slot: next
+        }
+        appearance {
+            buttonTemplate: @text-with-icon
+            templateOptions: [
+                #DEFAULT#
+                t-Button--success
+                t-Button--simple
+                t-Button--iconLeft
+                t-Button--hoverIconPush
+            ]
+            icon: fa-user
+        }
+        behavior {
+            action: redirectThisApp
+            target: {
+                page: 2
+                clearCache: 2
+            }
+            warnOnUnsavedChanges: doNotCheck
+        }
+        advanced {
+            htmlDomId: CREER
+        }
+    )
+
+)
+

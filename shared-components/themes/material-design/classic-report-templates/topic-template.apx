@@ -1,0 +1,56 @@
+classicReportTemplate topic-template (
+    name: topic template
+    templateClass: custom1
+    type: namedColumn
+    reportTemplate {
+        top: " "
+        bottom: " "
+    }
+    rowTemplate1 {
+        template:
+            ```html
+            <div class="posts beforepagination">
+              <div class="topwrap">
+                <div class="userinfo pull-left">
+                  <div class="avatar">
+                    <img src="#AVATAR_IMG#" alt="">
+                    <div class="status green">
+                      &nbsp;
+                    </div>
+                  </div>
+                  <div class="icons">
+                    <img src="##" alt="">
+                    <img src="##" alt="">
+                    <img src="##" alt="">
+                    <img src="##" alt="">
+                  </div>
+            
+                </div>
+                <div class="posttext pull-left">
+                    <h2>#TOPIC_TITLE#</h2>
+                    <p>#CONTENT#</p>
+                </div>
+                <div class="clearfix">
+            
+                </div>
+              </div>
+              <div class="postinfobot">
+                <div class="likeblock pull-left">
+                  <a href="#" class="up"><i class="fa fa-thumbs-o-up">#UP_LABEL#</i></a>
+                  <a href="#" class="down"><i class="fa fa-thumbs-o-down">#DOWN_LABEL#</i></a>
+                </div>
+                  <div class="posted pull-left"><i class="fa fa-clock-o"></i>
+                     Publié le :#POST_DATE#
+                </div>
+                <div class="clearfix"></div>
+              </div>
+            
+            </div>
+            
+            ```
+    }
+    advanced {
+        identifier: TOPIC_TEMPLATE
+    }
+)
+

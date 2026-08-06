@@ -1,0 +1,62 @@
+classicReportTemplate article (
+    name: Article
+    templateClass: standard
+    type: namedColumn
+    reportTemplate {
+        top: " "
+        bottom: " "
+    }
+    rowTemplate1 {
+        template:
+            ```html
+            <div class="actualite">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            		<tr>  
+            			<td width="3%">          
+            				<img src="#APP_IMAGES#bookmark.png" alt="pict-actu">
+            			</td> 
+            
+            			<td width="97%"><span>#ARTICLE_NAME#</span></td>
+            		</tr>
+            	</table>
+                
+                <div class="resume-actualite">
+                    #CONTENT#
+                    <p align="right">
+                        <a href="#LINK#" class="read-more">#LINK_LABEL#</a>
+                    </p>
+                </div>
+                
+                <div class="date_actu" align="left">Publié le #PUBLISH_DATE#</div>
+            </div>
+            
+            ```
+    }
+    rowTemplate2 {
+        template:
+            ```html
+            <div class="blog-post hentry index-post">
+                <div class="post-image-wrap">
+                    <a class="post-image-link" href="#LINK#">
+                        <img class="post-thumb" src="#IMAGE_SOURCE#" alt="ARTICLE_IMAGE_NAME">
+                    </a>
+                    <span class="post-tag index-post-tag">#TAGS#</span>
+                </div>
+            
+                <div class="post-info">
+                    <h2 class="post-title"><a href="#LINK#">#ARTICLE_TITLE#</a></h2>
+                    <div class="post-meta">
+                        <span class="post-author">#AUTHOR_NAME#</span>
+                        <span class="post-date published">#PUBLICATION_DATE#</span>
+                    </div>
+                    <p class="post-snippet">#DESCRIPTION#</p>
+                    <a class="read-more" href="#LINK#">Lire plus</a>
+                </div>
+            </div>
+            ```
+    }
+    advanced {
+        identifier: ACTUALITE
+    }
+)
+

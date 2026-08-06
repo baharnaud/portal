@@ -1,0 +1,179 @@
+classicReportTemplate cards-actualites (
+    name: Cards-actualites
+    templateClass: standard
+    type: namedColumn
+    templateOptions {
+        preset: ma-card-col-3
+    }
+    reportTemplate {
+        top: <div class="ma-report--cards #COMPONENT_CSS_CLASSES#">
+        bottom: </div>
+    }
+    rowTemplate1 {
+        template:
+            ```html
+            <div class="ma-card-col">
+              <div class="card">
+                <div class="card-image">
+                    <div class="card-content">#IMG_SRC#</div>
+                  
+                  <span class="card-title">#TITLE#</span>
+                  <a href="#FAB_LINK#" class="btn-floating btn-large halfway-fab waves-effect waves-light u-color #FAB_COLOR#" title="#FAB_LABEL#" aria-label="#FAB_LABEL#">
+                    <i class="fa #FAB_ICON_CSS_CLASSES#" aria-hidden="true"></i>
+                  </a>
+                </div>
+            
+                <div class="ma-card-stacked m-t-2">
+                  <div class="card-content">#CONTENT#</div>
+                  <div class="card-action">#BTN_LABEL_1##BTN_LABEL_2#</div>
+                </div>
+              </div>
+            </div>
+            ```
+        conditionType: plsqlExpression
+        plsqlExpression: :FAB_LINK is not null and :FAB_ICON_CSS_CLASSES is not null and :IMG_SRC is not null
+    }
+    rowTemplate2 {
+        template:
+            ```html
+            <div class="ma-card-col">
+              <div class="card ma-card-image-content">
+                <div class="card-image">
+                  <div class="card-content">#IMG_SRC#</div>
+                  
+                  <span class="card-title">#TITLE#</span>
+                </div>
+                <div class="ma-card-stacked">
+                  <div class="card-content">
+                    <p>#CONTENT#</p>
+                  </div>
+                  <div class="card-action">#BTN_LABEL_1##BTN_LABEL_2#</div>
+                </div>
+              </div>
+            
+              <div class="card sticky-action ma-card-reveal-content">
+                <div class="card-image waves-effect waves-block waves-light">
+                  <img src="#IMG_SRC#" class="activator">
+                </div>
+                <div class="card-content">
+                  <span class="card-title activator">#TITLE#<i class="fa fa-ellipsis-v right" aria-hidden="true"></i></span>
+                </div>
+                <div class="card-action">#BTN_LABEL_1##BTN_LABEL_2#</div>
+                <div class="card-reveal">
+                  <span class="card-title">#TITLE#<i class="fa fa-ellipsis-v right" aria-hidden="true"></i></span>
+                  <p>#CONTENT#</p>
+                </div>
+              </div>
+            </div>
+            ```
+        conditionType: plsqlExpression
+        plsqlExpression: :IMG_SRC is not null
+    }
+    rowTemplate3 {
+        template:
+            ```html
+            <div class="ma-card-col">
+              <div class="card">
+                <div class="card-content">
+                  <p class="card-title black-text">#TITLE#</p>
+                  <p>#CONTENT#</p>
+                </div>
+                <div class="card-action">#BTN_LABEL_1##BTN_LABEL_2#</div>
+              </div>
+            </div>
+            ```
+    }
+    advanced {
+        identifier: CARDS-ACTUALITES
+    }
+
+    templateOption card-horizontal (
+        name: Horizontal
+        sequence: 1
+        appearance {
+            cssClasses: ma-card-horizontal
+        }
+        help {
+            helpText: If the card contains an image, it will be displayed horizontally
+        }
+        advanced {
+            identifier: CARD_HORIZONTAL
+        }
+    )
+
+    templateOption card-hoverable1 (
+        name: Hoverable
+        sequence: 2
+        appearance {
+            cssClasses: ma-card-hoverable
+        }
+        advanced {
+            identifier: CARD_HOVERABLE1
+        }
+    )
+
+    templateOption card-reveal (
+        name: Reveal Effect
+        sequence: 3
+        appearance {
+            cssClasses: ma-card-reveal
+        }
+        help {
+            helpText: The content will unfold when clicking on the card.
+        }
+        advanced {
+            isAdvancedOption: true
+            identifier: CARD_REVEAL
+        }
+    )
+
+    templateOption card-col1 (
+        name: 1 Column
+        group: @report/card-columns
+        sequence: 1
+        appearance {
+            cssClasses: ma-card-col-1
+        }
+        advanced {
+            identifier: CARD_COL1
+        }
+    )
+
+    templateOption card-col2 (
+        name: 2 Columns
+        group: @report/card-columns
+        sequence: 2
+        appearance {
+            cssClasses: ma-card-col-2
+        }
+        advanced {
+            identifier: CARD_COL2
+        }
+    )
+
+    templateOption card-col3 (
+        name: 3 Columns
+        group: @report/card-columns
+        sequence: 3
+        appearance {
+            cssClasses: ma-card-col-3
+        }
+        advanced {
+            identifier: CARD_COL3
+        }
+    )
+
+    templateOption card-col4 (
+        name: 4 Columns
+        group: @report/card-columns
+        sequence: 4
+        appearance {
+            cssClasses: ma-card-col-4
+        }
+        advanced {
+            identifier: CARD_COL4
+        }
+    )
+
+)
+

@@ -1,0 +1,504 @@
+fieldTemplate standard (
+    name: Standard
+    templateClass: optionalLabel
+    label {
+        before:
+            ```html
+                <label for="#CURRENT_ITEM_NAME#" id="#LABEL_ID#" data-tooltip="#CURRENT_ITEM_HELP_TEXT#">
+            
+            ```
+        after:
+            ```html
+                </label>
+            
+            ```
+    }
+    item {
+        before:
+            ```html
+                #ERROR_TEMPLATE#
+            
+            ```
+    }
+    error {
+        errorTemplate:
+            ```html
+            <span class="ma-error-message">#ERROR_MESSAGE#</span>
+            
+            ```
+    }
+    fieldContainer {
+        beforeLabelAndItem:
+            ```html
+            <div id="#CURRENT_ITEM_NAME#_CONTAINER" class="ma-field-container input-field #ITEM_CSS_CLASSES#">
+            
+            ```
+        afterLabelAndItem:
+            ```html
+            </div>
+            
+            
+            ```
+    }
+    advanced {
+        identifier: STANDARD
+    }
+
+    templateOption checkbox-alternate (
+        name: Checkbox & Radio - 2nd Look
+        sequence: 10
+        appearance {
+            cssClasses: ma-alternate-look
+        }
+        advanced {
+            identifier: CHECKBOX_ALTERNATE
+        }
+    )
+
+    templateOption no-label (
+        name: Hide Label
+        sequence: 1
+        appearance {
+            cssClasses: item-no-label
+        }
+        advanced {
+            identifier: NO_LABEL
+        }
+    )
+
+    templateOption truncate-text-overflow (
+        name: Display Only - Truncate Text
+        sequence: 11
+        appearance {
+            cssClasses: truncate
+        }
+        advanced {
+            identifier: TRUNCATE_TEXT_OVERFLOW
+        }
+    )
+
+    templateOption field-center (
+        name: Center
+        group: @item/field-alignment
+        sequence: 2
+        appearance {
+            cssClasses: center-align
+        }
+        advanced {
+            identifier: FIELD_CENTER
+        }
+    )
+
+    templateOption field-left (
+        name: Left
+        group: @item/field-alignment
+        sequence: 1
+        appearance {
+            cssClasses: left-align
+        }
+        advanced {
+            identifier: FIELD_LEFT
+        }
+    )
+
+    templateOption field-right (
+        name: Right
+        group: @item/field-alignment
+        sequence: 3
+        appearance {
+            cssClasses: right-align
+        }
+        advanced {
+            identifier: FIELD_RIGHT
+        }
+    )
+
+    templateOption amber-text (
+        name: Amber
+        group: @item/field-color
+        sequence: 1
+        appearance {
+            cssClasses: [
+                ma-colored-field
+                amber-text
+            ]
+        }
+        advanced {
+            identifier: AMBER_TEXT
+        }
+    )
+
+    templateOption blue-grey-text (
+        name: Blue Grey
+        group: @item/field-color
+        sequence: 2
+        appearance {
+            cssClasses: [
+                ma-colored-field
+                blue-grey-text
+            ]
+        }
+        advanced {
+            identifier: BLUE_GREY_TEXT
+        }
+    )
+
+    templateOption blue-text (
+        name: Blue
+        group: @item/field-color
+        sequence: 3
+        appearance {
+            cssClasses: [
+                ma-colored-field
+                blue-text
+            ]
+        }
+        advanced {
+            identifier: BLUE_TEXT
+        }
+    )
+
+    templateOption brown-text (
+        name: Brown
+        group: @item/field-color
+        sequence: 4
+        appearance {
+            cssClasses: [
+                ma-colored-field
+                brown-text
+            ]
+        }
+        advanced {
+            identifier: BROWN_TEXT
+        }
+    )
+
+    templateOption cyan-text (
+        name: Cyan
+        group: @item/field-color
+        sequence: 5
+        appearance {
+            cssClasses: [
+                ma-colored-field
+                cyan-text
+            ]
+        }
+        advanced {
+            identifier: CYAN_TEXT
+        }
+    )
+
+    templateOption deep-orange-text (
+        name: Deep Orange
+        group: @item/field-color
+        sequence: 6
+        appearance {
+            cssClasses: [
+                ma-colored-field
+                deep-orange-text
+            ]
+        }
+        advanced {
+            identifier: DEEP_ORANGE_TEXT
+        }
+    )
+
+    templateOption deep-purple-text (
+        name: Deep Deep Purple
+        group: @item/field-color
+        sequence: 7
+        appearance {
+            cssClasses: [
+                ma-colored-field
+                deep-purple-text
+            ]
+        }
+        advanced {
+            identifier: DEEP_PURPLE_TEXT
+        }
+    )
+
+    templateOption green-text (
+        name: Green
+        group: @item/field-color
+        sequence: 8
+        appearance {
+            cssClasses: [
+                ma-colored-field
+                green-text
+            ]
+        }
+        advanced {
+            identifier: GREEN_TEXT
+        }
+    )
+
+    templateOption grey-text (
+        name: Grey
+        group: @item/field-color
+        sequence: 9
+        appearance {
+            cssClasses: [
+                ma-colored-field
+                grey-text
+            ]
+        }
+        advanced {
+            identifier: GREY_TEXT
+        }
+    )
+
+    templateOption indigo-text (
+        name: Light Indigo
+        group: @item/field-color
+        sequence: 10
+        appearance {
+            cssClasses: [
+                ma-colored-field
+                indigo-text
+            ]
+        }
+        advanced {
+            identifier: INDIGO_TEXT
+        }
+    )
+
+    templateOption light-blue-text (
+        name: Light Blue
+        group: @item/field-color
+        sequence: 11
+        appearance {
+            cssClasses: [
+                ma-colored-field
+                light-blue-text
+            ]
+        }
+        advanced {
+            identifier: LIGHT_BLUE_TEXT
+        }
+    )
+
+    templateOption light-green-text (
+        name: Light Green
+        group: @item/field-color
+        sequence: 12
+        appearance {
+            cssClasses: [
+                ma-colored-field
+                light-green-text
+            ]
+        }
+        advanced {
+            identifier: LIGHT_GREEN_TEXT
+        }
+    )
+
+    templateOption lime-text (
+        name: Lime
+        group: @item/field-color
+        sequence: 13
+        appearance {
+            cssClasses: [
+                ma-colored-field
+                lime-text
+            ]
+        }
+        advanced {
+            identifier: LIME_TEXT
+        }
+    )
+
+    templateOption orange-text (
+        name: Light Orange
+        group: @item/field-color
+        sequence: 14
+        appearance {
+            cssClasses: [
+                ma-colored-field
+                orange-text
+            ]
+        }
+        advanced {
+            identifier: ORANGE_TEXT
+        }
+    )
+
+    templateOption pink-text (
+        name: Pink
+        group: @item/field-color
+        sequence: 15
+        appearance {
+            cssClasses: [
+                ma-colored-field
+                pink-text
+            ]
+        }
+        advanced {
+            identifier: PINK_TEXT
+        }
+    )
+
+    templateOption purple-text (
+        name: Purple
+        group: @item/field-color
+        sequence: 16
+        appearance {
+            cssClasses: [
+                ma-colored-field
+                purple-text
+            ]
+        }
+        advanced {
+            identifier: PURPLE_TEXT
+        }
+    )
+
+    templateOption red-text (
+        name: Red
+        group: @item/field-color
+        sequence: 17
+        appearance {
+            cssClasses: [
+                ma-colored-field
+                red-text
+            ]
+        }
+        advanced {
+            identifier: RED_TEXT
+        }
+    )
+
+    templateOption teal-text (
+        name: Teal
+        group: @item/field-color
+        sequence: 18
+        appearance {
+            cssClasses: [
+                ma-colored-field
+                teal-text
+            ]
+        }
+        advanced {
+            identifier: TEAL_TEXT
+        }
+    )
+
+    templateOption white (
+        name: White
+        group: @item/field-color
+        sequence: 19
+        appearance {
+            cssClasses: [
+                ma-colored-field
+                white-text
+            ]
+        }
+        advanced {
+            identifier: WHITE
+        }
+    )
+
+    templateOption yellow-text (
+        name: Yellow
+        group: @item/field-color
+        sequence: 20
+        appearance {
+            cssClasses: [
+                ma-colored-field
+                yellow-text
+            ]
+        }
+        advanced {
+            identifier: YELLOW_TEXT
+        }
+    )
+
+    templateOption field-flow-text (
+        name: Responsive Text
+        group: @item/text-size
+        sequence: 0
+        appearance {
+            cssClasses: ma-text-size-responsive
+        }
+        help {
+            helpText: Make any display only and read only text responsive
+        }
+        advanced {
+            identifier: FIELD_FLOW_TEXT
+        }
+    )
+
+    templateOption h1 (
+        name: H1
+        group: @item/text-size
+        sequence: 1
+        appearance {
+            cssClasses: ma-text-size-h1
+        }
+        advanced {
+            identifier: H1
+        }
+    )
+
+    templateOption h2 (
+        name: H2
+        group: @item/text-size
+        sequence: 2
+        appearance {
+            cssClasses: ma-text-size-h2
+        }
+        advanced {
+            identifier: H2
+        }
+    )
+
+    templateOption h3 (
+        name: H3
+        group: @item/text-size
+        sequence: 3
+        appearance {
+            cssClasses: ma-text-size-h3
+        }
+        advanced {
+            identifier: H3
+        }
+    )
+
+    templateOption h4 (
+        name: H4
+        group: @item/text-size
+        sequence: 4
+        appearance {
+            cssClasses: ma-text-size-h4
+        }
+        advanced {
+            identifier: H4
+        }
+    )
+
+    templateOption h5 (
+        name: H5
+        group: @item/text-size
+        sequence: 5
+        appearance {
+            cssClasses: ma-text-size-h5
+        }
+        advanced {
+            identifier: H5
+        }
+    )
+
+    templateOption h6 (
+        name: H6
+        group: @item/text-size
+        sequence: 6
+        appearance {
+            cssClasses: ma-text-size-h6
+        }
+        advanced {
+            identifier: H6
+        }
+    )
+
+)
+

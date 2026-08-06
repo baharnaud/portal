@@ -1,0 +1,31 @@
+classicReportTemplate 3d-cards (
+    name: 3d cards
+    templateClass: custom5
+    type: namedColumn
+    reportTemplate {
+        top: " "
+        bottom: " "
+    }
+    rowTemplate1 {
+        template:
+            ```html
+            <div class="col3d">
+            <div class="card-container" >
+                  <div class="overlay"></div>
+                  <div class="overlay"></div>
+                  <div class="overlay"></div>
+                  <div class="overlay"></div>
+                  <div class="card3d" style="background-image: url(#IMG_SRC#); background-size: cover;background-position: 50% 50%; ">
+                
+                    <h4>#CONTENT#</h4>
+                    <span class"chev">&rsaquo;</span>
+                  </div>
+                </div>
+                </div>
+            ```
+    }
+    advanced {
+        identifier: 3D_CARDS
+    }
+)
+

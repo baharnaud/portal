@@ -1,0 +1,30 @@
+classicReportTemplate timeline (
+    name: Timeline
+    templateClass: oneColumnUnorderedList
+    type: namedColumn
+    reportTemplate {
+        top: <section class="cd-timeline cd-container">
+        bottom: " "
+    }
+    rowTemplate1 {
+        template:
+            ```html
+            <div class="cd-timeline-block">
+              <div class="cd-timeline-img blue lighten-2">
+                <i class="#ICON_CSS_CLASSES#" aria-hidden="true"></i>
+              </div>
+            
+              <div class="cd-timeline-content z-depth-1">
+                <h5>#TITLE#</h5>
+                <p class="flow-text">#DESCRIPTION#</p>
+                <a href="#BTN_LINK#" class="btn cd-read-more">#BTN_LABEL#</a>
+                <span class="cd-date">#TIMELINE_DATE#</span>
+              </div>
+            </div>
+            ```
+    }
+    advanced {
+        identifier: TIMELINE
+    }
+)
+

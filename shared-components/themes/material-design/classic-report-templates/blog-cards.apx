@@ -1,0 +1,39 @@
+classicReportTemplate blog-cards (
+    name: Blog Cards
+    templateClass: standard
+    type: namedColumn
+    reportTemplate {
+        top: " "
+        bottom: " "
+    }
+    rowTemplate1 {
+        template:
+            ```html
+            <div class="blog-card">
+                <div class="meta">
+                    <div class="photo" style="background-image: url(#IMAGE#)"></div>
+                    <ul class="details">
+                        <li class="author fa fa-user"><a href="#AUTHOR_ARTICLE#">#AUTHOR#</a></li>
+                        <li class="date fa fa-calendar-o">#ARTICLE_DATE#</li>
+                        <li class="tags">
+                            <ul class="fa fa-tag">
+                                <li><a href="#TAG_ARTICLE#">#TAG#</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="description">
+                    <h1>#ARTICLE_TITLE#</h1>
+                    <p>#DESCRIPTION#</p>
+                    <p class="read-more">
+                        <a href="#TEXT_LINK#">#TEXT#</a>
+                    </p>
+                </div>
+            </div>
+            ```
+    }
+    advanced {
+        identifier: BLOG_CARDS
+    }
+)
+

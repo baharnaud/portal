@@ -1,0 +1,51 @@
+regionTemplate carousel (
+    name: Carousel
+    templateClass: custom1
+    region {
+        template:
+            ```html
+            <div id="#REGION_STATIC_ID#" class="ma-region carousel #REGION_CSS_CLASSES#" #REGION_ATTRIBUTES#>
+              <div class="ma-region-body t-Region-body">#BODY##SUB_REGIONS#</div>
+            </div>
+            ```
+    }
+    subRegions {
+        template: <div class="carousel-item">#SUB_REGION#</div>
+    }
+    advanced {
+        identifier: CAROUSEL
+    }
+
+    templateOption carousel-slider (
+        name: Full Width Carousel
+        sequence: 1
+        appearance {
+            cssClasses: carousel-slider
+        }
+        help {
+            helpText: Our carousel has a full width option that makes it into a simple and elegant image carousel
+        }
+        advanced {
+            identifier: CAROUSEL_SLIDER
+        }
+    )
+
+    slot regionBody (
+        name: Region Body
+        staticId: BODY
+        supports {
+            items: true
+            buttons: true
+        }
+    )
+
+    slot subRegions (
+        name: Sub Regions
+        staticId: SUB_REGIONS
+        gridLayout {
+            gridSupport: false
+        }
+    )
+
+)
+

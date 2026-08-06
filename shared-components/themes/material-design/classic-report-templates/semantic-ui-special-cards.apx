@@ -1,0 +1,54 @@
+classicReportTemplate semantic-ui-special-cards (
+    name: Semantic UI Special Cards
+    templateClass: standard
+    type: namedColumn
+    reportTemplate {
+        top:
+            ```html
+            <div class="ui special cards" style="justify-content: center;">
+            
+            ```
+        bottom:
+            ```html
+            </div>
+            <tfoot class="right">
+                <div class="report-pagination">#PAGINATION#</div>
+            </tfoot>
+            ```
+    }
+    rowTemplate1 {
+        template:
+            ```html
+            <div class="card">
+            <div class="blurring dimmable image">
+              <div class="ui dimmer">
+                <div class="content">
+                  <div class="center">
+                    <div class="ui inverted button">#ACTION#</div>
+                  </div>
+                </div>
+              </div>
+              <img src="#IMG_SRC#" alt="#TITLE#">
+            </div>
+            <div class="content">
+              <a class="header">#TITLE#</a>
+              <div class="meta">
+                <span class="date">#PERIODE#</span>
+              </div>
+            </div>
+            </div>
+            
+            ```
+    }
+    pagination {
+        template: <span class="instructiontext" style="display:none;">#TEXT#</span>
+        nextPage: <a href="#LINK#" title="Suivant"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+        previousPage: <a href="#LINK#" title="Précédent"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
+        nextSet: <a href="#LINK#" title="Suivant"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+        previousSet: <a href="#LINK#" title="Précédent"><i class="fa fa-angle-double-left" aria-hidden="true"></i></a>
+    }
+    advanced {
+        identifier: PUB_OVER_EFFECT_CARD
+    }
+)
+

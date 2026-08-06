@@ -1,0 +1,58 @@
+classicReportTemplate slideshow (
+    name: SlideShow_
+    templateClass: standard
+    type: namedColumn
+    reportTemplate {
+        top:
+            ```html
+            <!-- Slider -->
+            <div id="myslider">
+              <div class="myslides">
+                  
+            ```
+        bottom:
+            ```html
+            </div>
+            <div class="switch">
+                <ul>
+                  <li>
+                    <div class="on"></div>
+                  </li>
+                    <li>
+                    
+                  </li>
+                    <li>
+                    
+                  </li>
+                    
+                  
+                </ul>
+              </div>
+            </div>
+            ```
+    }
+    rowTemplate1 {
+        template:
+            ```html
+            <div class="myslider">
+                <div class="legend"></div>
+                <div class="content">
+                    <div class="content-txt">
+                        <h1>#ARTICLE_TITLE#</h1>
+                            <h2>#ARTICLE_DESCRIPTION#</h2>
+                    </div>
+                </div>
+                <div class="image">
+                    <img src="#IMG_SRC#">
+                </div>   
+            </div>
+            
+                    
+            
+            ```
+    }
+    advanced {
+        identifier: SLIDESHOW_
+    }
+)
+

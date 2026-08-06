@@ -1,0 +1,4734 @@
+globalTemplateOption button-pulse (
+    templateType: button
+    name: Pulse
+    sequence: 3
+    appearance {
+        cssClasses: pulse
+    }
+    help {
+        helpText: Draw attention to your buttons with this subtle but captivating effect.
+    }
+    advanced {
+        identifier: BUTTON_PULSE
+    }
+)
+
+globalTemplateOption btn-bg-amber (
+    templateType: button
+    name: Amber
+    group: @button/background-color
+    sequence: 17
+    appearance {
+        cssClasses: amber
+    }
+    advanced {
+        identifier: BTN_BG_AMBER
+    }
+)
+
+globalTemplateOption btn-bg-black (
+    templateType: button
+    name: Black
+    group: @button/background-color
+    sequence: 1
+    appearance {
+        cssClasses: black
+    }
+    advanced {
+        identifier: BTN_BG_BLACK
+    }
+)
+
+globalTemplateOption btn-bg-blue (
+    templateType: button
+    name: Blue
+    group: @button/background-color
+    sequence: 9
+    appearance {
+        cssClasses: blue
+    }
+    advanced {
+        identifier: BTN_BG_BLUE
+    }
+)
+
+globalTemplateOption btn-bg-blue-grey (
+    templateType: button
+    name: Blue Grey
+    group: @button/background-color
+    sequence: 22
+    appearance {
+        cssClasses: blue-grey
+    }
+    advanced {
+        identifier: BTN_BG_BLUE_GREY
+    }
+)
+
+globalTemplateOption btn-bg-brown (
+    templateType: button
+    name: Brown
+    group: @button/background-color
+    sequence: 20
+    appearance {
+        cssClasses: brown
+    }
+    advanced {
+        identifier: BTN_BG_BROWN
+    }
+)
+
+globalTemplateOption btn-bg-cyan (
+    templateType: button
+    name: Cyan
+    group: @button/background-color
+    sequence: 11
+    appearance {
+        cssClasses: cyan
+    }
+    advanced {
+        identifier: BTN_BG_CYAN
+    }
+)
+
+globalTemplateOption btn-bg-deep-orange (
+    templateType: button
+    name: Deep Orange
+    group: @button/background-color
+    sequence: 19
+    appearance {
+        cssClasses: deep-orange
+    }
+    advanced {
+        identifier: BTN_BG_DEEP_ORANGE
+    }
+)
+
+globalTemplateOption btn-bg-deep-purple (
+    templateType: button
+    name: Deep Purple
+    group: @button/background-color
+    sequence: 7
+    appearance {
+        cssClasses: deep-purple
+    }
+    advanced {
+        identifier: BTN_BG_DEEP_PURPLE
+    }
+)
+
+globalTemplateOption btn-bg-green (
+    templateType: button
+    name: Green
+    group: @button/background-color
+    sequence: 13
+    appearance {
+        cssClasses: green
+    }
+    advanced {
+        identifier: BTN_BG_GREEN
+    }
+)
+
+globalTemplateOption btn-bg-grey (
+    templateType: button
+    name: Grey
+    group: @button/background-color
+    sequence: 21
+    appearance {
+        cssClasses: grey
+    }
+    advanced {
+        identifier: BTN_BG_GREY
+    }
+)
+
+globalTemplateOption btn-bg-indigo (
+    templateType: button
+    name: Indigo
+    group: @button/background-color
+    sequence: 8
+    appearance {
+        cssClasses: indigo
+    }
+    advanced {
+        identifier: BTN_BG_INDIGO
+    }
+)
+
+globalTemplateOption btn-bg-light-blue (
+    templateType: button
+    name: Light Blue
+    group: @button/background-color
+    sequence: 10
+    appearance {
+        cssClasses: light-blue
+    }
+    advanced {
+        identifier: BTN_BG_LIGHT_BLUE
+    }
+)
+
+globalTemplateOption btn-bg-light-green (
+    templateType: button
+    name: Light Green
+    group: @button/background-color
+    sequence: 14
+    appearance {
+        cssClasses: light-green
+    }
+    advanced {
+        identifier: BTN_BG_LIGHT_GREEN
+    }
+)
+
+globalTemplateOption btn-bg-lime (
+    templateType: button
+    name: Lime
+    group: @button/background-color
+    sequence: 15
+    appearance {
+        cssClasses: lime
+    }
+    advanced {
+        identifier: BTN_BG_LIME
+    }
+)
+
+globalTemplateOption btn-bg-orange (
+    templateType: button
+    name: Orange
+    group: @button/background-color
+    sequence: 18
+    appearance {
+        cssClasses: orange
+    }
+    advanced {
+        identifier: BTN_BG_ORANGE
+    }
+)
+
+globalTemplateOption btn-bg-pink (
+    templateType: button
+    name: Pink
+    group: @button/background-color
+    sequence: 5
+    appearance {
+        cssClasses: pink
+    }
+    advanced {
+        identifier: BTN_BG_PINK
+    }
+)
+
+globalTemplateOption btn-bg-purple (
+    templateType: button
+    name: Purple
+    group: @button/background-color
+    sequence: 6
+    appearance {
+        cssClasses: purple
+    }
+    advanced {
+        identifier: BTN_BG_PURPLE
+    }
+)
+
+globalTemplateOption btn-bg-red (
+    templateType: button
+    name: Red
+    group: @button/background-color
+    sequence: 4
+    appearance {
+        cssClasses: red
+    }
+    advanced {
+        identifier: BTN_BG_RED
+    }
+)
+
+globalTemplateOption btn-bg-teal (
+    templateType: button
+    name: Teal
+    group: @button/background-color
+    sequence: 12
+    appearance {
+        cssClasses: teal
+    }
+    advanced {
+        identifier: BTN_BG_TEAL
+    }
+)
+
+globalTemplateOption btn-bg-transparent (
+    templateType: button
+    name: Transparent
+    group: @button/background-color
+    sequence: 3
+    appearance {
+        cssClasses: transparent
+    }
+    advanced {
+        identifier: BTN_BG_TRANSPARENT
+    }
+)
+
+globalTemplateOption btn-bg-white (
+    templateType: button
+    name: White
+    group: @button/background-color
+    sequence: 2
+    appearance {
+        cssClasses: white
+    }
+    advanced {
+        identifier: BTN_BG_WHITE
+    }
+)
+
+globalTemplateOption btn-bg-yellow (
+    templateType: button
+    name: Yellow
+    group: @button/background-color
+    sequence: 16
+    appearance {
+        cssClasses: yellow
+    }
+    advanced {
+        identifier: BTN_BG_YELLOW
+    }
+)
+
+globalTemplateOption btn-bg-accent-1 (
+    templateType: button
+    name: Accent 1
+    group: @button/background-modifier
+    sequence: 1
+    appearance {
+        cssClasses: accent-1
+    }
+    advanced {
+        identifier: BTN_BG_ACCENT_1
+    }
+)
+
+globalTemplateOption btn-bg-accent-2 (
+    templateType: button
+    name: Accent 2
+    group: @button/background-modifier
+    sequence: 2
+    appearance {
+        cssClasses: accent-2
+    }
+    advanced {
+        identifier: BTN_BG_ACCENT_2
+    }
+)
+
+globalTemplateOption btn-bg-accent-3 (
+    templateType: button
+    name: Accent 3
+    group: @button/background-modifier
+    sequence: 3
+    appearance {
+        cssClasses: accent-3
+    }
+    advanced {
+        identifier: BTN_BG_ACCENT_3
+    }
+)
+
+globalTemplateOption btn-bg-accent-4 (
+    templateType: button
+    name: Accent 4
+    group: @button/background-modifier
+    sequence: 4
+    appearance {
+        cssClasses: accent-4
+    }
+    advanced {
+        identifier: BTN_BG_ACCENT_4
+    }
+)
+
+globalTemplateOption btn-bg-darken-1 (
+    templateType: button
+    name: Darken 1
+    group: @button/background-modifier
+    sequence: 5
+    appearance {
+        cssClasses: darken-1
+    }
+    advanced {
+        identifier: BTN_BG_DARKEN_1
+    }
+)
+
+globalTemplateOption btn-bg-darken-2 (
+    templateType: button
+    name: Darken 2
+    group: @button/background-modifier
+    sequence: 6
+    appearance {
+        cssClasses: darken-2
+    }
+    advanced {
+        identifier: BTN_BG_DARKEN_2
+    }
+)
+
+globalTemplateOption btn-bg-darken-3 (
+    templateType: button
+    name: Darken 3
+    group: @button/background-modifier
+    sequence: 7
+    appearance {
+        cssClasses: darken-3
+    }
+    advanced {
+        identifier: BTN_BG_DARKEN_3
+    }
+)
+
+globalTemplateOption btn-bg-darken-4 (
+    templateType: button
+    name: Darken 4
+    group: @button/background-modifier
+    sequence: 8
+    appearance {
+        cssClasses: darken-4
+    }
+    advanced {
+        identifier: BTN_BG_DARKEN_4
+    }
+)
+
+globalTemplateOption btn-bg-lighten-1 (
+    templateType: button
+    name: Lighten 1
+    group: @button/background-modifier
+    sequence: 9
+    appearance {
+        cssClasses: lighten-1
+    }
+    advanced {
+        identifier: BTN_BG_LIGHTEN_1
+    }
+)
+
+globalTemplateOption btn-bg-lighten-2 (
+    templateType: button
+    name: Lighten 2
+    group: @button/background-modifier
+    sequence: 10
+    appearance {
+        cssClasses: lighten-2
+    }
+    advanced {
+        identifier: BTN_BG_LIGHTEN_2
+    }
+)
+
+globalTemplateOption btn-bg-lighten-3 (
+    templateType: button
+    name: Lighten 3
+    group: @button/background-modifier
+    sequence: 11
+    appearance {
+        cssClasses: lighten-3
+    }
+    advanced {
+        identifier: BTN_BG_LIGHTEN_3
+    }
+)
+
+globalTemplateOption btn-bg-lighten-4 (
+    templateType: button
+    name: Lighten 4
+    group: @button/background-modifier
+    sequence: 12
+    appearance {
+        cssClasses: lighten-4
+    }
+    advanced {
+        identifier: BTN_BG_LIGHTEN_4
+    }
+)
+
+globalTemplateOption btn-bg-lighten-5 (
+    templateType: button
+    name: Lighten 5
+    group: @button/background-modifier
+    sequence: 13
+    appearance {
+        cssClasses: lighten-5
+    }
+    advanced {
+        identifier: BTN_BG_LIGHTEN_5
+    }
+)
+
+globalTemplateOption button-marginbot0 (
+    templateType: button
+    name: 0
+    group: @button/button-margin-bottom
+    sequence: 0
+    appearance {
+        cssClasses: m-b-0
+    }
+    advanced {
+        identifier: BUTTON_MARGINBOT0
+    }
+)
+
+globalTemplateOption button-marginbot1 (
+    templateType: button
+    name: 1
+    group: @button/button-margin-bottom
+    sequence: 1
+    appearance {
+        cssClasses: m-b-1
+    }
+    advanced {
+        identifier: BUTTON_MARGINBOT1
+    }
+)
+
+globalTemplateOption button-marginbot2 (
+    templateType: button
+    name: 2
+    group: @button/button-margin-bottom
+    sequence: 2
+    appearance {
+        cssClasses: m-b-2
+    }
+    advanced {
+        identifier: BUTTON_MARGINBOT2
+    }
+)
+
+globalTemplateOption button-marginbot3 (
+    templateType: button
+    name: 3
+    group: @button/button-margin-bottom
+    sequence: 3
+    appearance {
+        cssClasses: m-b-3
+    }
+    advanced {
+        identifier: BUTTON_MARGINBOT3
+    }
+)
+
+globalTemplateOption button-marginleft0 (
+    templateType: button
+    name: 0
+    group: @button/button-margin-left
+    sequence: 0
+    appearance {
+        cssClasses: m-l-0
+    }
+    advanced {
+        identifier: BUTTON_MARGINLEFT0
+    }
+)
+
+globalTemplateOption button-marginleft1 (
+    templateType: button
+    name: 1
+    group: @button/button-margin-left
+    sequence: 1
+    appearance {
+        cssClasses: m-l-1
+    }
+    advanced {
+        identifier: BUTTON_MARGINLEFT1
+    }
+)
+
+globalTemplateOption button-marginleft2 (
+    templateType: button
+    name: 2
+    group: @button/button-margin-left
+    sequence: 2
+    appearance {
+        cssClasses: m-l-2
+    }
+    advanced {
+        identifier: BUTTON_MARGINLEFT2
+    }
+)
+
+globalTemplateOption button-marginleft3 (
+    templateType: button
+    name: 3
+    group: @button/button-margin-left
+    sequence: 3
+    appearance {
+        cssClasses: m-l-3
+    }
+    advanced {
+        identifier: BUTTON_MARGINLEFT3
+    }
+)
+
+globalTemplateOption button-marginright0 (
+    templateType: button
+    name: 0
+    group: @button/button-margin-right
+    sequence: 0
+    appearance {
+        cssClasses: m-r-0
+    }
+    advanced {
+        identifier: BUTTON_MARGINRIGHT0
+    }
+)
+
+globalTemplateOption button-marginright1 (
+    templateType: button
+    name: 1
+    group: @button/button-margin-right
+    sequence: 1
+    appearance {
+        cssClasses: m-r-1
+    }
+    advanced {
+        identifier: BUTTON_MARGINRIGHT1
+    }
+)
+
+globalTemplateOption button-marginright2 (
+    templateType: button
+    name: 2
+    group: @button/button-margin-right
+    sequence: 2
+    appearance {
+        cssClasses: m-r-2
+    }
+    advanced {
+        identifier: BUTTON_MARGINRIGHT2
+    }
+)
+
+globalTemplateOption button-marginright3 (
+    templateType: button
+    name: 3
+    group: @button/button-margin-right
+    sequence: 3
+    appearance {
+        cssClasses: m-r-3
+    }
+    advanced {
+        identifier: BUTTON_MARGINRIGHT3
+    }
+)
+
+globalTemplateOption button-margintop0 (
+    templateType: button
+    name: 0
+    group: @button/button-margin-top
+    sequence: 0
+    appearance {
+        cssClasses: m-t-0
+    }
+    advanced {
+        identifier: BUTTON_MARGINTOP0
+    }
+)
+
+globalTemplateOption button-margintop1 (
+    templateType: button
+    name: 1
+    group: @button/button-margin-top
+    sequence: 1
+    appearance {
+        cssClasses: m-t-1
+    }
+    advanced {
+        identifier: BUTTON_MARGINTOP1
+    }
+)
+
+globalTemplateOption button-margintop2 (
+    templateType: button
+    name: 2
+    group: @button/button-margin-top
+    sequence: 2
+    appearance {
+        cssClasses: m-t-2
+    }
+    advanced {
+        identifier: BUTTON_MARGINTOP2
+    }
+)
+
+globalTemplateOption button-margintop3 (
+    templateType: button
+    name: 3
+    group: @button/button-margin-top
+    sequence: 3
+    appearance {
+        cssClasses: m-t-3
+    }
+    advanced {
+        identifier: BUTTON_MARGINTOP3
+    }
+)
+
+globalTemplateOption button-paddingbot0 (
+    templateType: button
+    name: 0
+    group: @button/button-padding-bottom
+    sequence: 0
+    appearance {
+        cssClasses: p-b-0
+    }
+    advanced {
+        identifier: BUTTON_PADDINGBOT0
+    }
+)
+
+globalTemplateOption button-paddingbot1 (
+    templateType: button
+    name: 1
+    group: @button/button-padding-bottom
+    sequence: 1
+    appearance {
+        cssClasses: p-b-1
+    }
+    advanced {
+        identifier: BUTTON_PADDINGBOT1
+    }
+)
+
+globalTemplateOption button-paddingbot2 (
+    templateType: button
+    name: 2
+    group: @button/button-padding-bottom
+    sequence: 2
+    appearance {
+        cssClasses: p-b-2
+    }
+    advanced {
+        identifier: BUTTON_PADDINGBOT2
+    }
+)
+
+globalTemplateOption button-paddingbot3 (
+    templateType: button
+    name: 3
+    group: @button/button-padding-bottom
+    sequence: 3
+    appearance {
+        cssClasses: p-b-3
+    }
+    advanced {
+        identifier: BUTTON_PADDINGBOT3
+    }
+)
+
+globalTemplateOption button-paddingleft0 (
+    templateType: button
+    name: 0
+    group: @button/button-padding-left
+    sequence: 0
+    appearance {
+        cssClasses: p-l-0
+    }
+    advanced {
+        identifier: BUTTON_PADDINGLEFT0
+    }
+)
+
+globalTemplateOption button-paddingleft1 (
+    templateType: button
+    name: 1
+    group: @button/button-padding-left
+    sequence: 1
+    appearance {
+        cssClasses: p-l-1
+    }
+    advanced {
+        identifier: BUTTON_PADDINGLEFT1
+    }
+)
+
+globalTemplateOption button-paddingleft2 (
+    templateType: button
+    name: 2
+    group: @button/button-padding-left
+    sequence: 2
+    appearance {
+        cssClasses: p-l-2
+    }
+    advanced {
+        identifier: BUTTON_PADDINGLEFT2
+    }
+)
+
+globalTemplateOption button-paddingleft3 (
+    templateType: button
+    name: 3
+    group: @button/button-padding-left
+    sequence: 3
+    appearance {
+        cssClasses: p-l-3
+    }
+    advanced {
+        identifier: BUTTON_PADDINGLEFT3
+    }
+)
+
+globalTemplateOption button-paddingright0 (
+    templateType: button
+    name: 0
+    group: @button/button-padding-right
+    sequence: 0
+    appearance {
+        cssClasses: p-r-0
+    }
+    advanced {
+        identifier: BUTTON_PADDINGRIGHT0
+    }
+)
+
+globalTemplateOption button-paddingright1 (
+    templateType: button
+    name: 1
+    group: @button/button-padding-right
+    sequence: 1
+    appearance {
+        cssClasses: p-r-1
+    }
+    advanced {
+        identifier: BUTTON_PADDINGRIGHT1
+    }
+)
+
+globalTemplateOption button-paddingright2 (
+    templateType: button
+    name: 2
+    group: @button/button-padding-right
+    sequence: 2
+    appearance {
+        cssClasses: p-r-2
+    }
+    advanced {
+        identifier: BUTTON_PADDINGRIGHT2
+    }
+)
+
+globalTemplateOption button-paddingright3 (
+    templateType: button
+    name: 3
+    group: @button/button-padding-right
+    sequence: 3
+    appearance {
+        cssClasses: p-r-3
+    }
+    advanced {
+        identifier: BUTTON_PADDINGRIGHT3
+    }
+)
+
+globalTemplateOption button-paddingtop0 (
+    templateType: button
+    name: 0
+    group: @button/button-padding-top
+    sequence: 0
+    appearance {
+        cssClasses: p-t-0
+    }
+    advanced {
+        identifier: BUTTON_PADDINGTOP0
+    }
+)
+
+globalTemplateOption button-paddingtop1 (
+    templateType: button
+    name: 1
+    group: @button/button-padding-top
+    sequence: 1
+    appearance {
+        cssClasses: p-t-1
+    }
+    advanced {
+        identifier: BUTTON_PADDINGTOP1
+    }
+)
+
+globalTemplateOption button-paddingtop2 (
+    templateType: button
+    name: 2
+    group: @button/button-padding-top
+    sequence: 2
+    appearance {
+        cssClasses: p-t-2
+    }
+    advanced {
+        identifier: BUTTON_PADDINGTOP2
+    }
+)
+
+globalTemplateOption button-paddingtop3 (
+    templateType: button
+    name: 3
+    group: @button/button-padding-top
+    sequence: 3
+    appearance {
+        cssClasses: p-t-3
+    }
+    advanced {
+        identifier: BUTTON_PADDINGTOP3
+    }
+)
+
+globalTemplateOption b-hidden-all-devices (
+    templateType: button
+    name: Hidden for All Devices
+    group: @button/hiding-content
+    sequence: 1
+    appearance {
+        cssClasses: hide
+    }
+    advanced {
+        identifier: B_HIDDEN_ALL_DEVICES
+    }
+)
+
+globalTemplateOption b-hidden-large-only (
+    templateType: button
+    name: Hidden for Large Only
+    group: @button/hiding-content
+    sequence: 4
+    appearance {
+        cssClasses: hide-on-large-only
+    }
+    advanced {
+        identifier: B_HIDDEN_LARGE_ONLY
+    }
+)
+
+globalTemplateOption b-hidden-medium-and-above (
+    templateType: button
+    name: Hidden for Medium and Above
+    group: @button/hiding-content
+    sequence: 6
+    appearance {
+        cssClasses: hide-on-med-and-up
+    }
+    advanced {
+        identifier: B_HIDDEN_MEDIUM_AND_ABOVE
+    }
+)
+
+globalTemplateOption b-hidden-medium-and-below (
+    templateType: button
+    name: Hidden for Medium and Below
+    group: @button/hiding-content
+    sequence: 5
+    appearance {
+        cssClasses: hide-on-med-and-down
+    }
+    advanced {
+        identifier: B_HIDDEN_MEDIUM_AND_BELOW
+    }
+)
+
+globalTemplateOption b-hidden-medium-only (
+    templateType: button
+    name: Hidden for Medium Only
+    group: @button/hiding-content
+    sequence: 3
+    appearance {
+        cssClasses: hide-on-med-only
+    }
+    advanced {
+        identifier: B_HIDDEN_MEDIUM_ONLY
+    }
+)
+
+globalTemplateOption b-hidden-small-and-large (
+    templateType: button
+    name: Hidden for Small and Large
+    group: @button/hiding-content
+    sequence: 7
+    appearance {
+        cssClasses: [
+            hide-on-small-only
+            hide-on-large-only
+        ]
+    }
+    advanced {
+        identifier: B_HIDDEN_SMALL_AND_LARGE
+    }
+)
+
+globalTemplateOption b-hidden-small-only (
+    templateType: button
+    name: Hidden for Small Only
+    group: @button/hiding-content
+    sequence: 2
+    appearance {
+        cssClasses: hide-on-small-only
+    }
+    advanced {
+        identifier: B_HIDDEN_SMALL_ONLY
+    }
+)
+
+globalTemplateOption depth-0 (
+    templateType: button
+    name: Depth 0
+    group: @button/shadow
+    sequence: 0
+    appearance {
+        cssClasses: z-depth-0
+    }
+    advanced {
+        identifier: DEPTH_0
+    }
+)
+
+globalTemplateOption depth-1 (
+    templateType: button
+    name: Depth 1
+    group: @button/shadow
+    sequence: 1
+    appearance {
+        cssClasses: z-depth-1
+    }
+    advanced {
+        identifier: DEPTH_1
+    }
+)
+
+globalTemplateOption depth-2 (
+    templateType: button
+    name: Depth 2
+    group: @button/shadow
+    sequence: 2
+    appearance {
+        cssClasses: z-depth-2
+    }
+    advanced {
+        identifier: DEPTH_2
+    }
+)
+
+globalTemplateOption depth-3 (
+    templateType: button
+    name: Depth 3
+    group: @button/shadow
+    sequence: 3
+    appearance {
+        cssClasses: z-depth-3
+    }
+    advanced {
+        identifier: DEPTH_3
+    }
+)
+
+globalTemplateOption depth-4 (
+    templateType: button
+    name: Depth 4
+    group: @button/shadow
+    sequence: 4
+    appearance {
+        cssClasses: z-depth-4
+    }
+    advanced {
+        identifier: DEPTH_4
+    }
+)
+
+globalTemplateOption depth-5 (
+    templateType: button
+    name: Depth 5
+    group: @button/shadow
+    sequence: 5
+    appearance {
+        cssClasses: z-depth-5
+    }
+    advanced {
+        identifier: DEPTH_5
+    }
+)
+
+globalTemplateOption large (
+    templateType: button
+    name: Large
+    group: @button/size
+    sequence: 1
+    appearance {
+        cssClasses: btn-large
+    }
+    advanced {
+        identifier: LARGE
+    }
+)
+
+globalTemplateOption btn-text-amber (
+    templateType: button
+    name: Amber
+    group: @button/text-color
+    sequence: 1
+    appearance {
+        cssClasses: amber-text
+    }
+    advanced {
+        identifier: BTN_TEXT_AMBER
+    }
+)
+
+globalTemplateOption btn-text-black (
+    templateType: button
+    name: Black
+    group: @button/text-color
+    sequence: 0
+    appearance {
+        cssClasses: black-text
+    }
+    advanced {
+        identifier: BTN_TEXT_BLACK
+    }
+)
+
+globalTemplateOption btn-text-blue (
+    templateType: button
+    name: Blue
+    group: @button/text-color
+    sequence: 3
+    appearance {
+        cssClasses: blue-text
+    }
+    advanced {
+        identifier: BTN_TEXT_BLUE
+    }
+)
+
+globalTemplateOption btn-text-blue-grey (
+    templateType: button
+    name: Blue Grey
+    group: @button/text-color
+    sequence: 2
+    appearance {
+        cssClasses: blue-grey-text
+    }
+    advanced {
+        identifier: BTN_TEXT_BLUE_GREY
+    }
+)
+
+globalTemplateOption btn-text-brown (
+    templateType: button
+    name: Brown
+    group: @button/text-color
+    sequence: 4
+    appearance {
+        cssClasses: brown-text
+    }
+    advanced {
+        identifier: BTN_TEXT_BROWN
+    }
+)
+
+globalTemplateOption btn-text-cyan (
+    templateType: button
+    name: Cyan
+    group: @button/text-color
+    sequence: 5
+    appearance {
+        cssClasses: cyan-text
+    }
+    advanced {
+        identifier: BTN_TEXT_CYAN
+    }
+)
+
+globalTemplateOption btn-text-deep-orange (
+    templateType: button
+    name: Deep Orange
+    group: @button/text-color
+    sequence: 6
+    appearance {
+        cssClasses: deep-orange-text
+    }
+    advanced {
+        identifier: BTN_TEXT_DEEP_ORANGE
+    }
+)
+
+globalTemplateOption btn-text-deep-purple (
+    templateType: button
+    name: Deep Deep Purple
+    group: @button/text-color
+    sequence: 7
+    appearance {
+        cssClasses: deep-purple-text
+    }
+    advanced {
+        identifier: BTN_TEXT_DEEP_PURPLE
+    }
+)
+
+globalTemplateOption btn-text-green (
+    templateType: button
+    name: Green
+    group: @button/text-color
+    sequence: 8
+    appearance {
+        cssClasses: green-text
+    }
+    advanced {
+        identifier: BTN_TEXT_GREEN
+    }
+)
+
+globalTemplateOption btn-text-grey (
+    templateType: button
+    name: Grey
+    group: @button/text-color
+    sequence: 9
+    appearance {
+        cssClasses: grey-text
+    }
+    advanced {
+        identifier: BTN_TEXT_GREY
+    }
+)
+
+globalTemplateOption btn-text-indigo (
+    templateType: button
+    name: Light Indigo
+    group: @button/text-color
+    sequence: 10
+    appearance {
+        cssClasses: indigo-text
+    }
+    advanced {
+        identifier: BTN_TEXT_INDIGO
+    }
+)
+
+globalTemplateOption btn-text-light-blue (
+    templateType: button
+    name: Light Blue
+    group: @button/text-color
+    sequence: 11
+    appearance {
+        cssClasses: light-blue-text
+    }
+    advanced {
+        identifier: BTN_TEXT_LIGHT_BLUE
+    }
+)
+
+globalTemplateOption btn-text-light-green (
+    templateType: button
+    name: Light Green
+    group: @button/text-color
+    sequence: 12
+    appearance {
+        cssClasses: light-green-text
+    }
+    advanced {
+        identifier: BTN_TEXT_LIGHT_GREEN
+    }
+)
+
+globalTemplateOption btn-text-lime (
+    templateType: button
+    name: Lime
+    group: @button/text-color
+    sequence: 13
+    appearance {
+        cssClasses: lime-text
+    }
+    advanced {
+        identifier: BTN_TEXT_LIME
+    }
+)
+
+globalTemplateOption btn-text-orange (
+    templateType: button
+    name: Light Orange
+    group: @button/text-color
+    sequence: 14
+    appearance {
+        cssClasses: orange-text
+    }
+    advanced {
+        identifier: BTN_TEXT_ORANGE
+    }
+)
+
+globalTemplateOption btn-text-pink (
+    templateType: button
+    name: Pink
+    group: @button/text-color
+    sequence: 15
+    appearance {
+        cssClasses: pink-text
+    }
+    advanced {
+        identifier: BTN_TEXT_PINK
+    }
+)
+
+globalTemplateOption btn-text-purple (
+    templateType: button
+    name: Purple
+    group: @button/text-color
+    sequence: 16
+    appearance {
+        cssClasses: purple-text
+    }
+    advanced {
+        identifier: BTN_TEXT_PURPLE
+    }
+)
+
+globalTemplateOption btn-text-red (
+    templateType: button
+    name: Red
+    group: @button/text-color
+    sequence: 17
+    appearance {
+        cssClasses: red-text
+    }
+    advanced {
+        identifier: BTN_TEXT_RED
+    }
+)
+
+globalTemplateOption btn-text-teal (
+    templateType: button
+    name: Teal
+    group: @button/text-color
+    sequence: 18
+    appearance {
+        cssClasses: teal-text
+    }
+    advanced {
+        identifier: BTN_TEXT_TEAL
+    }
+)
+
+globalTemplateOption btn-text-white (
+    templateType: button
+    name: White
+    group: @button/text-color
+    sequence: 19
+    appearance {
+        cssClasses: white-text
+    }
+    advanced {
+        identifier: BTN_TEXT_WHITE
+    }
+)
+
+globalTemplateOption btn-text-yellow (
+    templateType: button
+    name: Yellow
+    group: @button/text-color
+    sequence: 20
+    appearance {
+        cssClasses: yellow-text
+    }
+    advanced {
+        identifier: BTN_TEXT_YELLOW
+    }
+)
+
+globalTemplateOption green (
+    templateType: button
+    name: Green
+    group: @button/wave-effect
+    sequence: 1
+    appearance {
+        cssClasses: [
+            waves-effect
+            waves-green
+        ]
+    }
+    advanced {
+        identifier: GREEN
+    }
+)
+
+globalTemplateOption light (
+    templateType: button
+    name: Light
+    group: @button/wave-effect
+    sequence: 2
+    appearance {
+        cssClasses: [
+            waves-effect
+            waves-light
+        ]
+    }
+    advanced {
+        identifier: LIGHT
+    }
+)
+
+globalTemplateOption orange (
+    templateType: button
+    name: Orange
+    group: @button/wave-effect
+    sequence: 3
+    appearance {
+        cssClasses: [
+            waves-effect
+            waves-orange
+        ]
+    }
+    advanced {
+        identifier: ORANGE
+    }
+)
+
+globalTemplateOption purple (
+    templateType: button
+    name: Purple
+    group: @button/wave-effect
+    sequence: 4
+    appearance {
+        cssClasses: [
+            waves-effect
+            waves-purple
+        ]
+    }
+    advanced {
+        identifier: PURPLE
+    }
+)
+
+globalTemplateOption red (
+    templateType: button
+    name: Red
+    group: @button/wave-effect
+    sequence: 5
+    appearance {
+        cssClasses: [
+            waves-effect
+            waves-red
+        ]
+    }
+    advanced {
+        identifier: RED
+    }
+)
+
+globalTemplateOption teal (
+    templateType: button
+    name: Teal
+    group: @button/wave-effect
+    sequence: 6
+    appearance {
+        cssClasses: [
+            waves-effect
+            waves-teal
+        ]
+    }
+    advanced {
+        identifier: TEAL
+    }
+)
+
+globalTemplateOption wave-default (
+    templateType: button
+    name: Default
+    group: @button/wave-effect
+    sequence: 7
+    appearance {
+        cssClasses: waves-effect
+    }
+    advanced {
+        identifier: WAVE_DEFAULT
+    }
+)
+
+globalTemplateOption wave-none (
+    templateType: button
+    name: None
+    group: @button/wave-effect
+    sequence: 8
+    appearance {
+        cssClasses: wave-none
+    }
+    advanced {
+        identifier: WAVE_NONE
+    }
+)
+
+globalTemplateOption yellow (
+    templateType: button
+    name: Yellow
+    group: @button/wave-effect
+    sequence: 9
+    appearance {
+        cssClasses: [
+            waves-effect
+            waves-yellow
+        ]
+    }
+    advanced {
+        identifier: YELLOW
+    }
+)
+
+globalTemplateOption field-marginbot0 (
+    templateType: item
+    name: 0
+    group: @item/field-margin-bottom
+    sequence: 0
+    appearance {
+        cssClasses: m-b-0
+    }
+    advanced {
+        identifier: FIELD_MARGINBOT0
+    }
+)
+
+globalTemplateOption field-marginbot1 (
+    templateType: item
+    name: 1
+    group: @item/field-margin-bottom
+    sequence: 1
+    appearance {
+        cssClasses: m-b-1
+    }
+    advanced {
+        identifier: FIELD_MARGINBOT1
+    }
+)
+
+globalTemplateOption field-marginbot2 (
+    templateType: item
+    name: 2
+    group: @item/field-margin-bottom
+    sequence: 2
+    appearance {
+        cssClasses: m-b-2
+    }
+    advanced {
+        identifier: FIELD_MARGINBOT2
+    }
+)
+
+globalTemplateOption field-marginbot3 (
+    templateType: item
+    name: 3
+    group: @item/field-margin-bottom
+    sequence: 3
+    appearance {
+        cssClasses: m-b-3
+    }
+    advanced {
+        identifier: FIELD_MARGINBOT3
+    }
+)
+
+globalTemplateOption field-marginbot4 (
+    templateType: item
+    name: 4
+    group: @item/field-margin-bottom
+    sequence: 4
+    appearance {
+        cssClasses: m-b-4
+    }
+    advanced {
+        identifier: FIELD_MARGINBOT4
+    }
+)
+
+globalTemplateOption field-marginbot5 (
+    templateType: item
+    name: 5
+    group: @item/field-margin-bottom
+    sequence: 5
+    appearance {
+        cssClasses: m-b-5
+    }
+    advanced {
+        identifier: FIELD_MARGINBOT5
+    }
+)
+
+globalTemplateOption field-marginleft0 (
+    templateType: item
+    name: 0
+    group: @item/field-margin-left
+    sequence: 0
+    appearance {
+        cssClasses: m-l-0
+    }
+    advanced {
+        identifier: FIELD_MARGINLEFT0
+    }
+)
+
+globalTemplateOption field-marginleft1 (
+    templateType: item
+    name: 1
+    group: @item/field-margin-left
+    sequence: 1
+    appearance {
+        cssClasses: m-l-1
+    }
+    advanced {
+        identifier: FIELD_MARGINLEFT1
+    }
+)
+
+globalTemplateOption field-marginleft2 (
+    templateType: item
+    name: 2
+    group: @item/field-margin-left
+    sequence: 2
+    appearance {
+        cssClasses: m-l-2
+    }
+    advanced {
+        identifier: FIELD_MARGINLEFT2
+    }
+)
+
+globalTemplateOption field-marginleft3 (
+    templateType: item
+    name: 3
+    group: @item/field-margin-left
+    sequence: 3
+    appearance {
+        cssClasses: m-l-3
+    }
+    advanced {
+        identifier: FIELD_MARGINLEFT3
+    }
+)
+
+globalTemplateOption field-marginleft4 (
+    templateType: item
+    name: 4
+    group: @item/field-margin-left
+    sequence: 4
+    appearance {
+        cssClasses: m-l-4
+    }
+    advanced {
+        identifier: FIELD_MARGINLEFT4
+    }
+)
+
+globalTemplateOption field-marginleft5 (
+    templateType: item
+    name: 5
+    group: @item/field-margin-left
+    sequence: 5
+    appearance {
+        cssClasses: m-l-5
+    }
+    advanced {
+        identifier: FIELD_MARGINLEFT5
+    }
+)
+
+globalTemplateOption field-marginright0 (
+    templateType: item
+    name: 0
+    group: @item/field-margin-right
+    sequence: 0
+    appearance {
+        cssClasses: m-r-0
+    }
+    advanced {
+        identifier: FIELD_MARGINRIGHT0
+    }
+)
+
+globalTemplateOption field-marginright1 (
+    templateType: item
+    name: 1
+    group: @item/field-margin-right
+    sequence: 1
+    appearance {
+        cssClasses: m-r-1
+    }
+    advanced {
+        identifier: FIELD_MARGINRIGHT1
+    }
+)
+
+globalTemplateOption field-marginright2 (
+    templateType: item
+    name: 2
+    group: @item/field-margin-right
+    sequence: 2
+    appearance {
+        cssClasses: m-r-2
+    }
+    advanced {
+        identifier: FIELD_MARGINRIGHT2
+    }
+)
+
+globalTemplateOption field-marginright3 (
+    templateType: item
+    name: 3
+    group: @item/field-margin-right
+    sequence: 3
+    appearance {
+        cssClasses: m-r-3
+    }
+    advanced {
+        identifier: FIELD_MARGINRIGHT3
+    }
+)
+
+globalTemplateOption field-marginright4 (
+    templateType: item
+    name: 4
+    group: @item/field-margin-right
+    sequence: 4
+    appearance {
+        cssClasses: m-r-4
+    }
+    advanced {
+        identifier: FIELD_MARGINRIGHT4
+    }
+)
+
+globalTemplateOption field-marginright5 (
+    templateType: item
+    name: 5
+    group: @item/field-margin-right
+    sequence: 5
+    appearance {
+        cssClasses: m-r-5
+    }
+    advanced {
+        identifier: FIELD_MARGINRIGHT5
+    }
+)
+
+globalTemplateOption field-margintop0 (
+    templateType: item
+    name: 0
+    group: @item/field-margin-top
+    sequence: 0
+    appearance {
+        cssClasses: m-t-0
+    }
+    advanced {
+        identifier: FIELD_MARGINTOP0
+    }
+)
+
+globalTemplateOption field-margintop1 (
+    templateType: item
+    name: 1
+    group: @item/field-margin-top
+    sequence: 1
+    appearance {
+        cssClasses: m-t-1
+    }
+    advanced {
+        identifier: FIELD_MARGINTOP1
+    }
+)
+
+globalTemplateOption field-margintop2 (
+    templateType: item
+    name: 2
+    group: @item/field-margin-top
+    sequence: 2
+    appearance {
+        cssClasses: m-t-2
+    }
+    advanced {
+        identifier: FIELD_MARGINTOP2
+    }
+)
+
+globalTemplateOption field-margintop3 (
+    templateType: item
+    name: 3
+    group: @item/field-margin-top
+    sequence: 3
+    appearance {
+        cssClasses: m-t-3
+    }
+    advanced {
+        identifier: FIELD_MARGINTOP3
+    }
+)
+
+globalTemplateOption field-margintop4 (
+    templateType: item
+    name: 4
+    group: @item/field-margin-top
+    sequence: 4
+    appearance {
+        cssClasses: m-t-4
+    }
+    advanced {
+        identifier: FIELD_MARGINTOP4
+    }
+)
+
+globalTemplateOption field-margintop5 (
+    templateType: item
+    name: 5
+    group: @item/field-margin-top
+    sequence: 5
+    appearance {
+        cssClasses: m-t-5
+    }
+    advanced {
+        identifier: FIELD_MARGINTOP5
+    }
+)
+
+globalTemplateOption field-paddingbot0 (
+    templateType: item
+    name: 0
+    group: @item/field-padding-bottom
+    sequence: 0
+    appearance {
+        cssClasses: p-b-0
+    }
+    advanced {
+        identifier: FIELD_PADDINGBOT0
+    }
+)
+
+globalTemplateOption field-paddingbot1 (
+    templateType: item
+    name: 1
+    group: @item/field-padding-bottom
+    sequence: 1
+    appearance {
+        cssClasses: p-b-1
+    }
+    advanced {
+        identifier: FIELD_PADDINGBOT1
+    }
+)
+
+globalTemplateOption field-paddingbot2 (
+    templateType: item
+    name: 2
+    group: @item/field-padding-bottom
+    sequence: 2
+    appearance {
+        cssClasses: p-b-2
+    }
+    advanced {
+        identifier: FIELD_PADDINGBOT2
+    }
+)
+
+globalTemplateOption field-paddingbot3 (
+    templateType: item
+    name: 3
+    group: @item/field-padding-bottom
+    sequence: 3
+    appearance {
+        cssClasses: p-b-3
+    }
+    advanced {
+        identifier: FIELD_PADDINGBOT3
+    }
+)
+
+globalTemplateOption field-paddingbot4 (
+    templateType: item
+    name: 4
+    group: @item/field-padding-bottom
+    sequence: 4
+    appearance {
+        cssClasses: p-b-4
+    }
+    advanced {
+        identifier: FIELD_PADDINGBOT4
+    }
+)
+
+globalTemplateOption field-paddingbot5 (
+    templateType: item
+    name: 5
+    group: @item/field-padding-bottom
+    sequence: 5
+    appearance {
+        cssClasses: p-b-5
+    }
+    advanced {
+        identifier: FIELD_PADDINGBOT5
+    }
+)
+
+globalTemplateOption field-paddingleft0 (
+    templateType: item
+    name: 0
+    group: @item/field-padding-left
+    sequence: 0
+    appearance {
+        cssClasses: p-l-0
+    }
+    advanced {
+        identifier: FIELD_PADDINGLEFT0
+    }
+)
+
+globalTemplateOption field-paddingleft1 (
+    templateType: item
+    name: 1
+    group: @item/field-padding-left
+    sequence: 1
+    appearance {
+        cssClasses: p-l-1
+    }
+    advanced {
+        identifier: FIELD_PADDINGLEFT1
+    }
+)
+
+globalTemplateOption field-paddingleft2 (
+    templateType: item
+    name: 2
+    group: @item/field-padding-left
+    sequence: 2
+    appearance {
+        cssClasses: p-l-2
+    }
+    advanced {
+        identifier: FIELD_PADDINGLEFT2
+    }
+)
+
+globalTemplateOption field-paddingleft3 (
+    templateType: item
+    name: 3
+    group: @item/field-padding-left
+    sequence: 3
+    appearance {
+        cssClasses: p-l-3
+    }
+    advanced {
+        identifier: FIELD_PADDINGLEFT3
+    }
+)
+
+globalTemplateOption field-paddingleft4 (
+    templateType: item
+    name: 4
+    group: @item/field-padding-left
+    sequence: 4
+    appearance {
+        cssClasses: p-l-4
+    }
+    advanced {
+        identifier: FIELD_PADDINGLEFT4
+    }
+)
+
+globalTemplateOption field-paddingleft5 (
+    templateType: item
+    name: 5
+    group: @item/field-padding-left
+    sequence: 5
+    appearance {
+        cssClasses: p-l-5
+    }
+    advanced {
+        identifier: FIELD_PADDINGLEFT5
+    }
+)
+
+globalTemplateOption field-paddingright0 (
+    templateType: item
+    name: 0
+    group: @item/field-padding-right
+    sequence: 0
+    appearance {
+        cssClasses: p-r-0
+    }
+    advanced {
+        identifier: FIELD_PADDINGRIGHT0
+    }
+)
+
+globalTemplateOption field-paddingright1 (
+    templateType: item
+    name: 1
+    group: @item/field-padding-right
+    sequence: 1
+    appearance {
+        cssClasses: p-r-1
+    }
+    advanced {
+        identifier: FIELD_PADDINGRIGHT1
+    }
+)
+
+globalTemplateOption field-paddingright2 (
+    templateType: item
+    name: 2
+    group: @item/field-padding-right
+    sequence: 2
+    appearance {
+        cssClasses: p-r-2
+    }
+    advanced {
+        identifier: FIELD_PADDINGRIGHT2
+    }
+)
+
+globalTemplateOption field-paddingright3 (
+    templateType: item
+    name: 3
+    group: @item/field-padding-right
+    sequence: 3
+    appearance {
+        cssClasses: p-r-3
+    }
+    advanced {
+        identifier: FIELD_PADDINGRIGHT3
+    }
+)
+
+globalTemplateOption field-paddingright4 (
+    templateType: item
+    name: 4
+    group: @item/field-padding-right
+    sequence: 4
+    appearance {
+        cssClasses: p-r-4
+    }
+    advanced {
+        identifier: FIELD_PADDINGRIGHT4
+    }
+)
+
+globalTemplateOption field-paddingright5 (
+    templateType: item
+    name: 5
+    group: @item/field-padding-right
+    sequence: 5
+    appearance {
+        cssClasses: p-r-5
+    }
+    advanced {
+        identifier: FIELD_PADDINGRIGHT5
+    }
+)
+
+globalTemplateOption field-paddingtop0 (
+    templateType: item
+    name: 0
+    group: @item/field-padding-top
+    sequence: 0
+    appearance {
+        cssClasses: p-t-0
+    }
+    advanced {
+        identifier: FIELD_PADDINGTOP0
+    }
+)
+
+globalTemplateOption field-paddingtop1 (
+    templateType: item
+    name: 1
+    group: @item/field-padding-top
+    sequence: 1
+    appearance {
+        cssClasses: p-t-1
+    }
+    advanced {
+        identifier: FIELD_PADDINGTOP1
+    }
+)
+
+globalTemplateOption field-paddingtop2 (
+    templateType: item
+    name: 2
+    group: @item/field-padding-top
+    sequence: 2
+    appearance {
+        cssClasses: p-t-2
+    }
+    advanced {
+        identifier: FIELD_PADDINGTOP2
+    }
+)
+
+globalTemplateOption field-paddingtop3 (
+    templateType: item
+    name: 3
+    group: @item/field-padding-top
+    sequence: 3
+    appearance {
+        cssClasses: p-t-3
+    }
+    advanced {
+        identifier: FIELD_PADDINGTOP3
+    }
+)
+
+globalTemplateOption field-paddingtop4 (
+    templateType: item
+    name: 4
+    group: @item/field-padding-top
+    sequence: 4
+    appearance {
+        cssClasses: p-t-4
+    }
+    advanced {
+        identifier: FIELD_PADDINGTOP4
+    }
+)
+
+globalTemplateOption field-paddingtop5 (
+    templateType: item
+    name: 5
+    group: @item/field-padding-top
+    sequence: 5
+    appearance {
+        cssClasses: p-t-5
+    }
+    advanced {
+        identifier: FIELD_PADDINGTOP5
+    }
+)
+
+globalTemplateOption i-hidden-all-devices (
+    templateType: item
+    name: Hidden for All Devices
+    group: @item/hiding-content
+    sequence: 1
+    appearance {
+        cssClasses: hide
+    }
+    advanced {
+        identifier: I_HIDDEN_ALL_DEVICES
+    }
+)
+
+globalTemplateOption i-hidden-large-only (
+    templateType: item
+    name: Hidden for Large Only
+    group: @item/hiding-content
+    sequence: 4
+    appearance {
+        cssClasses: hide-on-large-only
+    }
+    advanced {
+        identifier: I_HIDDEN_LARGE_ONLY
+    }
+)
+
+globalTemplateOption i-hidden-medium-and-above (
+    templateType: item
+    name: Hidden for Medium and Above
+    group: @item/hiding-content
+    sequence: 6
+    appearance {
+        cssClasses: hide-on-med-and-up
+    }
+    advanced {
+        identifier: I_HIDDEN_MEDIUM_AND_ABOVE
+    }
+)
+
+globalTemplateOption i-hidden-medium-and-below (
+    templateType: item
+    name: Hidden for Medium and Below
+    group: @item/hiding-content
+    sequence: 5
+    appearance {
+        cssClasses: hide-on-med-and-down
+    }
+    advanced {
+        identifier: I_HIDDEN_MEDIUM_AND_BELOW
+    }
+)
+
+globalTemplateOption i-hidden-medium-only (
+    templateType: item
+    name: Hidden for Medium Only
+    group: @item/hiding-content
+    sequence: 3
+    appearance {
+        cssClasses: hide-on-med-only
+    }
+    advanced {
+        identifier: I_HIDDEN_MEDIUM_ONLY
+    }
+)
+
+globalTemplateOption i-hidden-mobile-only (
+    templateType: item
+    name: Hidden for Small Only
+    group: @item/hiding-content
+    sequence: 2
+    appearance {
+        cssClasses: hide-on-small-only
+    }
+    advanced {
+        identifier: I_HIDDEN_MOBILE_ONLY
+    }
+)
+
+globalTemplateOption i-hidden-small-and-large (
+    templateType: item
+    name: Hidden for Small and Large
+    group: @item/hiding-content
+    sequence: 7
+    appearance {
+        cssClasses: [
+            hide-on-small-only
+            hide-on-large-only
+        ]
+    }
+    advanced {
+        identifier: I_HIDDEN_SMALL_AND_LARGE
+    }
+)
+
+globalTemplateOption region-bg-amber (
+    templateType: region
+    name: Amber
+    group: @region/background-color
+    sequence: 17
+    appearance {
+        cssClasses: [
+            ma-region-bg-color
+            amber
+        ]
+    }
+    advanced {
+        identifier: REGION_BG_AMBER
+    }
+)
+
+globalTemplateOption region-bg-black (
+    templateType: region
+    name: Black
+    group: @region/background-color
+    sequence: 1
+    appearance {
+        cssClasses: [
+            ma-region-bg-color
+            black
+        ]
+    }
+    advanced {
+        identifier: REGION_BG_BLACK
+    }
+)
+
+globalTemplateOption region-bg-blue (
+    templateType: region
+    name: Blue
+    group: @region/background-color
+    sequence: 9
+    appearance {
+        cssClasses: [
+            ma-region-bg-color
+            blue
+        ]
+    }
+    advanced {
+        identifier: REGION_BG_BLUE
+    }
+)
+
+globalTemplateOption region-bg-blue-grey (
+    templateType: region
+    name: Blue Grey
+    group: @region/background-color
+    sequence: 22
+    appearance {
+        cssClasses: [
+            ma-region-bg-color
+            blue-grey
+        ]
+    }
+    advanced {
+        identifier: REGION_BG_BLUE_GREY
+    }
+)
+
+globalTemplateOption region-bg-brown (
+    templateType: region
+    name: Brown
+    group: @region/background-color
+    sequence: 20
+    appearance {
+        cssClasses: [
+            ma-region-bg-color
+            brown
+        ]
+    }
+    advanced {
+        identifier: REGION_BG_BROWN
+    }
+)
+
+globalTemplateOption region-bg-cyan (
+    templateType: region
+    name: Cyan
+    group: @region/background-color
+    sequence: 11
+    appearance {
+        cssClasses: [
+            ma-region-bg-color
+            cyan
+        ]
+    }
+    advanced {
+        identifier: REGION_BG_CYAN
+    }
+)
+
+globalTemplateOption region-bg-deep-orange (
+    templateType: region
+    name: Deep Orange
+    group: @region/background-color
+    sequence: 19
+    appearance {
+        cssClasses: [
+            ma-region-bg-color
+            deep-orange
+        ]
+    }
+    advanced {
+        identifier: REGION_BG_DEEP_ORANGE
+    }
+)
+
+globalTemplateOption region-bg-deep-purple (
+    templateType: region
+    name: Deep Purple
+    group: @region/background-color
+    sequence: 7
+    appearance {
+        cssClasses: [
+            ma-region-bg-color
+            deep-purple
+        ]
+    }
+    advanced {
+        identifier: REGION_BG_DEEP_PURPLE
+    }
+)
+
+globalTemplateOption region-bg-green (
+    templateType: region
+    name: Green
+    group: @region/background-color
+    sequence: 13
+    appearance {
+        cssClasses: [
+            ma-region-bg-color
+            green
+        ]
+    }
+    advanced {
+        identifier: REGION_BG_GREEN
+    }
+)
+
+globalTemplateOption region-bg-grey (
+    templateType: region
+    name: Grey
+    group: @region/background-color
+    sequence: 21
+    appearance {
+        cssClasses: [
+            ma-region-bg-color
+            grey
+        ]
+    }
+    advanced {
+        identifier: REGION_BG_GREY
+    }
+)
+
+globalTemplateOption region-bg-indigo (
+    templateType: region
+    name: Indigo
+    group: @region/background-color
+    sequence: 8
+    appearance {
+        cssClasses: [
+            ma-region-bg-color
+            indigo
+        ]
+    }
+    advanced {
+        identifier: REGION_BG_INDIGO
+    }
+)
+
+globalTemplateOption region-bg-light-blue (
+    templateType: region
+    name: Light Blue
+    group: @region/background-color
+    sequence: 10
+    appearance {
+        cssClasses: [
+            ma-region-bg-color
+            light-blue
+        ]
+    }
+    advanced {
+        identifier: REGION_BG_LIGHT_BLUE
+    }
+)
+
+globalTemplateOption region-bg-light-green (
+    templateType: region
+    name: Light Green
+    group: @region/background-color
+    sequence: 14
+    appearance {
+        cssClasses: [
+            ma-region-bg-color
+            light-green
+        ]
+    }
+    advanced {
+        identifier: REGION_BG_LIGHT_GREEN
+    }
+)
+
+globalTemplateOption region-bg-lime (
+    templateType: region
+    name: Lime
+    group: @region/background-color
+    sequence: 15
+    appearance {
+        cssClasses: [
+            ma-region-bg-color
+            lime
+        ]
+    }
+    advanced {
+        identifier: REGION_BG_LIME
+    }
+)
+
+globalTemplateOption region-bg-orange (
+    templateType: region
+    name: Orange
+    group: @region/background-color
+    sequence: 18
+    appearance {
+        cssClasses: [
+            ma-region-bg-color
+            orange
+        ]
+    }
+    advanced {
+        identifier: REGION_BG_ORANGE
+    }
+)
+
+globalTemplateOption region-bg-pink (
+    templateType: region
+    name: Pink
+    group: @region/background-color
+    sequence: 5
+    appearance {
+        cssClasses: [
+            ma-region-bg-color
+            pink
+        ]
+    }
+    advanced {
+        identifier: REGION_BG_PINK
+    }
+)
+
+globalTemplateOption region-bg-purple (
+    templateType: region
+    name: Purple
+    group: @region/background-color
+    sequence: 6
+    appearance {
+        cssClasses: [
+            ma-region-bg-color
+            purple
+        ]
+    }
+    advanced {
+        identifier: REGION_BG_PURPLE
+    }
+)
+
+globalTemplateOption region-bg-red (
+    templateType: region
+    name: Red
+    group: @region/background-color
+    sequence: 4
+    appearance {
+        cssClasses: [
+            ma-region-bg-color
+            red
+        ]
+    }
+    advanced {
+        identifier: REGION_BG_RED
+    }
+)
+
+globalTemplateOption region-bg-teal (
+    templateType: region
+    name: Teal
+    group: @region/background-color
+    sequence: 12
+    appearance {
+        cssClasses: [
+            ma-region-bg-color
+            teal
+        ]
+    }
+    advanced {
+        identifier: REGION_BG_TEAL
+    }
+)
+
+globalTemplateOption region-bg-transparent (
+    templateType: region
+    name: Transparent
+    group: @region/background-color
+    sequence: 3
+    appearance {
+        cssClasses: [
+            ma-region-bg-color
+            transparent
+        ]
+    }
+    advanced {
+        identifier: REGION_BG_TRANSPARENT
+    }
+)
+
+globalTemplateOption region-bg-white (
+    templateType: region
+    name: White
+    group: @region/background-color
+    sequence: 2
+    appearance {
+        cssClasses: [
+            ma-region-bg-color
+            white
+        ]
+    }
+    advanced {
+        identifier: REGION_BG_WHITE
+    }
+)
+
+globalTemplateOption region-bg-yellow (
+    templateType: region
+    name: Yellow
+    group: @region/background-color
+    sequence: 16
+    appearance {
+        cssClasses: [
+            ma-region-bg-color
+            yellow
+        ]
+    }
+    advanced {
+        identifier: REGION_BG_YELLOW
+    }
+)
+
+globalTemplateOption accent-1 (
+    templateType: region
+    name: Accent 1
+    group: @region/background-modifier
+    sequence: 1
+    appearance {
+        cssClasses: accent-1
+    }
+    advanced {
+        identifier: ACCENT_1
+    }
+)
+
+globalTemplateOption accent-2 (
+    templateType: region
+    name: Accent 2
+    group: @region/background-modifier
+    sequence: 2
+    appearance {
+        cssClasses: accent-2
+    }
+    advanced {
+        identifier: ACCENT_2
+    }
+)
+
+globalTemplateOption accent-3 (
+    templateType: region
+    name: Accent 3
+    group: @region/background-modifier
+    sequence: 3
+    appearance {
+        cssClasses: accent-3
+    }
+    advanced {
+        identifier: ACCENT_3
+    }
+)
+
+globalTemplateOption accent-4 (
+    templateType: region
+    name: Accent 4
+    group: @region/background-modifier
+    sequence: 4
+    appearance {
+        cssClasses: accent-4
+    }
+    advanced {
+        identifier: ACCENT_4
+    }
+)
+
+globalTemplateOption darken-1 (
+    templateType: region
+    name: Darken 1
+    group: @region/background-modifier
+    sequence: 5
+    appearance {
+        cssClasses: darken-1
+    }
+    advanced {
+        identifier: DARKEN_1
+    }
+)
+
+globalTemplateOption darken-2 (
+    templateType: region
+    name: Darken 2
+    group: @region/background-modifier
+    sequence: 6
+    appearance {
+        cssClasses: darken-2
+    }
+    advanced {
+        identifier: DARKEN_2
+    }
+)
+
+globalTemplateOption darken-3 (
+    templateType: region
+    name: Darken 3
+    group: @region/background-modifier
+    sequence: 7
+    appearance {
+        cssClasses: darken-3
+    }
+    advanced {
+        identifier: DARKEN_3
+    }
+)
+
+globalTemplateOption darken-4 (
+    templateType: region
+    name: Darken 4
+    group: @region/background-modifier
+    sequence: 8
+    appearance {
+        cssClasses: darken-4
+    }
+    advanced {
+        identifier: DARKEN_4
+    }
+)
+
+globalTemplateOption lighten-1 (
+    templateType: region
+    name: Lighten 1
+    group: @region/background-modifier
+    sequence: 9
+    appearance {
+        cssClasses: lighten-1
+    }
+    advanced {
+        identifier: LIGHTEN_1
+    }
+)
+
+globalTemplateOption lighten-2 (
+    templateType: region
+    name: Lighten 2
+    group: @region/background-modifier
+    sequence: 10
+    appearance {
+        cssClasses: lighten-2
+    }
+    advanced {
+        identifier: LIGHTEN_2
+    }
+)
+
+globalTemplateOption lighten-3 (
+    templateType: region
+    name: Lighten 3
+    group: @region/background-modifier
+    sequence: 11
+    appearance {
+        cssClasses: lighten-3
+    }
+    advanced {
+        identifier: LIGHTEN_3
+    }
+)
+
+globalTemplateOption lighten-4 (
+    templateType: region
+    name: Lighten 4
+    group: @region/background-modifier
+    sequence: 12
+    appearance {
+        cssClasses: lighten-4
+    }
+    advanced {
+        identifier: LIGHTEN_4
+    }
+)
+
+globalTemplateOption lighten-5 (
+    templateType: region
+    name: Lighten 5
+    group: @region/background-modifier
+    sequence: 13
+    appearance {
+        cssClasses: lighten-5
+    }
+    advanced {
+        identifier: LIGHTEN_5
+    }
+)
+
+globalTemplateOption body-center (
+    templateType: region
+    name: Center
+    group: @region/body-alignment
+    sequence: 2
+    appearance {
+        cssClasses: ma-region-body-center
+    }
+    advanced {
+        identifier: BODY_CENTER
+    }
+)
+
+globalTemplateOption body-left (
+    templateType: region
+    name: Left
+    group: @region/body-alignment
+    sequence: 1
+    appearance {
+        cssClasses: ma-region-body-left
+    }
+    advanced {
+        identifier: BODY_LEFT
+    }
+)
+
+globalTemplateOption body-right (
+    templateType: region
+    name: Right
+    group: @region/body-alignment
+    sequence: 3
+    appearance {
+        cssClasses: ma-region-body-right
+    }
+    advanced {
+        identifier: BODY_RIGHT
+    }
+)
+
+globalTemplateOption r-hidden-all-devices (
+    templateType: region
+    name: Hidden for All Devices
+    group: @region/hiding-content
+    sequence: 1
+    appearance {
+        cssClasses: hide
+    }
+    advanced {
+        identifier: R_HIDDEN_ALL_DEVICES
+    }
+)
+
+globalTemplateOption r-hidden-large-only (
+    templateType: region
+    name: Hidden for Large Only
+    group: @region/hiding-content
+    sequence: 4
+    appearance {
+        cssClasses: hide-on-large-only
+    }
+    advanced {
+        identifier: R_HIDDEN_LARGE_ONLY
+    }
+)
+
+globalTemplateOption r-hidden-medium-and-above (
+    templateType: region
+    name: Hidden for Medium and Above
+    group: @region/hiding-content
+    sequence: 6
+    appearance {
+        cssClasses: hide-on-med-and-up
+    }
+    advanced {
+        identifier: R_HIDDEN_MEDIUM_AND_ABOVE
+    }
+)
+
+globalTemplateOption r-hidden-medium-and-below (
+    templateType: region
+    name: Hidden for Medium and Below
+    group: @region/hiding-content
+    sequence: 5
+    appearance {
+        cssClasses: hide-on-med-and-down
+    }
+    advanced {
+        identifier: R_HIDDEN_MEDIUM_AND_BELOW
+    }
+)
+
+globalTemplateOption r-hidden-medium-only (
+    templateType: region
+    name: Hidden for Medium Only
+    group: @region/hiding-content
+    sequence: 3
+    appearance {
+        cssClasses: hide-on-med-only
+    }
+    advanced {
+        identifier: R_HIDDEN_MEDIUM_ONLY
+    }
+)
+
+globalTemplateOption r-hidden-small-and-large (
+    templateType: region
+    name: Hidden for Small and Large
+    group: @region/hiding-content
+    sequence: 7
+    appearance {
+        cssClasses: [
+            hide-on-small-only
+            hide-on-large-only
+        ]
+    }
+    advanced {
+        identifier: R_HIDDEN_SMALL_AND_LARGE
+    }
+)
+
+globalTemplateOption r-hidden-small-only (
+    templateType: region
+    name: Hidden for Small Only
+    group: @region/hiding-content
+    sequence: 2
+    appearance {
+        cssClasses: hide-on-small-only
+    }
+    advanced {
+        identifier: R_HIDDEN_SMALL_ONLY
+    }
+)
+
+globalTemplateOption region-container-70 (
+    templateType: region
+    name: 70%
+    group: @region/region-container
+    sequence: 10
+    appearance {
+        cssClasses: ma-container-70
+    }
+    advanced {
+        identifier: REGION_CONTAINER_70
+    }
+)
+
+globalTemplateOption region-container-80 (
+    templateType: region
+    name: 80%
+    group: @region/region-container
+    sequence: 20
+    appearance {
+        cssClasses: ma-container-80
+    }
+    advanced {
+        identifier: REGION_CONTAINER_80
+    }
+)
+
+globalTemplateOption region-container-90 (
+    templateType: region
+    name: 90%
+    group: @region/region-container
+    sequence: 30
+    appearance {
+        cssClasses: ma-container-90
+    }
+    advanced {
+        identifier: REGION_CONTAINER_90
+    }
+)
+
+globalTemplateOption region-marginbot0 (
+    templateType: region
+    name: 0
+    group: @region/region-margin-bottom
+    sequence: 0
+    appearance {
+        cssClasses: m-b-0
+    }
+    advanced {
+        identifier: REGION_MARGINBOT0
+    }
+)
+
+globalTemplateOption region-marginbot1 (
+    templateType: region
+    name: 1
+    group: @region/region-margin-bottom
+    sequence: 1
+    appearance {
+        cssClasses: m-b-1
+    }
+    advanced {
+        identifier: REGION_MARGINBOT1
+    }
+)
+
+globalTemplateOption region-marginbot1neg (
+    templateType: region
+    name: -1
+    group: @region/region-margin-bottom
+    sequence: -1
+    appearance {
+        cssClasses: m-b-1-neg
+    }
+    advanced {
+        identifier: REGION_MARGINBOT1NEG
+    }
+)
+
+globalTemplateOption region-marginbot2 (
+    templateType: region
+    name: 2
+    group: @region/region-margin-bottom
+    sequence: 2
+    appearance {
+        cssClasses: m-b-2
+    }
+    advanced {
+        identifier: REGION_MARGINBOT2
+    }
+)
+
+globalTemplateOption region-marginbot2neg (
+    templateType: region
+    name: -2
+    group: @region/region-margin-bottom
+    sequence: -2
+    appearance {
+        cssClasses: m-b-2-neg
+    }
+    advanced {
+        identifier: REGION_MARGINBOT2NEG
+    }
+)
+
+globalTemplateOption region-marginbot3 (
+    templateType: region
+    name: 3
+    group: @region/region-margin-bottom
+    sequence: 3
+    appearance {
+        cssClasses: m-b-3
+    }
+    advanced {
+        identifier: REGION_MARGINBOT3
+    }
+)
+
+globalTemplateOption region-marginbot3neg (
+    templateType: region
+    name: -3
+    group: @region/region-margin-bottom
+    sequence: -3
+    appearance {
+        cssClasses: m-b-3-neg
+    }
+    advanced {
+        identifier: REGION_MARGINBOT3NEG
+    }
+)
+
+globalTemplateOption region-marginbot4 (
+    templateType: region
+    name: 4
+    group: @region/region-margin-bottom
+    sequence: 4
+    appearance {
+        cssClasses: m-b-4
+    }
+    advanced {
+        identifier: REGION_MARGINBOT4
+    }
+)
+
+globalTemplateOption region-marginbot4neg (
+    templateType: region
+    name: -4
+    group: @region/region-margin-bottom
+    sequence: -4
+    appearance {
+        cssClasses: m-b-4-neg
+    }
+    advanced {
+        identifier: REGION_MARGINBOT4NEG
+    }
+)
+
+globalTemplateOption region-marginbot5 (
+    templateType: region
+    name: 5
+    group: @region/region-margin-bottom
+    sequence: 5
+    appearance {
+        cssClasses: m-b-5
+    }
+    advanced {
+        identifier: REGION_MARGINBOT5
+    }
+)
+
+globalTemplateOption region-marginbot5neg (
+    templateType: region
+    name: -5
+    group: @region/region-margin-bottom
+    sequence: -5
+    appearance {
+        cssClasses: m-b-5-neg
+    }
+    advanced {
+        identifier: REGION_MARGINBOT5NEG
+    }
+)
+
+globalTemplateOption region-marginleft0 (
+    templateType: region
+    name: 0
+    group: @region/region-margin-left
+    sequence: 0
+    appearance {
+        cssClasses: m-l-0
+    }
+    advanced {
+        identifier: REGION_MARGINLEFT0
+    }
+)
+
+globalTemplateOption region-marginleft1 (
+    templateType: region
+    name: 1
+    group: @region/region-margin-left
+    sequence: 1
+    appearance {
+        cssClasses: m-l-1
+    }
+    advanced {
+        identifier: REGION_MARGINLEFT1
+    }
+)
+
+globalTemplateOption region-marginleft1neg (
+    templateType: region
+    name: -1
+    group: @region/region-margin-left
+    sequence: -1
+    appearance {
+        cssClasses: m-l-1-neg
+    }
+    advanced {
+        identifier: REGION_MARGINLEFT1NEG
+    }
+)
+
+globalTemplateOption region-marginleft2 (
+    templateType: region
+    name: 2
+    group: @region/region-margin-left
+    sequence: 2
+    appearance {
+        cssClasses: m-l-2
+    }
+    advanced {
+        identifier: REGION_MARGINLEFT2
+    }
+)
+
+globalTemplateOption region-marginleft2neg (
+    templateType: region
+    name: -2
+    group: @region/region-margin-left
+    sequence: -2
+    appearance {
+        cssClasses: m-l-2-neg
+    }
+    advanced {
+        identifier: REGION_MARGINLEFT2NEG
+    }
+)
+
+globalTemplateOption region-marginleft3 (
+    templateType: region
+    name: 3
+    group: @region/region-margin-left
+    sequence: 3
+    appearance {
+        cssClasses: m-l-3
+    }
+    advanced {
+        identifier: REGION_MARGINLEFT3
+    }
+)
+
+globalTemplateOption region-marginleft3neg (
+    templateType: region
+    name: -3
+    group: @region/region-margin-left
+    sequence: -3
+    appearance {
+        cssClasses: m-l-3-neg
+    }
+    advanced {
+        identifier: REGION_MARGINLEFT3NEG
+    }
+)
+
+globalTemplateOption region-marginleft4 (
+    templateType: region
+    name: 4
+    group: @region/region-margin-left
+    sequence: 4
+    appearance {
+        cssClasses: m-l-4
+    }
+    advanced {
+        identifier: REGION_MARGINLEFT4
+    }
+)
+
+globalTemplateOption region-marginleft4neg (
+    templateType: region
+    name: -4
+    group: @region/region-margin-left
+    sequence: -4
+    appearance {
+        cssClasses: m-l-4-neg
+    }
+    advanced {
+        identifier: REGION_MARGINLEFT4NEG
+    }
+)
+
+globalTemplateOption region-marginleft5 (
+    templateType: region
+    name: 5
+    group: @region/region-margin-left
+    sequence: 5
+    appearance {
+        cssClasses: m-l-5
+    }
+    advanced {
+        identifier: REGION_MARGINLEFT5
+    }
+)
+
+globalTemplateOption region-marginleft5neg (
+    templateType: region
+    name: -5
+    group: @region/region-margin-left
+    sequence: -5
+    appearance {
+        cssClasses: m-l-5-neg
+    }
+    advanced {
+        identifier: REGION_MARGINLEFT5NEG
+    }
+)
+
+globalTemplateOption region-marginright0 (
+    templateType: region
+    name: 0
+    group: @region/region-margin-right
+    sequence: 0
+    appearance {
+        cssClasses: m-r-0
+    }
+    advanced {
+        identifier: REGION_MARGINRIGHT0
+    }
+)
+
+globalTemplateOption region-marginright1 (
+    templateType: region
+    name: 1
+    group: @region/region-margin-right
+    sequence: 1
+    appearance {
+        cssClasses: m-r-1
+    }
+    advanced {
+        identifier: REGION_MARGINRIGHT1
+    }
+)
+
+globalTemplateOption region-marginright1neg (
+    templateType: region
+    name: -1
+    group: @region/region-margin-right
+    sequence: -1
+    appearance {
+        cssClasses: m-r-1-neg
+    }
+    advanced {
+        identifier: REGION_MARGINRIGHT1NEG
+    }
+)
+
+globalTemplateOption region-marginright2 (
+    templateType: region
+    name: 2
+    group: @region/region-margin-right
+    sequence: 2
+    appearance {
+        cssClasses: m-r-2
+    }
+    advanced {
+        identifier: REGION_MARGINRIGHT2
+    }
+)
+
+globalTemplateOption region-marginright2neg (
+    templateType: region
+    name: -2
+    group: @region/region-margin-right
+    sequence: -2
+    appearance {
+        cssClasses: m-r-2-neg
+    }
+    advanced {
+        identifier: REGION_MARGINRIGHT2NEG
+    }
+)
+
+globalTemplateOption region-marginright3 (
+    templateType: region
+    name: 3
+    group: @region/region-margin-right
+    sequence: 3
+    appearance {
+        cssClasses: m-r-3
+    }
+    advanced {
+        identifier: REGION_MARGINRIGHT3
+    }
+)
+
+globalTemplateOption region-marginright3neg (
+    templateType: region
+    name: -3
+    group: @region/region-margin-right
+    sequence: -3
+    appearance {
+        cssClasses: m-r-3-neg
+    }
+    advanced {
+        identifier: REGION_MARGINRIGHT3NEG
+    }
+)
+
+globalTemplateOption region-marginright4 (
+    templateType: region
+    name: 4
+    group: @region/region-margin-right
+    sequence: 4
+    appearance {
+        cssClasses: m-r-4
+    }
+    advanced {
+        identifier: REGION_MARGINRIGHT4
+    }
+)
+
+globalTemplateOption region-marginright4neg (
+    templateType: region
+    name: -4
+    group: @region/region-margin-right
+    sequence: -4
+    appearance {
+        cssClasses: m-r-4-neg
+    }
+    advanced {
+        identifier: REGION_MARGINRIGHT4NEG
+    }
+)
+
+globalTemplateOption region-marginright5 (
+    templateType: region
+    name: 5
+    group: @region/region-margin-right
+    sequence: 5
+    appearance {
+        cssClasses: m-r-5
+    }
+    advanced {
+        identifier: REGION_MARGINRIGHT5
+    }
+)
+
+globalTemplateOption region-marginright5neg (
+    templateType: region
+    name: -5
+    group: @region/region-margin-right
+    sequence: -5
+    appearance {
+        cssClasses: m-r-5-neg
+    }
+    advanced {
+        identifier: REGION_MARGINRIGHT5NEG
+    }
+)
+
+globalTemplateOption region-margintop0 (
+    templateType: region
+    name: 0
+    group: @region/region-margin-top
+    sequence: 0
+    appearance {
+        cssClasses: m-t-0
+    }
+    advanced {
+        identifier: REGION_MARGINTOP0
+    }
+)
+
+globalTemplateOption region-margintop1 (
+    templateType: region
+    name: 1
+    group: @region/region-margin-top
+    sequence: 1
+    appearance {
+        cssClasses: m-t-1
+    }
+    advanced {
+        identifier: REGION_MARGINTOP1
+    }
+)
+
+globalTemplateOption region-margintop1neg (
+    templateType: region
+    name: -1
+    group: @region/region-margin-top
+    sequence: -1
+    appearance {
+        cssClasses: m-t-1-neg
+    }
+    advanced {
+        identifier: REGION_MARGINTOP1NEG
+    }
+)
+
+globalTemplateOption region-margintop2 (
+    templateType: region
+    name: 2
+    group: @region/region-margin-top
+    sequence: 2
+    appearance {
+        cssClasses: m-t-2
+    }
+    advanced {
+        identifier: REGION_MARGINTOP2
+    }
+)
+
+globalTemplateOption region-margintop2neg (
+    templateType: region
+    name: -2
+    group: @region/region-margin-top
+    sequence: -2
+    appearance {
+        cssClasses: m-t-2-neg
+    }
+    advanced {
+        identifier: REGION_MARGINTOP2NEG
+    }
+)
+
+globalTemplateOption region-margintop3 (
+    templateType: region
+    name: 3
+    group: @region/region-margin-top
+    sequence: 3
+    appearance {
+        cssClasses: m-t-3
+    }
+    advanced {
+        identifier: REGION_MARGINTOP3
+    }
+)
+
+globalTemplateOption region-margintop3neg (
+    templateType: region
+    name: -3
+    group: @region/region-margin-top
+    sequence: -3
+    appearance {
+        cssClasses: m-t-3-neg
+    }
+    advanced {
+        identifier: REGION_MARGINTOP3NEG
+    }
+)
+
+globalTemplateOption region-margintop4 (
+    templateType: region
+    name: 4
+    group: @region/region-margin-top
+    sequence: 4
+    appearance {
+        cssClasses: m-t-4
+    }
+    advanced {
+        identifier: REGION_MARGINTOP4
+    }
+)
+
+globalTemplateOption region-margintop4neg (
+    templateType: region
+    name: -4
+    group: @region/region-margin-top
+    sequence: -4
+    appearance {
+        cssClasses: m-t-4-neg
+    }
+    advanced {
+        identifier: REGION_MARGINTOP4NEG
+    }
+)
+
+globalTemplateOption region-margintop5 (
+    templateType: region
+    name: 5
+    group: @region/region-margin-top
+    sequence: 5
+    appearance {
+        cssClasses: m-t-5
+    }
+    advanced {
+        identifier: REGION_MARGINTOP5
+    }
+)
+
+globalTemplateOption region-margintop5neg (
+    templateType: region
+    name: -5
+    group: @region/region-margin-top
+    sequence: -5
+    appearance {
+        cssClasses: m-t-5-neg
+    }
+    advanced {
+        identifier: REGION_MARGINTOP5NEG
+    }
+)
+
+globalTemplateOption region-paddingbot0 (
+    templateType: region
+    name: 0
+    group: @region/region-padding-bottom
+    sequence: 0
+    appearance {
+        cssClasses: p-b-0
+    }
+    advanced {
+        identifier: REGION_PADDINGBOT0
+    }
+)
+
+globalTemplateOption region-paddingbot1 (
+    templateType: region
+    name: 1
+    group: @region/region-padding-bottom
+    sequence: 1
+    appearance {
+        cssClasses: p-b-1
+    }
+    advanced {
+        identifier: REGION_PADDINGBOT1
+    }
+)
+
+globalTemplateOption region-paddingbot1neg (
+    templateType: region
+    name: -1
+    group: @region/region-padding-bottom
+    sequence: -1
+    appearance {
+        cssClasses: p-b-1-neg
+    }
+    advanced {
+        identifier: REGION_PADDINGBOT1NEG
+    }
+)
+
+globalTemplateOption region-paddingbot2 (
+    templateType: region
+    name: 2
+    group: @region/region-padding-bottom
+    sequence: 2
+    appearance {
+        cssClasses: p-b-2
+    }
+    advanced {
+        identifier: REGION_PADDINGBOT2
+    }
+)
+
+globalTemplateOption region-paddingbot2neg (
+    templateType: region
+    name: -2
+    group: @region/region-padding-bottom
+    sequence: -2
+    appearance {
+        cssClasses: p-b-2-neg
+    }
+    advanced {
+        identifier: REGION_PADDINGBOT2NEG
+    }
+)
+
+globalTemplateOption region-paddingbot3 (
+    templateType: region
+    name: 3
+    group: @region/region-padding-bottom
+    sequence: 3
+    appearance {
+        cssClasses: p-b-3
+    }
+    advanced {
+        identifier: REGION_PADDINGBOT3
+    }
+)
+
+globalTemplateOption region-paddingbot3neg (
+    templateType: region
+    name: -3
+    group: @region/region-padding-bottom
+    sequence: -3
+    appearance {
+        cssClasses: p-b-3-neg
+    }
+    advanced {
+        identifier: REGION_PADDINGBOT3NEG
+    }
+)
+
+globalTemplateOption region-paddingbot4 (
+    templateType: region
+    name: 4
+    group: @region/region-padding-bottom
+    sequence: 4
+    appearance {
+        cssClasses: p-b-4
+    }
+    advanced {
+        identifier: REGION_PADDINGBOT4
+    }
+)
+
+globalTemplateOption region-paddingbot4neg (
+    templateType: region
+    name: -4
+    group: @region/region-padding-bottom
+    sequence: -4
+    appearance {
+        cssClasses: p-b-4-neg
+    }
+    advanced {
+        identifier: REGION_PADDINGBOT4NEG
+    }
+)
+
+globalTemplateOption region-paddingbot5 (
+    templateType: region
+    name: 5
+    group: @region/region-padding-bottom
+    sequence: 5
+    appearance {
+        cssClasses: p-b-5
+    }
+    advanced {
+        identifier: REGION_PADDINGBOT5
+    }
+)
+
+globalTemplateOption region-paddingbot5neg (
+    templateType: region
+    name: -5
+    group: @region/region-padding-bottom
+    sequence: -5
+    appearance {
+        cssClasses: p-b-5-neg
+    }
+    advanced {
+        identifier: REGION_PADDINGBOT5NEG
+    }
+)
+
+globalTemplateOption region-paddingleft0 (
+    templateType: region
+    name: 0
+    group: @region/region-padding-left
+    sequence: 0
+    appearance {
+        cssClasses: p-l-0
+    }
+    advanced {
+        identifier: REGION_PADDINGLEFT0
+    }
+)
+
+globalTemplateOption region-paddingleft1 (
+    templateType: region
+    name: 1
+    group: @region/region-padding-left
+    sequence: 1
+    appearance {
+        cssClasses: p-l-1
+    }
+    advanced {
+        identifier: REGION_PADDINGLEFT1
+    }
+)
+
+globalTemplateOption region-paddingleft1neg (
+    templateType: region
+    name: -1
+    group: @region/region-padding-left
+    sequence: -1
+    appearance {
+        cssClasses: p-l-1-neg
+    }
+    advanced {
+        identifier: REGION_PADDINGLEFT1NEG
+    }
+)
+
+globalTemplateOption region-paddingleft2 (
+    templateType: region
+    name: 2
+    group: @region/region-padding-left
+    sequence: 2
+    appearance {
+        cssClasses: p-l-2
+    }
+    advanced {
+        identifier: REGION_PADDINGLEFT2
+    }
+)
+
+globalTemplateOption region-paddingleft2neg (
+    templateType: region
+    name: -2
+    group: @region/region-padding-left
+    sequence: -2
+    appearance {
+        cssClasses: p-l-2-neg
+    }
+    advanced {
+        identifier: REGION_PADDINGLEFT2NEG
+    }
+)
+
+globalTemplateOption region-paddingleft3 (
+    templateType: region
+    name: 3
+    group: @region/region-padding-left
+    sequence: 3
+    appearance {
+        cssClasses: p-l-3
+    }
+    advanced {
+        identifier: REGION_PADDINGLEFT3
+    }
+)
+
+globalTemplateOption region-paddingleft3neg (
+    templateType: region
+    name: -3
+    group: @region/region-padding-left
+    sequence: -3
+    appearance {
+        cssClasses: p-l-3-neg
+    }
+    advanced {
+        identifier: REGION_PADDINGLEFT3NEG
+    }
+)
+
+globalTemplateOption region-paddingleft4 (
+    templateType: region
+    name: 4
+    group: @region/region-padding-left
+    sequence: 4
+    appearance {
+        cssClasses: p-l-4
+    }
+    advanced {
+        identifier: REGION_PADDINGLEFT4
+    }
+)
+
+globalTemplateOption region-paddingleft4neg (
+    templateType: region
+    name: -4
+    group: @region/region-padding-left
+    sequence: -4
+    appearance {
+        cssClasses: p-l-4-neg
+    }
+    advanced {
+        identifier: REGION_PADDINGLEFT4NEG
+    }
+)
+
+globalTemplateOption region-paddingleft5 (
+    templateType: region
+    name: 5
+    group: @region/region-padding-left
+    sequence: 5
+    appearance {
+        cssClasses: p-l-5
+    }
+    advanced {
+        identifier: REGION_PADDINGLEFT5
+    }
+)
+
+globalTemplateOption region-paddingleft5neg (
+    templateType: region
+    name: -5
+    group: @region/region-padding-left
+    sequence: -5
+    appearance {
+        cssClasses: p-l-5-neg
+    }
+    advanced {
+        identifier: REGION_PADDINGLEFT5NEG
+    }
+)
+
+globalTemplateOption region-paddingright0 (
+    templateType: region
+    name: 0
+    group: @region/region-padding-right
+    sequence: 0
+    appearance {
+        cssClasses: p-r-0
+    }
+    advanced {
+        identifier: REGION_PADDINGRIGHT0
+    }
+)
+
+globalTemplateOption region-paddingright1 (
+    templateType: region
+    name: 1
+    group: @region/region-padding-right
+    sequence: 1
+    appearance {
+        cssClasses: p-r-1
+    }
+    advanced {
+        identifier: REGION_PADDINGRIGHT1
+    }
+)
+
+globalTemplateOption region-paddingright1neg (
+    templateType: region
+    name: -1
+    group: @region/region-padding-right
+    sequence: -1
+    appearance {
+        cssClasses: p-r-1-neg
+    }
+    advanced {
+        identifier: REGION_PADDINGRIGHT1NEG
+    }
+)
+
+globalTemplateOption region-paddingright2 (
+    templateType: region
+    name: 2
+    group: @region/region-padding-right
+    sequence: 2
+    appearance {
+        cssClasses: p-r-2
+    }
+    advanced {
+        identifier: REGION_PADDINGRIGHT2
+    }
+)
+
+globalTemplateOption region-paddingright2neg (
+    templateType: region
+    name: -2
+    group: @region/region-padding-right
+    sequence: -2
+    appearance {
+        cssClasses: p-r-2-neg
+    }
+    advanced {
+        identifier: REGION_PADDINGRIGHT2NEG
+    }
+)
+
+globalTemplateOption region-paddingright3 (
+    templateType: region
+    name: 3
+    group: @region/region-padding-right
+    sequence: 3
+    appearance {
+        cssClasses: p-r-3
+    }
+    advanced {
+        identifier: REGION_PADDINGRIGHT3
+    }
+)
+
+globalTemplateOption region-paddingright3neg (
+    templateType: region
+    name: -3
+    group: @region/region-padding-right
+    sequence: -3
+    appearance {
+        cssClasses: p-r-3-neg
+    }
+    advanced {
+        identifier: REGION_PADDINGRIGHT3NEG
+    }
+)
+
+globalTemplateOption region-paddingright4 (
+    templateType: region
+    name: 4
+    group: @region/region-padding-right
+    sequence: 4
+    appearance {
+        cssClasses: p-r-4
+    }
+    advanced {
+        identifier: REGION_PADDINGRIGHT4
+    }
+)
+
+globalTemplateOption region-paddingright4neg (
+    templateType: region
+    name: -4
+    group: @region/region-padding-right
+    sequence: -4
+    appearance {
+        cssClasses: p-r-4-neg
+    }
+    advanced {
+        identifier: REGION_PADDINGRIGHT4NEG
+    }
+)
+
+globalTemplateOption region-paddingright5 (
+    templateType: region
+    name: 5
+    group: @region/region-padding-right
+    sequence: 5
+    appearance {
+        cssClasses: p-r-5
+    }
+    advanced {
+        identifier: REGION_PADDINGRIGHT5
+    }
+)
+
+globalTemplateOption region-paddingright5neg (
+    templateType: region
+    name: -5
+    group: @region/region-padding-right
+    sequence: -5
+    appearance {
+        cssClasses: p-r-5-neg
+    }
+    advanced {
+        identifier: REGION_PADDINGRIGHT5NEG
+    }
+)
+
+globalTemplateOption region-paddingtop0 (
+    templateType: region
+    name: 0
+    group: @region/region-padding-top
+    sequence: 0
+    appearance {
+        cssClasses: p-t-0
+    }
+    advanced {
+        identifier: REGION_PADDINGTOP0
+    }
+)
+
+globalTemplateOption region-paddingtop1 (
+    templateType: region
+    name: 1
+    group: @region/region-padding-top
+    sequence: 1
+    appearance {
+        cssClasses: p-t-1
+    }
+    advanced {
+        identifier: REGION_PADDINGTOP1
+    }
+)
+
+globalTemplateOption region-paddingtop1neg (
+    templateType: region
+    name: -1
+    group: @region/region-padding-top
+    sequence: -1
+    appearance {
+        cssClasses: p-t-1-neg
+    }
+    advanced {
+        identifier: REGION_PADDINGTOP1NEG
+    }
+)
+
+globalTemplateOption region-paddingtop2 (
+    templateType: region
+    name: 2
+    group: @region/region-padding-top
+    sequence: 2
+    appearance {
+        cssClasses: p-t-2
+    }
+    advanced {
+        identifier: REGION_PADDINGTOP2
+    }
+)
+
+globalTemplateOption region-paddingtop2neg (
+    templateType: region
+    name: -2
+    group: @region/region-padding-top
+    sequence: -2
+    appearance {
+        cssClasses: p-t-2-neg
+    }
+    advanced {
+        identifier: REGION_PADDINGTOP2NEG
+    }
+)
+
+globalTemplateOption region-paddingtop3 (
+    templateType: region
+    name: 3
+    group: @region/region-padding-top
+    sequence: 3
+    appearance {
+        cssClasses: p-t-3
+    }
+    advanced {
+        identifier: REGION_PADDINGTOP3
+    }
+)
+
+globalTemplateOption region-paddingtop3neg (
+    templateType: region
+    name: -3
+    group: @region/region-padding-top
+    sequence: -3
+    appearance {
+        cssClasses: p-t-3-neg
+    }
+    advanced {
+        identifier: REGION_PADDINGTOP3NEG
+    }
+)
+
+globalTemplateOption region-paddingtop4 (
+    templateType: region
+    name: 4
+    group: @region/region-padding-top
+    sequence: 4
+    appearance {
+        cssClasses: p-t-4
+    }
+    advanced {
+        identifier: REGION_PADDINGTOP4
+    }
+)
+
+globalTemplateOption region-paddingtop4neg (
+    templateType: region
+    name: -4
+    group: @region/region-padding-top
+    sequence: -4
+    appearance {
+        cssClasses: p-t-4-neg
+    }
+    advanced {
+        identifier: REGION_PADDINGTOP4NEG
+    }
+)
+
+globalTemplateOption region-paddingtop5 (
+    templateType: region
+    name: 5
+    group: @region/region-padding-top
+    sequence: 5
+    appearance {
+        cssClasses: p-t-5
+    }
+    advanced {
+        identifier: REGION_PADDINGTOP5
+    }
+)
+
+globalTemplateOption region-paddingtop5neg (
+    templateType: region
+    name: -5
+    group: @region/region-padding-top
+    sequence: -5
+    appearance {
+        cssClasses: p-t-5-neg
+    }
+    advanced {
+        identifier: REGION_PADDINGTOP5NEG
+    }
+)
+
+globalTemplateOption depth-0 (
+    templateType: region
+    name: Depth 0
+    group: @region/shadow
+    sequence: 0
+    appearance {
+        cssClasses: z-depth-0
+    }
+    advanced {
+        identifier: DEPTH_0
+    }
+)
+
+globalTemplateOption depth-1 (
+    templateType: region
+    name: Depth 1
+    group: @region/shadow
+    sequence: 1
+    appearance {
+        cssClasses: z-depth-1
+    }
+    advanced {
+        identifier: DEPTH_1
+    }
+)
+
+globalTemplateOption depth-2 (
+    templateType: region
+    name: Depth 2
+    group: @region/shadow
+    sequence: 2
+    appearance {
+        cssClasses: z-depth-2
+    }
+    advanced {
+        identifier: DEPTH_2
+    }
+)
+
+globalTemplateOption depth-3 (
+    templateType: region
+    name: Depth 3
+    group: @region/shadow
+    sequence: 3
+    appearance {
+        cssClasses: z-depth-3
+    }
+    advanced {
+        identifier: DEPTH_3
+    }
+)
+
+globalTemplateOption depth-4 (
+    templateType: region
+    name: Depth 4
+    group: @region/shadow
+    sequence: 4
+    appearance {
+        cssClasses: z-depth-4
+    }
+    advanced {
+        identifier: DEPTH_4
+    }
+)
+
+globalTemplateOption depth-5 (
+    templateType: region
+    name: Depth 5
+    group: @region/shadow
+    sequence: 5
+    appearance {
+        cssClasses: z-depth-5
+    }
+    advanced {
+        identifier: DEPTH_5
+    }
+)
+
+globalTemplateOption amber-text (
+    templateType: region
+    name: Amber
+    group: @region/text-color-global
+    sequence: 1
+    appearance {
+        cssClasses: [
+            ma-colored-region
+            amber-text
+        ]
+    }
+    advanced {
+        identifier: AMBER_TEXT
+    }
+)
+
+globalTemplateOption blue-grey-text (
+    templateType: region
+    name: Blue Grey
+    group: @region/text-color-global
+    sequence: 2
+    appearance {
+        cssClasses: [
+            ma-colored-region
+            blue-grey-text
+        ]
+    }
+    advanced {
+        identifier: BLUE_GREY_TEXT
+    }
+)
+
+globalTemplateOption blue-text (
+    templateType: region
+    name: Blue
+    group: @region/text-color-global
+    sequence: 3
+    appearance {
+        cssClasses: [
+            ma-colored-region
+            blue-text
+        ]
+    }
+    advanced {
+        identifier: BLUE_TEXT
+    }
+)
+
+globalTemplateOption brown-text (
+    templateType: region
+    name: Brown
+    group: @region/text-color-global
+    sequence: 4
+    appearance {
+        cssClasses: [
+            ma-colored-region
+            brown-text
+        ]
+    }
+    advanced {
+        identifier: BROWN_TEXT
+    }
+)
+
+globalTemplateOption cyan-text (
+    templateType: region
+    name: Cyan
+    group: @region/text-color-global
+    sequence: 5
+    appearance {
+        cssClasses: [
+            ma-colored-region
+            cyan-text
+        ]
+    }
+    advanced {
+        identifier: CYAN_TEXT
+    }
+)
+
+globalTemplateOption deep-orange-text (
+    templateType: region
+    name: Deep Orange
+    group: @region/text-color-global
+    sequence: 6
+    appearance {
+        cssClasses: [
+            ma-colored-region
+            deep-orange-text
+        ]
+    }
+    advanced {
+        identifier: DEEP_ORANGE_TEXT
+    }
+)
+
+globalTemplateOption deep-purple-text (
+    templateType: region
+    name: Deep Deep Purple
+    group: @region/text-color-global
+    sequence: 7
+    appearance {
+        cssClasses: [
+            ma-colored-region
+            deep-purple-text
+        ]
+    }
+    advanced {
+        identifier: DEEP_PURPLE_TEXT
+    }
+)
+
+globalTemplateOption green-text (
+    templateType: region
+    name: Green
+    group: @region/text-color-global
+    sequence: 8
+    appearance {
+        cssClasses: [
+            ma-colored-region
+            green-text
+        ]
+    }
+    advanced {
+        identifier: GREEN_TEXT
+    }
+)
+
+globalTemplateOption grey-text (
+    templateType: region
+    name: Grey
+    group: @region/text-color-global
+    sequence: 9
+    appearance {
+        cssClasses: [
+            ma-colored-region
+            grey-text
+        ]
+    }
+    advanced {
+        identifier: GREY_TEXT
+    }
+)
+
+globalTemplateOption indigo-text (
+    templateType: region
+    name: Light Indigo
+    group: @region/text-color-global
+    sequence: 10
+    appearance {
+        cssClasses: [
+            ma-colored-region
+            indigo-text
+        ]
+    }
+    advanced {
+        identifier: INDIGO_TEXT
+    }
+)
+
+globalTemplateOption light-blue-text (
+    templateType: region
+    name: Light Blue
+    group: @region/text-color-global
+    sequence: 11
+    appearance {
+        cssClasses: [
+            ma-colored-region
+            light-blue-text
+        ]
+    }
+    advanced {
+        identifier: LIGHT_BLUE_TEXT
+    }
+)
+
+globalTemplateOption light-green-text (
+    templateType: region
+    name: Light Green
+    group: @region/text-color-global
+    sequence: 12
+    appearance {
+        cssClasses: [
+            ma-colored-region
+            light-green-text
+        ]
+    }
+    advanced {
+        identifier: LIGHT_GREEN_TEXT
+    }
+)
+
+globalTemplateOption lime-text (
+    templateType: region
+    name: Lime
+    group: @region/text-color-global
+    sequence: 13
+    appearance {
+        cssClasses: [
+            ma-colored-region
+            lime-text
+        ]
+    }
+    advanced {
+        identifier: LIME_TEXT
+    }
+)
+
+globalTemplateOption orange-text (
+    templateType: region
+    name: Light Orange
+    group: @region/text-color-global
+    sequence: 14
+    appearance {
+        cssClasses: [
+            ma-colored-region
+            orange-text
+        ]
+    }
+    advanced {
+        identifier: ORANGE_TEXT
+    }
+)
+
+globalTemplateOption pink-text (
+    templateType: region
+    name: Pink
+    group: @region/text-color-global
+    sequence: 15
+    appearance {
+        cssClasses: [
+            ma-colored-region
+            pink-text
+        ]
+    }
+    advanced {
+        identifier: PINK_TEXT
+    }
+)
+
+globalTemplateOption purple-text (
+    templateType: region
+    name: Purple
+    group: @region/text-color-global
+    sequence: 16
+    appearance {
+        cssClasses: [
+            ma-colored-region
+            purple-text
+        ]
+    }
+    advanced {
+        identifier: PURPLE_TEXT
+    }
+)
+
+globalTemplateOption red-text (
+    templateType: region
+    name: Red
+    group: @region/text-color-global
+    sequence: 17
+    appearance {
+        cssClasses: [
+            ma-colored-region
+            red-text
+        ]
+    }
+    advanced {
+        identifier: RED_TEXT
+    }
+)
+
+globalTemplateOption teal-text (
+    templateType: region
+    name: Teal
+    group: @region/text-color-global
+    sequence: 18
+    appearance {
+        cssClasses: [
+            ma-colored-region
+            teal-text
+        ]
+    }
+    advanced {
+        identifier: TEAL_TEXT
+    }
+)
+
+globalTemplateOption white (
+    templateType: region
+    name: White
+    group: @region/text-color-global
+    sequence: 19
+    appearance {
+        cssClasses: [
+            ma-colored-region
+            white-text
+        ]
+    }
+    advanced {
+        identifier: WHITE
+    }
+)
+
+globalTemplateOption yellow-text (
+    templateType: region
+    name: Yellow
+    group: @region/text-color-global
+    sequence: 20
+    appearance {
+        cssClasses: [
+            ma-colored-region
+            yellow-text
+        ]
+    }
+    advanced {
+        identifier: YELLOW_TEXT
+    }
+)
+
+globalTemplateOption title-amber-text (
+    templateType: region
+    name: Amber
+    group: @region/text-color-title
+    sequence: 1
+    appearance {
+        cssClasses: ma-region-title-amber-text
+    }
+    advanced {
+        identifier: TITLE_AMBER_TEXT
+    }
+)
+
+globalTemplateOption title-blue-grey-text (
+    templateType: region
+    name: Blue Grey
+    group: @region/text-color-title
+    sequence: 2
+    appearance {
+        cssClasses: ma-region-title-blue-grey-text
+    }
+    advanced {
+        identifier: TITLE_BLUE_GREY_TEXT
+    }
+)
+
+globalTemplateOption title-blue-text (
+    templateType: region
+    name: Blue
+    group: @region/text-color-title
+    sequence: 3
+    appearance {
+        cssClasses: ma-region-title-blue-text
+    }
+    advanced {
+        identifier: TITLE_BLUE_TEXT
+    }
+)
+
+globalTemplateOption title-brown-text (
+    templateType: region
+    name: Brown
+    group: @region/text-color-title
+    sequence: 4
+    appearance {
+        cssClasses: ma-region-title-brown-text
+    }
+    advanced {
+        identifier: TITLE_BROWN_TEXT
+    }
+)
+
+globalTemplateOption title-cyan-text (
+    templateType: region
+    name: Cyan
+    group: @region/text-color-title
+    sequence: 5
+    appearance {
+        cssClasses: ma-region-title-cyan-text
+    }
+    advanced {
+        identifier: TITLE_CYAN_TEXT
+    }
+)
+
+globalTemplateOption title-deep-orange-text (
+    templateType: region
+    name: Deep Orange
+    group: @region/text-color-title
+    sequence: 6
+    appearance {
+        cssClasses: ma-region-title-deep-orange-text
+    }
+    advanced {
+        identifier: TITLE_DEEP_ORANGE_TEXT
+    }
+)
+
+globalTemplateOption title-deep-purple-text (
+    templateType: region
+    name: Deep Deep Purple
+    group: @region/text-color-title
+    sequence: 7
+    appearance {
+        cssClasses: ma-region-title-deep-purple-text
+    }
+    advanced {
+        identifier: TITLE_DEEP_PURPLE_TEXT
+    }
+)
+
+globalTemplateOption title-green-text (
+    templateType: region
+    name: Green
+    group: @region/text-color-title
+    sequence: 8
+    appearance {
+        cssClasses: ma-region-title-green-text
+    }
+    advanced {
+        identifier: TITLE_GREEN_TEXT
+    }
+)
+
+globalTemplateOption title-grey-text (
+    templateType: region
+    name: Grey
+    group: @region/text-color-title
+    sequence: 9
+    appearance {
+        cssClasses: ma-region-title-grey-text
+    }
+    advanced {
+        identifier: TITLE_GREY_TEXT
+    }
+)
+
+globalTemplateOption title-indigo-text (
+    templateType: region
+    name: Light Indigo
+    group: @region/text-color-title
+    sequence: 10
+    appearance {
+        cssClasses: ma-region-title-indigo-text
+    }
+    advanced {
+        identifier: TITLE_INDIGO_TEXT
+    }
+)
+
+globalTemplateOption title-light-blue-text (
+    templateType: region
+    name: Light Blue
+    group: @region/text-color-title
+    sequence: 11
+    appearance {
+        cssClasses: ma-region-title-light-blue-text
+    }
+    advanced {
+        identifier: TITLE_LIGHT_BLUE_TEXT
+    }
+)
+
+globalTemplateOption title-light-green-text (
+    templateType: region
+    name: Light Green
+    group: @region/text-color-title
+    sequence: 12
+    appearance {
+        cssClasses: ma-region-title-light-green-text
+    }
+    advanced {
+        identifier: TITLE_LIGHT_GREEN_TEXT
+    }
+)
+
+globalTemplateOption title-lime-text (
+    templateType: region
+    name: Lime
+    group: @region/text-color-title
+    sequence: 13
+    appearance {
+        cssClasses: ma-region-title-lime-text
+    }
+    advanced {
+        identifier: TITLE_LIME_TEXT
+    }
+)
+
+globalTemplateOption title-orange-text (
+    templateType: region
+    name: Light Orange
+    group: @region/text-color-title
+    sequence: 14
+    appearance {
+        cssClasses: ma-region-title-orange-text
+    }
+    advanced {
+        identifier: TITLE_ORANGE_TEXT
+    }
+)
+
+globalTemplateOption title-pink-text (
+    templateType: region
+    name: Pink
+    group: @region/text-color-title
+    sequence: 15
+    appearance {
+        cssClasses: ma-region-title-pink-text
+    }
+    advanced {
+        identifier: TITLE_PINK_TEXT
+    }
+)
+
+globalTemplateOption title-purple-text (
+    templateType: region
+    name: Purple
+    group: @region/text-color-title
+    sequence: 16
+    appearance {
+        cssClasses: ma-region-title-purple-text
+    }
+    advanced {
+        identifier: TITLE_PURPLE_TEXT
+    }
+)
+
+globalTemplateOption title-red-text (
+    templateType: region
+    name: Red
+    group: @region/text-color-title
+    sequence: 17
+    appearance {
+        cssClasses: ma-region-title-red-text
+    }
+    advanced {
+        identifier: TITLE_RED_TEXT
+    }
+)
+
+globalTemplateOption title-teal-text (
+    templateType: region
+    name: Teal
+    group: @region/text-color-title
+    sequence: 18
+    appearance {
+        cssClasses: ma-region-title-teal-text
+    }
+    advanced {
+        identifier: TITLE_TEAL_TEXT
+    }
+)
+
+globalTemplateOption title-white (
+    templateType: region
+    name: White
+    group: @region/text-color-title
+    sequence: 19
+    appearance {
+        cssClasses: ma-region-title-white-text
+    }
+    advanced {
+        identifier: TITLE_WHITE
+    }
+)
+
+globalTemplateOption title-yellow-text (
+    templateType: region
+    name: Yellow
+    group: @region/text-color-title
+    sequence: 20
+    appearance {
+        cssClasses: ma-region-title-yellow-text
+    }
+    advanced {
+        identifier: TITLE_YELLOW_TEXT
+    }
+)
+
+globalTemplateOption title-center (
+    templateType: region
+    name: Center
+    group: @region/title-alignment
+    sequence: 2
+    appearance {
+        cssClasses: ma-region-title-center
+    }
+    advanced {
+        identifier: TITLE_CENTER
+    }
+)
+
+globalTemplateOption title-left (
+    templateType: region
+    name: Left
+    group: @region/title-alignment
+    sequence: 1
+    appearance {
+        cssClasses: ma-region-title-left
+    }
+    advanced {
+        identifier: TITLE_LEFT
+    }
+)
+
+globalTemplateOption title-right (
+    templateType: region
+    name: Right
+    group: @region/title-alignment
+    sequence: 3
+    appearance {
+        cssClasses: ma-region-title-right
+    }
+    advanced {
+        identifier: TITLE_RIGHT
+    }
+)
+

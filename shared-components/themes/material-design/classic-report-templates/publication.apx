@@ -1,0 +1,43 @@
+classicReportTemplate publication (
+    name: Publication
+    templateClass: standard
+    type: namedColumn
+    reportTemplate {
+        top:
+            ```html
+            <div class="item">
+                <div class="row">
+            ```
+        bottom:
+            ```html
+            </div>                       
+                </div>
+            ```
+    }
+    rowTemplate1 {
+        template:
+            ```html
+            <div class="col-xs-12  col-sm-6">
+                <div class="testimonial__quote" align="center">
+                    <img src="#IMG_SOURCE#" alt="#IMAGE_NAME#">
+                </div>
+            
+                <cite class="testimonial__author">#PUBLICATION_TITLE#</cite>
+            
+                <div class="testimonial__rating">
+                    <i class="fa  fa-star" style="color:#2B6828; font-weight:bold; font-family:'Oswald'">#PERIODE#</i>
+            
+                    <!--cover-->
+                    <div class="link">
+                        <a href="#FILE_SOURCE#" target="_blank" class="dlink">Télécharger</a>
+                    </div>
+                    <!--cover-->
+                </div>
+            </div>
+            ```
+    }
+    advanced {
+        identifier: PUBLICATION
+    }
+)
+

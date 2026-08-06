@@ -1,0 +1,30 @@
+classicReportTemplate comments (
+    name: Comments
+    templateClass: standard
+    type: namedColumn
+    reportTemplate {
+        top: <div class="post-comments">
+        bottom: "	</div>"
+    }
+    rowTemplate1 {
+        template:
+            ```html
+            <div class="media">
+                <div class="media-left">
+                    <img class="media-object" src="#IMG_SRC#" alt="">
+                </div>
+                <div class="media-body">
+                    <div class="media-heading">
+                        <h4>#USERNAME#</h4>
+                        <span class="time">#DATE_TIME_COMMENT#</span>
+                    </div>
+                    <p>#COMMENTS#</p>
+                </div>
+            		</div>
+            ```
+    }
+    advanced {
+        identifier: COMMENTS
+    }
+)
+

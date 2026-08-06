@@ -1,0 +1,111 @@
+theme material-design (
+    name: Material Design
+    themeNumber: 101
+    style {
+        currentThemeStyle: @default-copier
+    }
+    javaScript {
+        fileUrls: [
+            #IMAGE_PREFIX#themes/theme_42/1.1/js/modernizr-custom#MIN#.js?v=#APEX_VERSION#
+            #IMAGE_PREFIX#themes/theme_42/1.1/js/theme42#MIN#.js?v=#APEX_VERSION#
+            #THEME_IMAGES#js/apex-init#MIN#.js
+            #THEME_IMAGES#lib/materialize/js/materialize#MIN#.js
+            #THEME_IMAGES#js/materialize-init#MIN#.js
+            #THEME_DB_IMAGES#lightslider.min.js
+        ]
+    }
+    css {
+        fileUrls: [
+            #IMAGE_PREFIX#themes/theme_42/1.1/css/core/Alert.css
+            #THEME_DB_IMAGES#news-cards.css
+            #THEME_DB_IMAGES#sujets.css
+            #IMAGE_PREFIX#themes/theme_42/1.1/css/core/BadgeList.css
+            #IMAGE_PREFIX#themes/theme_42/1.1/css/core/Calendar.css
+            #IMAGE_PREFIX#themes/theme_42/1.1/css/core/ClassicCalendar.css
+            #IMAGE_PREFIX#themes/theme_42/1.1/css/core/Dialog.css
+            #IMAGE_PREFIX#themes/theme_42/1.1/css/core/jQuery-UI/jquery_ui_all_core.css
+            #IMAGE_PREFIX#themes/theme_42/1.1/css/core/jQuery-UI/jquery_ui_dialog.css
+            #IMAGE_PREFIX#themes/theme_42/1.1/css/core/jQuery-UI/jquery_ui_theme.css
+            #IMAGE_PREFIX#themes/theme_42/1.1/css/theme/vita/BadgeList.css
+            #IMAGE_PREFIX#themes/theme_42/1.1/css/theme/vita/Calendar.css
+            #IMAGE_PREFIX#themes/theme_42/1.1/css/theme/vita/ClassicCalendar.css
+            #IMAGE_PREFIX#themes/theme_42/1.1/css/theme/vita/jquery_ui_theme.css
+            #IMAGE_PREFIX#themes/theme_42/1.1/css/theme/vita/less-src/BadgeList.css
+            #IMAGE_PREFIX#themes/theme_42/1.1/css/theme/vita/less-src/u-Color.css
+        ]
+    }
+    componentDefaults {
+        page: @standard
+        navigationBarList: @navbar
+        navigationMenuListPosition: side
+        navigationMenuListTop: @navbar
+        navigationMenuListSide: @sidenav
+        loginPage: @clean
+        errorPage: @standard
+        printerFriendlyPage: @clean
+        breadcrumb: @standard
+        button: @text
+        defaultLabel: @standard
+        optionalLabel: @standard
+        requiredLabel: @standard
+        list: @collection
+        region: @standard
+        classicReport: @standard
+        headerToolbar: @standard
+        footerToolbar: @standard
+    }
+    regionDefaults {
+        breadcrumbs: @standard
+        charts: @standard
+        forms: @standard
+        lists: @standard
+        reports: @standard
+        wizards: @standard
+        interactiveReports: @standard
+    }
+    dialogDefaults {
+        dialogContentRegion: @standard
+        dialogButtonRegion: @standard
+        dialogPage: @modal
+    }
+    icons {
+        library: fontApex
+    }
+    description {
+        description: A Material Design Theme for Oracle APEX
+    }
+    advanced {
+        identifier: MATERIAL_DESIGN
+    }
+
+    style default (
+        name: Default
+        css {
+            fileUrls: #THEME_IMAGES#css/app#MIN#.css
+        }
+        themeRollerAttributes {
+            readOnly: true
+            inputParameterFileUrls: #THEME_IMAGES#less/themeroller.less
+        }
+        advanced {
+            endUserCanPick: true
+        }
+    )
+
+    style default-copier (
+        name: Default (Copier)
+        css {
+            fileUrls: #THEME_IMAGES#css/app#MIN#.css
+        }
+        themeRollerAttributes {
+            inputParameterFileUrls: #THEME_IMAGES#less/themeroller.less
+            outputCssFileUrl: #THEME_DB_IMAGES#17687249253890106.css
+            jsonConfig: {"customCSS":"","vars":{"@primary-color":"#000000","@dropdown-color":"#000000"}}
+        }
+        advanced {
+            endUserCanPick: true
+        }
+    )
+
+)
+

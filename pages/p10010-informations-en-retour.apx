@@ -1,0 +1,300 @@
+page 10010 (
+    name: Informations en retour
+    alias: INFORMATIONS-EN-RETOUR
+    title: Informations en retour
+    pageGroup: @administration
+    appearance {
+        pageMode: modalDialog
+        dialogTemplate: @modal-dialog
+    }
+    dialog {
+        width: 480
+        chained: false
+        resizable: false
+    }
+    navigation {
+        cursorFocus: doNotFocusCursor
+    }
+    css {
+        inline:
+            ```css
+            .feedback-positive, .feedback-negative, .feedback-neutral { padding: 8px; border-radius: 100%; background-color: white; margin: 4px; }
+            .feedback-positive { color: #4caf50; }
+            .feedback-neutral { color: #eb9f41; }
+            .feedback-negative { color: #f44336; }
+            ```
+    }
+    security {
+        formAutoComplete: false
+    }
+    config {
+        buildOption: @fonctionnalité-informations-en-retour
+    }
+
+    region région-d-élément-de-panneau (
+        name: Région d'élément de panneau
+        type: staticContent
+        layout {
+            sequence: 10
+            slot: contentBody
+        }
+        appearance {
+            template: @blank-with-attributes
+            templateOptions: [
+                #DEFAULT#
+                t-Form--stretchInputs
+            ]
+        }
+    )
+
+    region région-de-boutons (
+        name: Région de boutons
+        type: staticContent
+        layout {
+            sequence: 10
+            slot: dialogFooter
+        }
+        appearance {
+            template: @buttons-container
+            templateOptions: #DEFAULT#
+        }
+    )
+
+    pageItem P10010_APPLICATION_ID (
+        type: hidden
+        layout {
+            sequence: 10
+            region: @région-d-élément-de-panneau
+            slot: regionBody
+        }
+        source {
+            used: always
+        }
+        security {
+            encryptSessionState: false
+        }
+    )
+
+    pageItem P10010_FEEDBACK (
+        type: textarea
+        label {
+            label: Informations en retour
+            alignment: left
+        }
+        layout {
+            sequence: 40
+            region: @région-d-élément-de-panneau
+            slot: regionBody
+            alignment: left
+        }
+        appearance {
+            template: @optional-floating
+            width: 64
+            height: 4
+        }
+        validation {
+            maxLength: 4000
+        }
+        security {
+            encryptSessionState: false
+        }
+    )
+
+    pageItem P10010_PAGE_ID (
+        type: hidden
+        layout {
+            sequence: 20
+            region: @région-d-élément-de-panneau
+            slot: regionBody
+        }
+        source {
+            used: always
+        }
+        security {
+            encryptSessionState: false
+        }
+    )
+
+    pageItem P10010_RATING (
+        type: radioGroup
+        label {
+            label: Expérience
+            alignment: left
+        }
+        settings {
+            noOfCols: 3
+        }
+        lov {
+            type: sharedComponent
+            lov: @feedback-rating
+            displayExtraValues: false
+            displayNullValue: false
+        }
+        layout {
+            sequence: 35
+            region: @région-d-élément-de-panneau
+            slot: regionBody
+            alignment: left
+        }
+        appearance {
+            template: @optional-floating
+            templateOptions: [
+                #DEFAULT#
+                t-Form-fieldContainer--radioButtonGroup
+            ]
+        }
+        security {
+            encryptSessionState: false
+            escapeSpecialChars: false
+        }
+    )
+
+    pageItem P10010_USER_AGENT (
+        type: hidden
+        layout {
+            sequence: 30
+            region: @région-d-élément-de-panneau
+            slot: regionBody
+        }
+        source {
+            type: sqlQuerySingleValue
+            sqlQuery:
+                ```sql
+                select sys.owa_util.get_cgi_env('user-agent') x
+                from dual
+                ```
+            used: always
+        }
+        security {
+            encryptSessionState: false
+        }
+    )
+
+    button cancel (
+        buttonName: CANCEL
+        label: Annuler
+        layout {
+            sequence: 20
+            region: @région-de-boutons
+            slot: edit
+        }
+        appearance {
+            buttonTemplate: @text
+            templateOptions: #DEFAULT#
+        }
+        behavior {
+            action: definedByDynamicAction
+        }
+    )
+
+    button submit (
+        buttonName: SUBMIT
+        label: Soumettre les informations en retour
+        layout {
+            sequence: 10
+            region: @région-de-boutons
+            slot: create
+        }
+        appearance {
+            buttonTemplate: @text
+            hot: true
+            templateOptions: [
+                #DEFAULT#
+                t-Button--gapLeft
+            ]
+        }
+        behavior {
+            warnOnUnsavedChanges: doNotCheck
+        }
+    )
+
+    dynamicAction annuler-la-boîte-de-dialogue (
+        name: Annuler la boîte de dialogue
+        execution {
+            sequence: 10
+        }
+        when {
+            event: click
+            selectionType: button
+            button: @cancel
+        }
+
+        action native-dialog-cancel (
+            action: cancelDialog
+            execution {
+                sequence: 10
+                fireOnInit: false
+            }
+        )
+
+    )
+
+    validation au-moins-une-information-en-retour-doit-être-indiquée (
+        name: Au moins une information en retour doit être indiquée
+        execution {
+            sequence: 10
+        }
+        validation {
+            type: functionBodyReturningBoolean
+            plsqlFunctionBody:
+                ```plsql
+                if :P10010_FEEDBACK is null and :P10010_RATING is null then
+                    return false;
+                else
+                    return true;
+                end if;
+                ```
+        }
+        error {
+            errorMessage: Fournissez des informations en retour sur votre expérience.
+            displayLocation: inlineInNotification
+        }
+    )
+
+    process soumettre-les-informations-en-retour (
+        name: Soumettre les informations en retour
+        type: executeCode
+        source {
+            plsqlCode:
+                ```plsql
+                begin
+                apex_util.submit_feedback (
+                    p_comment              => :P10010_FEEDBACK,
+                    p_application_id       => :APP_ID,
+                    p_page_id              => :P10010_PAGE_ID,
+                    p_rating               => :P10010_RATING
+                
+                 );
+                end;
+                ```
+        }
+        execution {
+            sequence: 10
+        }
+        successMessage {
+            successMessage: Informations en retour soumises
+        }
+        advanced {
+            executionMappingIdentifier: 206059689929503689
+        }
+        serverSideCondition {
+            whenButtonPressed: @submit
+        }
+    )
+
+    branch (
+        name: succès
+        execution {
+            sequence: 10
+        }
+        behavior {
+            target: {
+                page: 10011
+                action: resetPagination
+                successMessage: false
+            }
+        }
+    )
+
+)
+

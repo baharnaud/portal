@@ -1,0 +1,386 @@
+pageTemplate standard (
+    name: Standard
+    templateClass: oneLevelTabsWithSidebar
+    templateOptions {
+        default: [
+            main-container
+            page-navbar-fixed
+        ]
+    }
+    page {
+        header:
+            ```html
+            <!DOCTYPE html>
+            <html class="no-js #RTL_CLASS# page-&APP_PAGE_ID. app-&APP_ALIAS." lang="&BROWSER_LANGUAGE." #TEXT_DIRECTION#>
+            <head>
+              <title>#TITLE#</title>
+            
+              <!-- Meta -->
+              <meta http-equiv="x-ua-compatible" content="IE=edge" />
+              <meta charset="utf-8">
+              <meta name="author" content="Vincent Morneau">
+              <meta name="description" content="Material Design Theme for APEX">
+              <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            
+              #APEX_CSS#
+              #THEME_CSS#
+              #TEMPLATE_CSS#
+              #THEME_STYLE_CSS#
+              #APPLICATION_CSS#
+              #PAGE_CSS#
+              #FAVICONS#
+              #HEAD#
+            </head>
+            <body id="#PAGE_STATIC_ID#" class="#PAGE_CSS_CLASSES#" #TEXT_DIRECTION# #ONLOAD#>
+            ```
+        body:
+            ```html
+            #FORM_OPEN#
+            
+            <!-- Item Container -->
+            #REGION_POSITION_01#
+            
+            <!-- Navbar & Sidenav -->
+            <header>
+              <div class="top-nav-wrapper">
+                <nav class="top-nav nav-extended">
+                  <div class="nav-wrapper main-nav-wrapper m-l-1">
+                    <a href="#" id="app-sidenav-trigger" class="sidenav-trigger button-collapse show-on-large hide" data-target="app-sidenav" title="#EXPAND_COLLAPSE_NAV_LABEL#">
+                      <i class="fa fa-navicon left" aria-hidden="true"></i>
+                    </a>
+                    <a href="#HOME_LINK#" class="brand-logo ma-responsive-text">#LOGO#</a>
+                      
+                    #NAVIGATION_BAR#
+                      &SLOGAN.
+                    #TOP_GLOBAL_NAVIGATION_LIST#
+                  </div>
+                    
+                  <div class="nav-wrapper search-nav-wrapper hide">
+                    <!-- Search Bar Start -->
+                    #REGION_POSITION_05#
+                    <!-- Search Bar END -->
+                  </div>
+                  <!-- Breadcrumbs Start -->
+                  #REGION_POSITION_03#
+                  <!-- Breadcrumbs End -->
+                  <div class="nav-content">
+                    #REGION_POSITION_02#
+                  </div>
+                </nav>
+              </div>
+              <!-- Side nav -->
+              #SIDE_GLOBAL_NAVIGATION_LIST#
+            </header>
+            
+            <!-- Content -->
+            <main>
+              <div class="ma-main-container">
+                <div class="row">
+                  <div class="ma-body-column-css-classes">
+                    #BODY#
+                  </div>
+            
+                  <!-- Region Display Selector -->
+                  #REGION_POSITION_04#
+                </div>
+              </div>
+            </main>
+            
+            <!-- Footer -->
+            <footer class="page-footer">
+              <div class="container">
+                <!-- Footer Top -->
+                #REGION_POSITION_07#
+              </div>
+            
+              <!-- Footer Bottom -->
+              <div class="footer-copyright">
+                <div class="container">
+                  <div class="version">#APP_VERSION#</div>
+                  <div class="customize right">#CUSTOMIZE#</div>
+                  <div class="screenreader right">#SCREEN_READER_TOGGLE#</div>
+                </div>
+              </div>
+            </footer>
+            
+            <div id="ma-notification-container">
+            #SUCCESS_MESSAGE##NOTIFICATION_MESSAGE##GLOBAL_NOTIFICATION#
+            </div>
+            
+            #FORM_CLOSE#
+            ```
+        footer:
+            ```html
+            #FORM_CLOSE#
+            #DEVELOPER_TOOLBAR#
+            #APEX_JAVASCRIPT#
+            #GENERATED_CSS#
+            #THEME_JAVASCRIPT#
+            #TEMPLATE_JAVASCRIPT#
+            #APPLICATION_JAVASCRIPT#
+            #PAGE_JAVASCRIPT#
+            #GENERATED_JAVASCRIPT#
+            <script type="text/javascript" src="#THEME_IMAGES#js/finalize#MIN#.js"></script>
+            </body>
+            </html>
+            ```
+    }
+    javaScript {
+        executeWhenPageLoads:
+            ```javascript-browser
+            jQuery('.messageBar').marquee({
+                //speed in milliseconds of the marquee
+                duration: 10000,
+                //gap in pixels between the tickers
+                gap: 50,
+                //time in milliseconds before the marquee will start animating
+                delayBeforeStart: 0,
+                //'left' or 'right'
+                direction: 'left',
+                //true or false - should the marquee be duplicated to show an effect of continues flow
+                duplicated: true
+                
+            });
+            ```
+    }
+    css {
+        inline:
+            ```css
+            .messageBar {
+               font-size: 1rem;
+               overflow: hidden;  
+               background: rgba(0,0,0,0); 
+               margin : 0px 400px 0px 550px;
+            }
+            
+            @media only screen and (max-width: 640px) {
+              .messageBar {
+                font-size: 1.5rem;
+                padding: 0;
+              }
+            }
+            
+            ```
+    }
+    subtemplate {
+        successMessage:
+            ```html
+            <div class="t-Body-alert">
+              <div class="t-Alert t-Alert--defaultIcons t-Alert--success t-Alert--horizontal t-Alert--page t-Alert--colorBG" id="t_Alert_Success" role="alert">
+                <div class="t-Alert-wrap">
+                  <div class="t-Alert-icon">
+                  <i aria-hidden="true" class="fa fa-check"></i>
+                  </div>
+                  <div class="t-Alert-content">
+                    <div class="t-Alert-header">
+                      <span class="t-Alert-title">#SUCCESS_MESSAGE#</span>
+                    </div>
+                  </div>
+                  <div class="t-Alert-buttons">
+                    <button class="t-Button t-Button--noUI t-Button--icon t-Button--closeAlert btn-flat" type="button" title="#CLOSE_NOTIFICATION#"><i aria-hidden="true" class="fa fa-times panel-close"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            ```
+        notification:
+            ```html
+            <div class="t-Body-alert">
+              <div class="t-Alert t-Alert--defaultIcons t-Alert--warning t-Alert--horizontal t-Alert--page" id="t_Alert_Success" role="alert">
+                <div class="t-Alert-wrap">
+                  <div class="t-Alert-icon">
+                  <i aria-hidden="true" class="fa fa-warning"></i>
+                  </div>
+                  <div class="t-Alert-content">
+                    <div class="t-Alert-header">
+                      <span class="t-Alert-title">#MESSAGE#</span>
+                    </div>
+                  </div>
+                  <div class="t-Alert-buttons">
+                    <button class="t-Button t-Button--noUI t-Button--icon t-Button--closeAlert btn-flat" type="button" title="#CLOSE_NOTIFICATION#"><i aria-hidden="true" class="fa fa-times panel-close"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            ```
+    }
+    layout {
+        maxColumns: 12
+        alwaysUseMaxColumns: true
+        containerTemplate: <div class="ma-container">#ROWS#</div>
+        rowTemplate: <div class="row">#COLUMNS#</div>
+        columnTemplate: <div class="col s12 m#COLUMN_SPAN_NUMBER# #CSS_CLASSES#" #ATTRIBUTES#>#CONTENT#</div>
+    }
+    positions {
+        breadcrumbPosition: breadcrumbs
+    }
+    errorPage {
+        template:
+            ```html
+            <div class="row">
+              <div class="col s12">
+                <div class="card">
+                  <div class="card-image center">
+                    <i class="fa fa-warning fa-5x amber-text text-lighten-1 m-t-1"></i>
+                  </div>
+                  <div class="card-content grey-text">
+                    <p class="m-t-1">#MESSAGE#</p>
+                    <hr class="m-x-4 m-y-2">
+                    <p class="m-t-1">#ADDITIONAL_INFO#</p>
+                    <p class="m-t-1">#TECHNICAL_INFO#</p>
+                  </div>
+                  <div class="card-action">
+                    <a href="#BACK_LINK#" class="btn-flat waves-effect waves-light">#OK#</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            ```
+    }
+    advanced {
+        identifier: STANDARD
+    }
+
+    templateOption container (
+        name: Wrap Page in a Container
+        sequence: 1
+        appearance {
+            cssClasses: main-container
+        }
+        advanced {
+            identifier: CONTAINER
+        }
+    )
+
+    templateOption navigation-bar-fixed (
+        name: Navigation Bar Fixed
+        sequence: 3
+        appearance {
+            cssClasses: page-navbar-fixed
+        }
+        advanced {
+            identifier: NAVIGATION_BAR_FIXED
+        }
+    )
+
+    templateOption side-navigation-fixed (
+        name: Side Navigation Fixed
+        sequence: 4
+        appearance {
+            cssClasses: ma-sidenav-fixed
+        }
+        advanced {
+            identifier: SIDE_NAVIGATION_FIXED
+        }
+    )
+
+    templateOption page-logo-alignment-center (
+        name: Center
+        group: @page/page-logo-alignment
+        sequence: 20
+        appearance {
+            cssClasses: page-center-logo
+        }
+        advanced {
+            identifier: PAGE_LOGO_ALIGNMENT_CENTER
+        }
+    )
+
+    templateOption page-logo-alignment-left (
+        name: Left
+        group: @page/page-logo-alignment
+        sequence: 10
+        appearance {
+            cssClasses: page-left-logo
+        }
+        advanced {
+            identifier: PAGE_LOGO_ALIGNMENT_LEFT
+        }
+    )
+
+    templateOption page-navbar-style-standard (
+        name: Standard
+        group: @page/page-navbar-style
+        sequence: 10
+        appearance {
+            cssClasses: ma-page-navbar--standard
+        }
+        advanced {
+            identifier: PAGE_NAVBAR_STYLE_STANDARD
+        }
+    )
+
+    templateOption page-navbar-style-transparent (
+        name: Transparent
+        group: @page/page-navbar-style
+        sequence: 20
+        appearance {
+            cssClasses: ma-page-navbar--transparent
+        }
+        advanced {
+            identifier: PAGE_NAVBAR_STYLE_TRANSPARENT
+        }
+    )
+
+    slot breadcrumbs (
+        name: Breadcrumbs
+        staticId: REGION_POSITION_03
+        gridLayout {
+            gridSupport: false
+        }
+    )
+
+    slot extendedNavbar (
+        name: Extended Navbar
+        staticId: REGION_POSITION_02
+        gridLayout {
+            gridSupport: false
+        }
+    )
+
+    slot footer (
+        name: Footer
+        staticId: REGION_POSITION_07
+        gridLayout {
+            maxFixedColumns: 12
+        }
+    )
+
+    slot itemContainer (
+        name: Item Container
+        staticId: REGION_POSITION_01
+        gridLayout {
+            gridSupport: false
+        }
+    )
+
+    slot pageBody (
+        name: Page Body
+        staticId: BODY
+        supports {
+            items: true
+            buttons: true
+        }
+        gridLayout {
+            maxFixedColumns: 12
+        }
+    )
+
+    slot regionDisplaySelector (
+        name: Region Display Selector
+        staticId: REGION_POSITION_04
+        gridLayout {
+            gridSupport: false
+        }
+    )
+
+    slot searchBar (
+        name: Search Bar
+        staticId: REGION_POSITION_05
+        gridLayout {
+            gridSupport: false
+        }
+    )
+
+)
+

@@ -1,0 +1,46 @@
+fieldTemplate image (
+    name: Image
+    templateClass: custom2
+    templateOptions {
+        default: item-image-responsive
+    }
+    label {
+        before: <label class="hide">
+        after: </label>
+    }
+    fieldContainer {
+        beforeLabelAndItem: <div id="#CURRENT_ITEM_NAME#_CONTAINER" class="#ITEM_CSS_CLASSES#">
+        afterLabelAndItem:
+            ```html
+            </div>
+            
+            ```
+    }
+    advanced {
+        identifier: IMAGE
+    }
+
+    templateOption image-circle (
+        name: Image Circle
+        sequence: 1
+        appearance {
+            cssClasses: item-image-circle
+        }
+        advanced {
+            identifier: IMAGE_CIRCLE
+        }
+    )
+
+    templateOption image-responsive (
+        name: Image Responsive
+        sequence: 3
+        appearance {
+            cssClasses: item-image-responsive
+        }
+        advanced {
+            identifier: IMAGE_RESPONSIVE
+        }
+    )
+
+)
+

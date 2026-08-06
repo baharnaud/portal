@@ -1,0 +1,110 @@
+classicReportTemplate standard (
+    name: Standard
+    templateClass: standard
+    type: genericColumns
+    templateOptions {
+        default: borderless
+    }
+    reportTemplate {
+        top: <table id="report_#REGION_STATIC_ID#" class="#COMPONENT_CSS_CLASSES#" #REPORT_ATTRIBUTES#>
+        bottom:
+            ```html
+            </tbody>
+            </table>
+            <tfoot class="right">
+                <div>#EXTERNAL_LINK##CSV_LINK#</div>
+                <div class="report-pagination">#PAGINATION#</div>
+            </tfoot>
+            ```
+    }
+    columnTemplates {
+        beforeHeading:
+            ```html
+            <thead>
+            <tr>
+            ```
+        heading: <th data-field="#COLUMN_HEADER_NAME#" #ALIGNMENT# #COLUMN_WIDTH# id="#COLUMN_HEADER_NAME#">#COLUMN_HEADER#</th>
+        afterHeading:
+            ```html
+            </tr>
+            </thead>
+            <tbody>
+            ```
+        beforeEachRow: <tr>
+    }
+    columnTemplate1 {
+        template: <td headers="#COLUMN_HEADER_NAME#" data-label="#COLUMN_HEADER#" #ALIGNMENT#>#COLUMN_VALUE#</td>
+    }
+    rowTemplates {
+        afterEachRow: </tr>
+    }
+    pagination {
+        template: <span class="instructiontext">#TEXT#</span>
+        nextPage: <a href="#LINK#"><i class="fa fa-angle-right" aria-hidden="true">next</i></a>
+        previousPage: <a href="#LINK#"><i class="fa fa-angle-left" aria-hidden="true">before</i></a>
+        nextSet: <a href="#LINK#"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+        previousSet: <a href="#LINK#"><i class="fa fa-angle-double-left" aria-hidden="true"></i></a>
+    }
+    advanced {
+        identifier: STANDARD
+    }
+
+    templateOption borderless (
+        name: Borderless
+        sequence: 1
+        appearance {
+            cssClasses: borderless
+        }
+        advanced {
+            identifier: BORDERLESS
+        }
+    )
+
+    templateOption hoverable (
+        name: Hoverable
+        sequence: 3
+        appearance {
+            cssClasses: highlight
+        }
+        advanced {
+            identifier: HOVERABLE
+        }
+    )
+
+    templateOption striped (
+        name: Striped
+        sequence: 2
+        appearance {
+            cssClasses: striped
+        }
+        advanced {
+            identifier: STRIPED
+        }
+    )
+
+    templateOption responsive (
+        name: Style 1
+        group: @report/responsive-behavior
+        sequence: 1
+        appearance {
+            cssClasses: responsive-table
+        }
+        advanced {
+            identifier: RESPONSIVE
+        }
+    )
+
+    templateOption style-2 (
+        name: Style 2
+        group: @report/responsive-behavior
+        sequence: 2
+        appearance {
+            cssClasses: table-responsive
+        }
+        advanced {
+            identifier: STYLE_2
+        }
+    )
+
+)
+

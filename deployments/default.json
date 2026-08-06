@@ -1,0 +1,11 @@
+{
+  "app" : {
+    "id" : 104,
+    "databaseSession" : {
+      "parsingSchema" : "RHUSER"
+    },
+    "runtime" : {
+      "debugging" : true
+    }
+  }
+}

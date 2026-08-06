@@ -1,0 +1,44 @@
+classicReportTemplate homepage-news (
+    name: HomePage News
+    templateClass: standard
+    type: namedColumn
+    reportTemplate {
+        top:
+            ```html
+            <!--<section id="one" class="wrapper style1">-->
+                <div class="inner">
+            ```
+        bottom:
+            ```html
+                </div>
+            <!--</section>-->
+                    
+            
+            ```
+    }
+    rowTemplate1 {
+        template:
+            ```html
+            <article class="feature">
+                <span class="image"><a href="#LINK#" alt=""><img src="#IMG_SRC#" alt="#TITLE#"/></a></span>
+                <div class="content">
+                    <h2><a href="#LINK#" alt="">#TITLE#</a></h2>
+                    <p>
+                        	<span class="updated">#DATEPUB#</span> 	| 	<a href="#CAT-LINK#" rel="tag">#CAT_ARTICLE#</a> 	| 	
+                        <a class="comments-link" href="#">		2 		<span aria-hidden="true" class="fa fa-comments"></span></a>
+                    </p>
+                    <p>#DESCRIPTION#</p>
+                    <ul class="actions">
+                        <li>
+                            <a href="#LINK#" class="button alt">#LINK_LABEL#</a>
+                        </li>
+                    </ul>
+                </div>
+            </article>
+            ```
+    }
+    advanced {
+        identifier: HOMEPAGE_NEWS
+    }
+)
+

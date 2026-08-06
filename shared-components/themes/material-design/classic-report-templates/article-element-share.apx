@@ -1,0 +1,43 @@
+classicReportTemplate article-element-share (
+    name: Article_element_share
+    templateClass: standard
+    type: namedColumn
+    reportTemplate {
+        top: " "
+        bottom: " "
+    }
+    rowTemplate1 {
+        template:
+            ```html
+            <!-- blog-post -->
+            <div class="blog-post hentry item-post">
+                    <!-- POST FOOTER -->
+                    <div class="post-footer">
+                        <!-- POST SHARE -->
+                        <div class="post-share">
+                            <ul class="share-links social social-color">
+                                <li class="facebook"><a class="facebook" href="" onclick="" rel="nofollow"><span>Facebook</span></a></li>
+            
+                                <li class="twitter"><a class="twitter" href="" onclick="" rel="nofollow"><span>Twitter</span></a></li>
+            
+                                <li class="gplus"><a class="gplus" href="" onclick="" rel="nofollow"></a></li>
+            
+                                <li class="linkedin"><a class="linkedin" href="" onclick="" rel="nofollow"></a></li>
+            
+                                <li class="whatsapp whatsapp-mobile"><a class="whatsapp" href="" rel="nofollow" target="_blank"></a></li>
+            
+                                <li class="email"><a class="email" href="" onclick="" rel="nofollow"></a></li>
+                            </ul>
+                        </div>
+                        <!-- POST SHARE -->
+                    </div>
+                    <!-- POST FOOTER END-->
+            </div>
+            <!-- blog-post -->
+            ```
+    }
+    advanced {
+        identifier: ARTICLE_ELEMENT_SHARE
+    }
+)
+

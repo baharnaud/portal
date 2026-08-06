@@ -1,0 +1,44 @@
+classicReportTemplate card-with-over-state (
+    name: Card With Over State
+    templateClass: standard
+    type: namedColumn
+    reportTemplate {
+        top: <div id="article" style="position: relative">
+        bottom: </div>
+    }
+    rowTemplate1 {
+        template:
+            ```html
+            <div class="blog-card spring-fever" style="background: url(#BG_IMG#); background-repeat: no-repeat; background-position: center; background-size: cover;">
+              <div class="title-content">
+                <h3><a href="#">#TITLE#</a></h3>
+                <hr/>
+              </div>
+              <!-- /.title-content -->
+            
+              <div class="card-info">
+                #SHORT_DESCRIPTION#
+                <a href="#">Read Article<span class="licon icon-arr icon-black"></span></a>
+              </div>
+              <!-- /.card-info -->
+            
+              <div class="utility-info">
+                <ul class="utility-list">
+                  <li class="comments fa #ICON_COMMENT#">&nbsp;&nbsp;#COUNT_COMMENT#</li>
+                  <li class="date fa #ICON_DATE#">&nbsp;&nbsp;#PUBLISH_DATE#</li>
+                </ul>
+              </div>
+              <!-- /.utility-info -->
+            
+              <!-- overlays -->
+              <div class="gradient-overlay"></div>
+              <div class="color-overlay"></div>
+            </div>
+            <!-- /.blog-card -->
+            ```
+    }
+    advanced {
+        identifier: CARD_WITH_OVER_STATE
+    }
+)
+

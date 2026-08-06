@@ -1,0 +1,442 @@
+page 10014 (
+    name: Informations en retour
+    alias: INFORMATIONS-EN-RETOUR1
+    title: Informations en retour
+    pageGroup: @administration
+    appearance {
+        pageMode: modalDialog
+        dialogTemplate: @modal-dialog
+    }
+    dialog {
+        chained: false
+        resizable: false
+    }
+    navigation {
+        cursorFocus: doNotFocusCursor
+    }
+    javaScript {
+        functionAndGlobalVariableDeclaration: var htmldb_delete_message='"DELETE_CONFIRM_MSG"';
+    }
+    css {
+        inline:
+            ```css
+            /* Color feedback rating icons */
+            .feedback-positive { color: #4caf50; }
+            .feedback-neutral { color: #eb9f41; }
+            .feedback-negative { color: #f44336; }
+            ```
+    }
+    security {
+        authorizationScheme: @droits-d-administration
+        pageAccessProtection: argumentsMustHaveChecksum
+        formAutoComplete: false
+    }
+    config {
+        buildOption: @fonctionnalité-informations-en-retour
+    }
+
+    region région-d-élément-de-panneau (
+        name: Région d'élément de panneau
+        type: staticContent
+        layout {
+            sequence: 10
+            slot: contentBody
+        }
+        appearance {
+            template: @blank-with-attributes
+            templateOptions: [
+                #DEFAULT#
+                t-Form--stretchInputs
+            ]
+        }
+    )
+
+    region région-de-boutons (
+        name: Région de boutons
+        type: staticContent
+        layout {
+            sequence: 10
+            slot: dialogFooter
+        }
+        appearance {
+            template: @buttons-container
+            templateOptions: #DEFAULT#
+        }
+    )
+
+    pageItem P10014_FEEDBACK (
+        type: displayOnly
+        label {
+            label: Informations en retour
+            alignment: left
+        }
+        layout {
+            sequence: 50
+            region: @région-d-élément-de-panneau
+            slot: regionBody
+            alignment: left
+        }
+        appearance {
+            template: @optional-floating
+        }
+        security {
+            encryptSessionState: false
+        }
+    )
+
+    pageItem P10014_FEEDBACK_STATUS (
+        type: selectList
+        label {
+            label: Statut
+            alignment: left
+        }
+        lov {
+            type: sharedComponent
+            lov: @feedback-status
+            displayExtraValues: false
+            displayNullValue: false
+        }
+        layout {
+            sequence: 70
+            region: @région-d-élément-de-panneau
+            slot: regionBody
+            alignment: left
+        }
+        appearance {
+            template: @optional-floating
+        }
+        security {
+            encryptSessionState: false
+        }
+    )
+
+    pageItem P10014_FILED (
+        type: displayOnly
+        label {
+            label: Enregistré
+            alignment: left
+        }
+        layout {
+            sequence: 30
+            region: @région-d-élément-de-panneau
+            slot: regionBody
+            alignment: left
+            startNewRow: false
+        }
+        appearance {
+            template: @optional-floating
+        }
+        security {
+            encryptSessionState: false
+        }
+    )
+
+    pageItem P10014_ID (
+        type: hidden
+        layout {
+            sequence: 10
+            region: @région-d-élément-de-panneau
+            slot: regionBody
+        }
+        security {
+            encryptSessionState: false
+        }
+    )
+
+    pageItem P10014_PAGE_ID (
+        type: displayOnly
+        label {
+            label: Page
+            alignment: left
+        }
+        layout {
+            sequence: 20
+            region: @région-d-élément-de-panneau
+            slot: regionBody
+            alignment: left
+        }
+        appearance {
+            template: @optional-floating
+        }
+        security {
+            encryptSessionState: false
+        }
+    )
+
+    pageItem P10014_RATING_ICON (
+        type: displayOnly
+        label {
+            label: Evaluation
+            alignment: left
+        }
+        settings {
+            format: htmlUnsafe
+        }
+        layout {
+            sequence: 40
+            region: @région-d-élément-de-panneau
+            slot: regionBody
+            alignment: left
+            startNewRow: false
+        }
+        appearance {
+            template: @optional-floating
+        }
+        security {
+            encryptSessionState: false
+        }
+    )
+
+    pageItem P10014_RESPONSE (
+        type: textarea
+        label {
+            label: Réponse
+            alignment: left
+        }
+        layout {
+            sequence: 60
+            region: @région-d-élément-de-panneau
+            slot: regionBody
+            alignment: left
+        }
+        appearance {
+            template: @optional-floating
+            width: 64
+            height: 4
+        }
+        validation {
+            maxLength: 4000
+        }
+        security {
+            encryptSessionState: false
+        }
+    )
+
+    pageItem P10014_USER_AGENT (
+        type: displayOnly
+        label {
+            label: Agent utilisateur
+            alignment: left
+        }
+        layout {
+            sequence: 100
+            region: @région-d-élément-de-panneau
+            slot: regionBody
+            alignment: left
+        }
+        appearance {
+            template: @optional-floating
+        }
+        security {
+            encryptSessionState: false
+        }
+    )
+
+    button cancel (
+        buttonName: CANCEL
+        label: Annuler
+        layout {
+            sequence: 20
+            region: @région-de-boutons
+            slot: edit
+        }
+        appearance {
+            buttonTemplate: @text
+            templateOptions: #DEFAULT#
+        }
+        behavior {
+            action: definedByDynamicAction
+        }
+    )
+
+    button delete (
+        buttonName: DELETE
+        label: Supprimer
+        layout {
+            sequence: 30
+            region: @région-de-boutons
+            slot: edit
+        }
+        appearance {
+            buttonTemplate: @text
+            templateOptions: [
+                #DEFAULT#
+                t-Button--danger
+                t-Button--simple
+            ]
+        }
+        behavior {
+            action: redirectUrl
+            targetUrl: javascript:apex.confirm(htmldb_delete_message,'DELETE');
+            warnOnUnsavedChanges: doNotCheck
+            databaseAction: delete
+        }
+        serverSideCondition {
+            type: itemIsNotNull
+            item: P10014_ID
+        }
+    )
+
+    button save (
+        buttonName: SAVE
+        label: Appliquer les modifications
+        layout {
+            sequence: 10
+            region: @région-de-boutons
+            slot: create
+        }
+        appearance {
+            buttonTemplate: @text
+            hot: true
+            templateOptions: [
+                #DEFAULT#
+                t-Button--gapLeft
+            ]
+        }
+        behavior {
+            warnOnUnsavedChanges: doNotCheck
+        }
+    )
+
+    dynamicAction annuler-la-boîte-de-dialogue (
+        name: Annuler la boîte de dialogue
+        execution {
+            sequence: 10
+        }
+        when {
+            event: click
+            selectionType: button
+            button: @cancel
+        }
+
+        action native-dialog-cancel (
+            action: cancelDialog
+            execution {
+                sequence: 10
+                fireOnInit: false
+            }
+        )
+
+    )
+
+    process charger-les-données (
+        name: Charger les données
+        type: executeCode
+        source {
+            plsqlCode:
+                ```plsql
+                for c1 in (
+                   select page_id,
+                          page_name,
+                          case feedback_rating
+                                when 1 then '<span class="fa fa-frown-o feedback-negative" aria-hidden="true" title="Négatif"></span>' 
+                                when 2 then '<span class="fa fa-emoji-neutral feedback-neutral" aria-hidden="true" title="Neutre"></span>'  
+                                when 3 then '<span class="fa fa-smile-o feedback-positive" aria-hidden="true" title="Positif"></span>' 
+                                end rating_icon,
+                          lower(created_by) || ' - ' || apex_util.get_since(created_on) filed,
+                          feedback,
+                          public_response,
+                          feedback_status,
+                          http_user_agent
+                     from apex_team_feedback
+                    where feedback_id = :P10014_ID
+                ) loop
+                   :P10014_PAGE_ID := c1.page_id||'. '||c1.page_name;
+                   :P10014_FILED := c1.filed;
+                   :P10014_RATING_ICON := c1.rating_icon;
+                   :P10014_FEEDBACK := c1.feedback;
+                   :P10014_RESPONSE := c1.public_response;
+                   :P10014_FEEDBACK_STATUS := c1.feedback_status;
+                   :P10014_USER_AGENT := c1.http_user_agent;
+                end loop;
+                ```
+        }
+        execution {
+            sequence: 10
+            point: afterHeader
+        }
+        advanced {
+            executionMappingIdentifier: 206070235029503700
+        }
+    )
+
+    process e-property-button-action-lov-reset-d (
+        name: E.PROPERTY.BUTTON_ACTION.LOV.RESET.D
+        type: clearSessionState
+        execution {
+            sequence: 40
+        }
+        advanced {
+            executionMappingIdentifier: 206071479347503701
+        }
+        serverSideCondition {
+            whenButtonPressed: @delete
+        }
+    )
+
+    process fermer-la-boîte-de-dialogue (
+        name: Fermer la boîte de dialogue
+        type: closeDialog
+        settings {
+            showSuccessMessages: false
+        }
+        execution {
+            sequence: 50
+        }
+        advanced {
+            executionMappingIdentifier: 206071809864503701
+        }
+    )
+
+    process mettre-à-jour (
+        name: Mettre à jour
+        type: executeCode
+        source {
+            plsqlCode:
+                ```plsql
+                apex_util.reply_to_feedback (
+                    p_feedback_id        => :P10014_ID,
+                    p_status             => :P10014_FEEDBACK_STATUS,
+                    p_public_response    => :P10014_RESPONSE );
+                ```
+        }
+        execution {
+            sequence: 10
+        }
+        successMessage {
+            successMessage: Action traitée.
+        }
+        advanced {
+            executionMappingIdentifier: 206070664097503700
+        }
+        serverSideCondition {
+            whenButtonPressed: @save
+        }
+    )
+
+    process supprimer (
+        name: Supprimer
+        type: executeCode
+        source {
+            plsqlCode:
+                ```plsql
+                apex_util.delete_feedback (
+                    p_feedback_id        => :P10014_ID );
+                ```
+        }
+        execution {
+            sequence: 20
+        }
+        successMessage {
+            successMessage: Action traitée.
+        }
+        advanced {
+            executionMappingIdentifier: 206071063697503700
+        }
+        serverSideCondition {
+            whenButtonPressed: @delete
+        }
+    )
+
+)
+

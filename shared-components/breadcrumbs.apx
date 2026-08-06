@@ -1,0 +1,44 @@
+breadcrumb breadcrumb (
+    name: Breadcrumb
+
+    entry administration (
+        name: Administration
+        pageNumber: 10000
+        execution {
+            sequence: 10
+        }
+        link {
+            target: {
+                page: 10000
+            }
+        }
+    )
+
+    entry candidat (
+        name: Candidat
+        pageNumber: 2
+        execution {
+            sequence: 10
+        }
+        link {
+            target: {
+                page: 2
+            }
+        }
+    )
+
+    entry h2-align-center-class-h2-portail-orimarc-h2-hr-class-trait-h2-align-center-liste-des-postes-vacants-h (
+        name: <h2 align="center" class="h2">PORTAIL ORIMARC </h2><hr class="trait"><h2 align="center">LISTE DES POSTES VACANTS</h2>
+        pageNumber: 1
+        execution {
+            sequence: 10
+        }
+        link {
+            target: {
+                page: 1
+            }
+        }
+    )
+
+)
+

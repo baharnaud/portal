@@ -1,0 +1,151 @@
+buttonTemplate floating-action-button (
+    name: Floating Action Button
+    templateClass: buttonAlternative3
+    templateOptions {
+        preset: [
+            fab-position-absolute
+            btn-large
+            waves-effect waves-light
+            fab-direction-top
+            fab-open-behavior-hover
+        ]
+    }
+    button {
+        normal:
+            ```html
+            <button type="button" onclick="#JAVASCRIPT#" id="#BUTTON_ID#" class="fixed-action-btn btn-floating #BUTTON_CSS_CLASSES#" #BUTTON_ATTRIBUTES# title="#LABEL#" aria-label="#LABEL#">
+              <i class="#ICON_CSS_CLASSES#" aria-hidden="true"></i>
+            </button>
+            ```
+        hot:
+            ```html
+            <a href="#LINK#" id="#BUTTON_ID#" class="fixed-action-btn btn-floating #BUTTON_CSS_CLASSES#" #BUTTON_ATTRIBUTES# title="#LABEL#" aria-label="#LABEL#">
+              <i class="#ICON_CSS_CLASSES#" aria-hidden="true"></i>
+            </a>
+            ```
+    }
+    advanced {
+        identifier: FIXED_ACTION_BUTTON
+    }
+
+    templateOption fab-toolbar (
+        name: Toolbar
+        sequence: 40
+        appearance {
+            cssClasses: fab-toolbar
+        }
+        advanced {
+            identifier: FAB_TOOLBAR
+        }
+    )
+
+    templateOption fab-direction-bottom (
+        name: Bottom
+        group: @button/fab-direction
+        sequence: 30
+        appearance {
+            cssClasses: fab-direction-bottom
+        }
+        advanced {
+            identifier: FAB_DIRECTION_BOTTOM
+        }
+    )
+
+    templateOption fab-direction-left (
+        name: Left
+        group: @button/fab-direction
+        sequence: 40
+        appearance {
+            cssClasses: fab-direction-left
+        }
+        advanced {
+            identifier: FAB_DIRECTION_LEFT
+        }
+    )
+
+    templateOption fab-direction-right (
+        name: Right
+        group: @button/fab-direction
+        sequence: 20
+        appearance {
+            cssClasses: fab-direction-right
+        }
+        advanced {
+            identifier: FAB_DIRECTION_RIGHT
+        }
+    )
+
+    templateOption fab-direction-top (
+        name: Top
+        group: @button/fab-direction
+        sequence: 10
+        appearance {
+            cssClasses: fab-direction-top
+        }
+        advanced {
+            identifier: FAB_DIRECTION_TOP
+        }
+    )
+
+    templateOption fab-open-behavior-click (
+        name: Click
+        group: @button/fab-open-behavior
+        sequence: 20
+        appearance {
+            cssClasses: fab-open-behavior-click
+        }
+        advanced {
+            identifier: FAB_OPEN_BEHAVIOR_CLICK
+        }
+    )
+
+    templateOption fab-open-behavior-hover (
+        name: Hover
+        group: @button/fab-open-behavior
+        sequence: 10
+        appearance {
+            cssClasses: fab-open-behavior-hover
+        }
+        advanced {
+            identifier: FAB_OPEN_BEHAVIOR_HOVER
+        }
+    )
+
+    templateOption inside-the-parent (
+        name: Inside the Parent
+        group: @button/position
+        sequence: 3
+        appearance {
+            cssClasses: fab-position-absolute
+        }
+        advanced {
+            identifier: INSIDE_THE_PARENT
+        }
+    )
+
+    templateOption left (
+        name: Fixed - Bottom Left
+        group: @button/position
+        sequence: 2
+        appearance {
+            cssClasses: fab-position-left
+        }
+        advanced {
+            identifier: LEFT
+        }
+    )
+
+    templateOption right (
+        name: Fixed - Bottom Right
+        group: @button/position
+        sequence: 1
+        appearance {
+            cssClasses: fab-position-right
+        }
+        advanced {
+            identifier: RIGHT
+        }
+    )
+
+)
+

@@ -1,0 +1,57 @@
+classicReportTemplate news-cards-2 (
+    name: News Cards 2
+    templateClass: custom1
+    type: namedColumn
+    reportTemplate {
+        top: " <div class=\"rowcard\">"
+        bottom:
+            ```html
+            </div>
+            <tfoot class="right">
+                <div>#EXTERNAL_LINK##CSV_LINK#</div>
+                <div class="report-pagination">#PAGINATION#</div>
+            </tfoot>
+            ```
+    }
+    rowTemplate1 {
+        template:
+            ```html
+            <div class="example-2 cardn">
+                      <div class="wrapper" style="background-image: url(#NEW_IMG_SRC#); background-position: center; background-size:cover; background-repeat: no-repeat;"> 
+                           
+                        <div class="header">               
+                           <div class="date">
+                             <span class="day">#DAY#</span>
+                             <span class="month">#MONTH#</span>
+                             <span class="year">#YEAR#</span>
+                           </div>
+                           <ul class="menu-content">
+                             <li>
+                               <a href="#ICON_LINK1#" class="fa #NEW_ICON_CSS_CLASS1#"><span>#ICON_LABEL1#</span></a>
+                             </li>
+                             <li><a href="#ICON_LINK2#" class="fa #NEW_ICON_CSS_CLASS2#"><span>#ICON_LABEL2#</span></a></li>
+                             <li><a href="#ICON_LINK3#" class="fa #NEW_ICON_CSS_CLASS3#"><span>#ICON_LABEL3#</span></a></li>
+                           </ul>
+                         </div> 
+                         <div class="data">
+                           <div class="content">
+                             <span class="author">#AUTHOR#</span>
+                             <h1 class="title"><a href="#ART_LINK#">#TITLE#</a></h1>
+                             <p class="text">#CONTENT#</p>
+                             <a href="#ART_LINK#" class="button">En savoir plus...</a>
+                           </div>
+                         </div>
+                      </div> 
+                     </div>
+            ```
+    }
+    pagination {
+        template: <span class="instructiontext"></span>
+        nextSet: <a href="#LINK#"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+        previousSet: <a href="#LINK#"><i class="fa fa-angle-double-left" aria-hidden="true"></i></a>
+    }
+    advanced {
+        identifier: NEWS_CARDS_2
+    }
+)
+

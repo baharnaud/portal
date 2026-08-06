@@ -1,0 +1,231 @@
+lov diplôme (
+    name: DIPLÔME
+    source {
+        type: sqlQuery
+        sqlQuery:
+            ```sql
+            select LIBELLE as d,
+                   IDDIPLOME as r
+              from DIPLOME
+             order by 1
+            ```
+    }
+    columnMapping {
+        return: R
+        display: D
+    }
+)
+
+lov feedback-rating (
+    name: FEEDBACK_RATING
+    source {
+        location: staticValues
+    }
+
+    entry neutre (
+        sequence: 2
+        display: Neutre
+        return: 2
+        globalization {
+            template: <span title="#DISPLAY_VALUE#" aria-label="#DISPLAY_VALUE#"><span class="fa fa-emoji-neutral fa-2x feedback-neutral" aria-hidden="true" ></span></span>
+        }
+    )
+
+    entry négatif (
+        sequence: 3
+        display: Négatif
+        return: 1
+        globalization {
+            template: <span title="#DISPLAY_VALUE#" aria-label="#DISPLAY_VALUE#"><span class="fa fa-frown-o fa-2x feedback-negative" aria-hidden="true" ></span></span>
+        }
+    )
+
+    entry positif (
+        sequence: 1
+        display: Positif
+        return: 3
+        globalization {
+            template: <span title="#DISPLAY_VALUE#" aria-label="#DISPLAY_VALUE#"><span class="fa fa-smile-o fa-2x feedback-positive" aria-hidden="true" ></span></span>
+        }
+    )
+
+)
+
+lov feedback-status (
+    name: FEEDBACK_STATUS
+    source {
+        location: staticValues
+    }
+
+    entry aucune-action (
+        sequence: 1
+        display: Aucune action
+        return: 0
+    )
+
+    entry fermé (
+        sequence: 4
+        display: Fermé
+        return: 4
+    )
+
+    entry ouvert (
+        sequence: 3
+        display: Ouvert
+        return: 3
+    )
+
+    entry réception-confirmée (
+        sequence: 2
+        display: Réception confirmée
+        return: 1
+    )
+
+)
+
+lov genre (
+    name: GENRE
+    source {
+        location: staticValues
+    }
+
+    entry feminin (
+        sequence: 2
+        display: Feminin
+        return: f
+    )
+
+    entry masculin (
+        sequence: 1
+        display: Masculin
+        return: m
+    )
+
+)
+
+lov login-remember-username (
+    name: LOGIN_REMEMBER_USERNAME
+    source {
+        location: staticValues
+    }
+
+    entry mémoriser-le-nom-utilisateur (
+        sequence: 10
+        display: Mémoriser le nom utilisateur
+        return: Y
+    )
+
+)
+
+lov pays (
+    name: PAYS
+    source {
+        type: sqlQuery
+        sqlQuery:
+            ```sql
+            select LIBELLE as d,
+                   IDPAYS as r
+              from PAYS
+             order by 1
+            ```
+    }
+    columnMapping {
+        return: R
+        display: D
+    }
+)
+
+lov poste-adherent (
+    name: POSTE ADHERENT
+    source {
+        type: sqlQuery
+        sqlQuery:
+            ```sql
+            select LIBELLE as d,
+                   IDPOSTE as r
+              from CONTACT_POSTE
+             order by 1
+            ```
+    }
+    columnMapping {
+        return: R
+        display: D
+    }
+)
+
+lov rec-plan-recrutement (
+    name: REC PLAN RECRUTEMENT
+    source {
+        tableName: REC_PLAN_RECRUTEMENT
+    }
+    columnMapping {
+        return: IDREC_PLAN_RECRUTEMENT
+        display: LIBELLE
+        defaultSort: LIBELLE
+    }
+)
+
+lov situation-matrimoniale (
+    name: SITUATION MATRIMONIALE
+    source {
+        location: staticValues
+    }
+
+    entry célibataire (
+        sequence: 1
+        display: Célibataire
+        return: c
+    )
+
+    entry divorcé (
+        sequence: 3
+        display: Divorcé
+        return: d
+    )
+
+    entry marié-e (
+        sequence: 2
+        display: Marié(e)
+        return: m
+    )
+
+)
+
+lov titre (
+    name: TITRE
+    source {
+        tableName: TITRE
+    }
+    columnMapping {
+        return: DESIGNATION
+        display: DESIGNATION
+        defaultSort: DESIGNATION
+    }
+)
+
+lov titre-adherent (
+    name: TITRE ADHERENT
+    source {
+        location: staticValues
+    }
+
+    entry madame (
+        sequence: 2
+        display: Madame
+        return: madame
+    )
+
+    entry mademoiselle (
+        sequence: 3
+        display: Mademoiselle
+        return: mademoiselle
+    )
+
+    entry monsieur (
+        sequence: 1
+        display: Monsieur
+        return: monsieur
+    )
+
+)
+

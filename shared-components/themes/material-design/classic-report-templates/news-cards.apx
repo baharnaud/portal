@@ -1,0 +1,53 @@
+classicReportTemplate news-cards (
+    name: News Cards
+    templateClass: custom1
+    type: namedColumn
+    reportTemplate {
+        top:
+            ```html
+             <div class="rowcard">
+                 
+            ```
+        bottom:
+            ```html
+            </div>
+            
+            ```
+    }
+    rowTemplate1 {
+        template:
+            ```html
+            <div class="example-1 cardn">     
+            <div class="wrapper" style="background-image: url(#NEW_IMG_SRC#);">
+                        
+                    <div class="date">
+                      <span class="day">#DAY#</span>
+                      <span class="month">#MONTH#</span>
+                      <span class="year">#YEAR#</span>
+                    </div>
+                    <div class="data">
+                      <div class="content">
+                        <span class="author">#AUTHOR#</span>
+                        <h1 class="title"><a href="#">#TITLE#</a></h1>
+                        <p class="text">#CONTENT#</p>
+                        <label for="show-menu" class="menu-button"><span></span></label>
+                      </div>
+                      <input type="checkbox" id="show-menu" />
+                      <ul class="menu-content">
+                        <li>
+                          <a href="#" class="fa #NEW_ICON_CSS_CLASS1#">#ICON_LABEL1#</a>
+                        </li>
+                        <li><a href="#" class="fa #NEW_ICON_CSS_CLASS2#"><span>#ICON_LABEL2#</span></a></li>
+                        <li><a href="#" class="fa #NEW_ICON_CSS_CLASS3#"><span>#ICON_LABEL3#</span></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                
+            ```
+    }
+    advanced {
+        identifier: NEWS_CARDS
+    }
+)
+

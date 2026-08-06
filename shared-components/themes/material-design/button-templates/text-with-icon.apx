@@ -1,0 +1,128 @@
+buttonTemplate text-with-icon (
+    name: Text with Icon
+    templateClass: buttonAlternative1
+    templateOptions {
+        preset: [
+            btn
+            waves-effect waves-light
+            icon-float-left
+        ]
+    }
+    button {
+        normal:
+            ```html
+            <button type="button" onclick="#JAVASCRIPT#" id="#BUTTON_ID#" class="ma-button #BUTTON_CSS_CLASSES#" #BUTTON_ATTRIBUTES#>
+              <i class="#ICON_CSS_CLASSES#" aria-hidden="true"></i>
+              <span class="ma-button-label">#LABEL#</span>
+              <i class="#ICON_CSS_CLASSES#" aria-hidden="true"></i>
+            </button>
+            ```
+        hot:
+            ```html
+            <a href="#LINK#" id="#BUTTON_ID#" class="ma-button #BUTTON_CSS_CLASSES#" #BUTTON_ATTRIBUTES#>
+              <i class="#ICON_CSS_CLASSES#" aria-hidden="true"></i>
+              <span class="ma-button-label">#LABEL#</span>
+              <i class="#ICON_CSS_CLASSES#" aria-hidden="true"></i>
+            </a>
+            ```
+    }
+    advanced {
+        identifier: STANDARD
+    }
+
+    templateOption button-block (
+        name: Full Column Width
+        sequence: 1
+        appearance {
+            cssClasses: ma-btn-block
+        }
+        help {
+            helpText: This makes the button to be 100% of the width of it's container.
+        }
+        advanced {
+            identifier: BUTTON_BLOCK
+        }
+    )
+
+    templateOption inline-button (
+        name: Inline (Next to an item)
+        sequence: 2
+        appearance {
+            cssClasses: ma-btn-inline
+        }
+        advanced {
+            identifier: INLINE_BUTTON
+        }
+    )
+
+    templateOption icon-float-left (
+        name: Left
+        group: @button/icon-float
+        sequence: 1
+        appearance {
+            cssClasses: icon-float-left
+        }
+        help {
+            helpText: Only applies if the button has an icon
+        }
+        advanced {
+            identifier: ICON-FLOAT-LEFT
+        }
+    )
+
+    templateOption icon-float-right (
+        name: Right
+        group: @button/icon-float
+        sequence: 2
+        appearance {
+            cssClasses: icon-float-right
+        }
+        help {
+            helpText: Only applies if the button has an icon.
+        }
+        advanced {
+            identifier: ICON-FLOAT-RIGHT
+        }
+    )
+
+    templateOption flat (
+        name: Flat
+        group: @button/type
+        sequence: 2
+        appearance {
+            cssClasses: btn-flat
+        }
+        advanced {
+            identifier: FLAT
+        }
+    )
+
+    templateOption outline (
+        name: Outlined
+        group: @button/type
+        sequence: 3
+        appearance {
+            cssClasses: [
+                btn
+                btn-outlined
+            ]
+        }
+        advanced {
+            identifier: OUTLINE
+        }
+    )
+
+    templateOption raised (
+        name: Raised
+        group: @button/type
+        sequence: 1
+        appearance {
+            cssClasses: btn
+        }
+        advanced {
+            identifier: RAISED
+        }
+    )
+
+)
+

@@ -1,0 +1,26 @@
+listTemplate extended-navbar-tabs (
+    name: Extended Navbar Tabs
+    templateClass: tabbedNavigationList
+    list {
+        beforeEntries: <ul class="tabs tabs-transparent #COMPONENT_CSS_CLASSES#">
+        afterEntries: </ul>
+    }
+    entry {
+        current:
+            ```html
+            <li class="tab">
+              <a target="_self" href="#LINK#">#TEXT#</a>
+            </li>
+            ```
+        noncurrent:
+            ```html
+            <li class="tab">
+              <a target="_self" href="#LINK#">#TEXT#</a>
+            </li>
+            ```
+    }
+    advanced {
+        identifier: EXTENDED_NAVBAR_TABS
+    }
+)
+

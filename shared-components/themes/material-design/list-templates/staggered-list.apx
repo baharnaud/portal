@@ -1,0 +1,41 @@
+listTemplate staggered-list (
+    name: Staggered List
+    templateClass: buttonList
+    list {
+        beforeEntries:
+            ```html
+            <ul id="#LIST_ID#" class="staggered-list #COMPONENT_CSS_CLASSES#">
+            
+            ```
+        afterEntries:
+            ```html
+            </ul>
+            
+            ```
+    }
+    entry {
+        current:
+            ```html
+                <li>
+                    <h4><a href="#LINK#">#TEXT#</a></h4>
+                    <p>#A01#</p>
+                </li>
+            
+            ```
+        noncurrent:
+            ```html
+                <li>
+                    <h4><a href="#LINK#">#TEXT#</a></h4>
+                    <p>#A01#</p>
+                </li>
+            
+            ```
+    }
+    attributeDescriptions {
+        a01: Entry Description
+    }
+    advanced {
+        identifier: STAGGERED_LIST
+    }
+)
+

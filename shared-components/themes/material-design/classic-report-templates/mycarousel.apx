@@ -1,0 +1,48 @@
+classicReportTemplate mycarousel (
+    name: MyCarousel
+    templateClass: oneColumnUnorderedList
+    type: namedColumn
+    reportTemplate {
+        top:
+            ```html
+            <div id="gallery" style="width: 100%;">
+                <div class="lSSlideOuter">
+                    <div class=" lSSlideWrapper usingCss">
+                        <ul id="lightSlider" class="lightSlider lSSlide" style="width: 1970px; height: 104px; padding-bottom: 0%; transform: translate3d(0px, 0px, 0px);">
+            ```
+        bottom:
+            ```html
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            ```
+    }
+    rowTemplate1 {
+        template:
+            ```html
+            <li class="lslide">
+            <a href="#SLIDER_LINK">
+                <img src="#IMG_THUMBNAIL#" alt="#IMG_NAME#"/>
+            </a>
+            </li>
+            
+            ```
+    }
+    javaScript {
+        executeWhenPageLoads:
+            ```javascript-browser
+            $(document).ready(function () {
+                $(".lightSlider").lightSlider({autoWidth:true, enableDrag:false});
+                $(".lightSlider img").click( function() {
+                        $('#picture').attr('src', $(this).data('src'));
+                        $('#picture').attr('alt', $(this).attr('alt'));
+                });
+            });
+            ```
+    }
+    advanced {
+        identifier: MYCAROUSEL
+    }
+)
+

@@ -1,0 +1,249 @@
+page 9999 (
+    name: Page de connexion
+    alias: LOGIN
+    title: Servive en Ligne - Ouvrir une session
+    appearance {
+        pageTemplate: @login
+        templateOptions: #DEFAULT#
+    }
+    navigation {
+        warnOnUnsavedChanges: false
+    }
+    security {
+        authentication: public
+        formAutoComplete: false
+    }
+
+    region servive-en-ligne (
+        name: Servive en Ligne
+        type: staticContent
+        layout {
+            sequence: 10
+            slot: contentBody
+        }
+        appearance {
+            template: @login
+            templateOptions: #DEFAULT#
+            icon: app-icon
+        }
+        settings {
+            outputAs: text
+        }
+    )
+
+    region sélecteur-de-langue (
+        name: Sélecteur de langue
+        type: plSqlDynamicContent
+        source {
+            plsqlCode: apex_lang.emit_language_selector_list;
+        }
+        layout {
+            sequence: 20
+            parentRegion: @servive-en-ligne
+            slot: subRegions
+        }
+        appearance {
+            template: @blank-with-attributes
+            templateOptions: #DEFAULT#
+        }
+    )
+
+    pageItem P9999_PASSWORD (
+        type: password
+        label {
+            label: Mot de passe
+            alignment: right
+        }
+        layout {
+            sequence: 20
+            region: @servive-en-ligne
+            slot: regionBody
+            alignment: left
+        }
+        appearance {
+            template: @hidden
+            templateOptions: #DEFAULT#
+            icon: fa-key
+            width: 40
+            valuePlaceholder: Mot de passe
+        }
+        validation {
+            maxLength: 100
+        }
+        sessionState {
+            storage: request
+        }
+        security {
+            encryptSessionState: false
+        }
+    )
+
+    pageItem P9999_REMEMBER (
+        type: checkboxGroup
+        label {
+            label: Mémoriser le nom utilisateur
+            alignment: right
+        }
+        lov {
+            type: sharedComponent
+            lov: @login-remember-username
+            displayExtraValues: false
+        }
+        layout {
+            sequence: 30
+            region: @servive-en-ligne
+            slot: regionBody
+            alignment: left
+        }
+        appearance {
+            template: @hidden
+            templateOptions: #DEFAULT#
+        }
+        sessionState {
+            storage: request
+        }
+        serverSideCondition {
+            type: expression
+            plsqlExpression: apex_authentication.persistent_cookies_enabled
+        }
+        security {
+            encryptSessionState: false
+        }
+        help {
+            helpText:
+                ```html
+                <p>
+                Si vous cochez cette case, l'application enregistre votre nom utilisateur dans un cookie de navigateur persistant nommé "LOGIN_USERNAME_COOKIE".
+                Lors de votre prochain accès à la page de connexion,
+                cette valeur est automatiquement renseignée dans le champ de nom utilisateur.
+                </p>
+                <p>
+                Si vous désactivez cette case à cocher et que votre nom utilisateur est déjà enregistré dans le cookie,
+                l'application le remplace par une valeur vide.
+                Vous pouvez également utiliser les outils de développement de votre navigateur pour enlever entièrement le cookie.
+                </p>
+                ```
+        }
+    )
+
+    pageItem P9999_USERNAME (
+        type: textField
+        label {
+            label: Nom utilisateur
+            alignment: right
+        }
+        settings {
+            trimSpaces: none
+        }
+        layout {
+            sequence: 10
+            region: @servive-en-ligne
+            slot: regionBody
+            alignment: left
+        }
+        appearance {
+            template: @hidden
+            templateOptions: #DEFAULT#
+            icon: fa-user
+            width: 40
+            valuePlaceholder: Nom utilisateur
+        }
+        validation {
+            maxLength: 100
+        }
+        sessionState {
+            storage: request
+        }
+        security {
+            encryptSessionState: false
+        }
+    )
+
+    button login (
+        buttonName: LOGIN
+        label: Ouvrir une session
+        layout {
+            sequence: 40
+            region: @servive-en-ligne
+            slot: next
+        }
+        appearance {
+            buttonTemplate: @text
+            hot: true
+            templateOptions: #DEFAULT#
+        }
+        behavior {
+            warnOnUnsavedChanges: doNotCheck
+        }
+    )
+
+    process définir-le-cookie-de-nom-utilisateur (
+        name: Définir le cookie de nom utilisateur
+        type: executeCode
+        source {
+            plsqlCode:
+                ```plsql
+                apex_authentication.send_login_username_cookie (
+                    p_username => lower(:P9999_USERNAME),
+                    p_consent  => :P9999_REMEMBER = 'Y' );
+                ```
+        }
+        execution {
+            sequence: 10
+        }
+        advanced {
+            executionMappingIdentifier: 206047716151503644
+        }
+    )
+
+    process effacer-le-cache-des-pages (
+        name: Effacer le cache des pages
+        type: clearSessionState
+        execution {
+            sequence: 30
+        }
+        advanced {
+            executionMappingIdentifier: 206048586261503644
+        }
+    )
+
+    process login (
+        name: Login
+        type: executeCode
+        source {
+            plsqlCode:
+                ```plsql
+                apex_authentication.login(
+                    p_username => :P9999_USERNAME,
+                    p_password => :P9999_PASSWORD );
+                ```
+        }
+        execution {
+            sequence: 20
+        }
+        advanced {
+            executionMappingIdentifier: 206047388449503642
+        }
+    )
+
+    process obtenir-le-cookie-de-nom-utilisateur (
+        name: Obtenir le cookie de nom utilisateur
+        type: executeCode
+        source {
+            plsqlCode:
+                ```plsql
+                :P9999_USERNAME := apex_authentication.get_login_username_cookie;
+                :P9999_REMEMBER := case when :P9999_USERNAME is not null then 'Y' end;
+                ```
+        }
+        execution {
+            sequence: 10
+            point: beforeHeader
+        }
+        advanced {
+            executionMappingIdentifier: 206048175881503644
+        }
+    )
+
+)
+

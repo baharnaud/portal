@@ -1,0 +1,651 @@
+templateOptionGroup background-color (
+    templateType: button
+    name: Background Color
+    sequence: 3
+    advanced {
+        identifier: BACKGROUND_COLOR
+    }
+)
+
+templateOptionGroup background-modifier (
+    templateType: button
+    name: Background Modifier
+    sequence: 4
+    advanced {
+        identifier: BACKGROUND_MODIFIER
+    }
+)
+
+templateOptionGroup button-margin-bottom (
+    templateType: button
+    name: --------- bottom
+    sequence: 901
+    help {
+        helpText: Apply "Margin bottom" to any element with a template option.
+    }
+    advanced {
+        isAdvancedOption: true
+        identifier: BUTTON_MARGIN_BOTTOM
+    }
+)
+
+templateOptionGroup button-margin-left (
+    templateType: button
+    name: --------- left
+    sequence: 903
+    help {
+        helpText: Apply "Margin left" to any element with a template option.
+    }
+    advanced {
+        isAdvancedOption: true
+        identifier: BUTTON_MARGIN_LEFT
+    }
+)
+
+templateOptionGroup button-margin-right (
+    templateType: button
+    name: --------- right
+    sequence: 902
+    help {
+        helpText: Apply "Margin right" to any element with a template option.
+    }
+    advanced {
+        isAdvancedOption: true
+        identifier: BUTTON_MARGIN_RIGHT
+    }
+)
+
+templateOptionGroup button-margin-top (
+    templateType: button
+    name: Margin top
+    sequence: 900
+    help {
+        helpText: Apply "Margin top" to any element with a template option.
+    }
+    advanced {
+        isAdvancedOption: true
+        identifier: BUTTON_MARGIN_TOP
+    }
+)
+
+templateOptionGroup button-padding-bottom (
+    templateType: button
+    name: ----------- bottom
+    sequence: 911
+    help {
+        helpText: Apply "Padding bottom" to any element with a template option.
+    }
+    advanced {
+        isAdvancedOption: true
+        identifier: BUTTON_PADDING_BOTTOM
+    }
+)
+
+templateOptionGroup button-padding-left (
+    templateType: button
+    name: ----------- left
+    sequence: 913
+    help {
+        helpText: Apply "Padding left" to any element with a template option.
+    }
+    advanced {
+        isAdvancedOption: true
+        identifier: BUTTON_PADDING_LEFT
+    }
+)
+
+templateOptionGroup button-padding-right (
+    templateType: button
+    name: ----------- right
+    sequence: 912
+    help {
+        helpText: Apply "Padding right" to any element with a template option.
+    }
+    advanced {
+        isAdvancedOption: true
+        identifier: BUTTON_PADDING_RIGHT
+    }
+)
+
+templateOptionGroup button-padding-top (
+    templateType: button
+    name: Padding top
+    sequence: 910
+    help {
+        helpText: Apply "Padding top" to any element with a template option.
+    }
+    advanced {
+        isAdvancedOption: true
+        identifier: BUTTON_PADDING_TOP
+    }
+)
+
+templateOptionGroup fab-direction (
+    templateType: button
+    name: Direction
+    sequence: 20
+    help {
+        helpText: Direction FAB menu opens. Can be 'top', 'right', 'bottom', 'left'
+    }
+    advanced {
+        identifier: FAB_DIRECTION
+    }
+)
+
+templateOptionGroup fab-open-behavior (
+    templateType: button
+    name: Open Behavior
+    sequence: 30
+    help {
+        helpText: Determines if the FAB opens using Hover or Click
+    }
+    advanced {
+        identifier: FAB_OPEN_BEHAVIOR
+    }
+)
+
+templateOptionGroup hiding-content (
+    templateType: button
+    name: Hiding Content
+    sequence: 800
+    advanced {
+        isAdvancedOption: true
+        identifier: HIDING_CONTENT
+    }
+)
+
+templateOptionGroup icon-float (
+    templateType: button
+    name: Icon Float
+    sequence: 1
+    help {
+        helpText: Only applies if your button has an icon
+    }
+    advanced {
+        isAdvancedOption: true
+        identifier: ICON_FLOAT
+    }
+)
+
+templateOptionGroup position (
+    templateType: button
+    name: Position
+    sequence: 10
+    advanced {
+        identifier: POSITION
+    }
+)
+
+templateOptionGroup shadow (
+    templateType: button
+    name: Shadow
+    sequence: 7
+    advanced {
+        identifier: SHADOW
+    }
+)
+
+templateOptionGroup size (
+    templateType: button
+    name: Size
+    sequence: 2
+    settings {
+        nullText: Default
+    }
+    advanced {
+        identifier: SIZE
+    }
+)
+
+templateOptionGroup text-color (
+    templateType: button
+    name: Text Color
+    sequence: 5
+    advanced {
+        identifier: TEXT_COLOR
+    }
+)
+
+templateOptionGroup type (
+    templateType: button
+    name: Type
+    sequence: 1
+    advanced {
+        identifier: TYPE
+    }
+)
+
+templateOptionGroup wave-effect (
+    templateType: button
+    name: Wave Effect
+    sequence: 6
+    settings {
+        nullText: None
+    }
+    advanced {
+        identifier: WAVE_EFFECT
+    }
+)
+
+templateOptionGroup field-alignment (
+    templateType: item
+    name: Text Alignment
+    sequence: 1
+    advanced {
+        identifier: FIELD_ALIGNMENT
+    }
+)
+
+templateOptionGroup field-color (
+    templateType: item
+    name: Text Color
+    sequence: 2
+    advanced {
+        identifier: FIELD_COLOR
+    }
+)
+
+templateOptionGroup field-margin-bottom (
+    templateType: item
+    name: --------- bottom
+    sequence: 901
+    help {
+        helpText: Apply "Margin bottom" to any element with a template option.
+    }
+    advanced {
+        isAdvancedOption: true
+        identifier: FIELD_MARGIN_BOTTOM
+    }
+)
+
+templateOptionGroup field-margin-left (
+    templateType: item
+    name: --------- left
+    sequence: 903
+    help {
+        helpText: Apply "Margin left" to any element with a template option.
+    }
+    advanced {
+        isAdvancedOption: true
+        identifier: FIELD_MARGIN_LEFT
+    }
+)
+
+templateOptionGroup field-margin-right (
+    templateType: item
+    name: --------- right
+    sequence: 902
+    help {
+        helpText: Apply "Margin right" to any element with a template option.
+    }
+    advanced {
+        isAdvancedOption: true
+        identifier: FIELD_MARGIN_RIGHT
+    }
+)
+
+templateOptionGroup field-margin-top (
+    templateType: item
+    name: Margin top
+    sequence: 900
+    help {
+        helpText: Apply "Margin top" to any element with a template option.
+    }
+    advanced {
+        isAdvancedOption: true
+        identifier: FIELD_MARGIN_TOP
+    }
+)
+
+templateOptionGroup field-padding-bottom (
+    templateType: item
+    name: ----------- bottom
+    sequence: 911
+    help {
+        helpText: Apply "Padding bottom" to any element with a template option.
+    }
+    advanced {
+        isAdvancedOption: true
+        identifier: FIELD_PADDING_BOTTOM
+    }
+)
+
+templateOptionGroup field-padding-left (
+    templateType: item
+    name: ----------- left
+    sequence: 913
+    help {
+        helpText: Apply "Padding left" to any element with a template option.
+    }
+    advanced {
+        isAdvancedOption: true
+        identifier: FIELD_PADDING_LEFT
+    }
+)
+
+templateOptionGroup field-padding-right (
+    templateType: item
+    name: ----------- right
+    sequence: 912
+    help {
+        helpText: Apply "Padding right" to any element with a template option.
+    }
+    advanced {
+        isAdvancedOption: true
+        identifier: FIELD_PADDING_RIGHT
+    }
+)
+
+templateOptionGroup field-padding-top (
+    templateType: item
+    name: Padding top
+    sequence: 910
+    help {
+        helpText: Apply "Padding top" to any element with a template option.
+    }
+    advanced {
+        isAdvancedOption: true
+        identifier: FIELD_PADDING_TOP
+    }
+)
+
+templateOptionGroup hiding-content (
+    templateType: item
+    name: Hiding Content
+    sequence: 800
+    advanced {
+        isAdvancedOption: true
+        identifier: HIDING_CONTENT
+    }
+)
+
+templateOptionGroup text-size (
+    templateType: item
+    name: Display Only - Text Size
+    sequence: 3
+    settings {
+        nullText: Default
+    }
+    help {
+        helpText: Defines the size of the text.
+    }
+    advanced {
+        identifier: TEXT_SIZE
+    }
+)
+
+templateOptionGroup page-logo-alignment (
+    templateType: page
+    name: Logo Alignment
+    sequence: 0
+    help {
+        helpText: The font size of your region title
+    }
+    advanced {
+        identifier: PAGE_LOGO_ALIGNMENT
+    }
+)
+
+templateOptionGroup page-navbar-style (
+    templateType: page
+    name: Navigation Bar Style
+    sequence: 20
+    advanced {
+        identifier: PAGE_NAVBAR_STYLE
+    }
+)
+
+templateOptionGroup background-color (
+    templateType: region
+    name: Background Color
+    sequence: 6
+    advanced {
+        identifier: BACKGROUND_COLOR
+    }
+)
+
+templateOptionGroup background-modifier (
+    templateType: region
+    name: Background Modifier
+    sequence: 7
+    advanced {
+        identifier: BACKGROUND_MODIFIER
+    }
+)
+
+templateOptionGroup body-alignment (
+    templateType: region
+    name: Alignment - Body
+    sequence: 2
+    advanced {
+        identifier: BODY_ALIGNMENT
+    }
+)
+
+templateOptionGroup collapsible-behavior (
+    templateType: region
+    name: Collapsible Behavior
+    sequence: 1
+    advanced {
+        identifier: COLLAPSIBLE_BEHAVIOR
+    }
+)
+
+templateOptionGroup hiding-content (
+    templateType: region
+    name: Hiding Content
+    sequence: 800
+    advanced {
+        isAdvancedOption: true
+        identifier: HIDING_CONTENT
+    }
+)
+
+templateOptionGroup region-container (
+    templateType: region
+    name: Container
+    sequence: 750
+    settings {
+        nullText: Default (none)
+    }
+    help {
+        helpText: Helps centering and contain content with left and right margins
+    }
+    advanced {
+        isAdvancedOption: true
+        identifier: REGION_CONTAINER
+    }
+)
+
+templateOptionGroup region-margin-bottom (
+    templateType: region
+    name: --------- bottom
+    sequence: 901
+    help {
+        helpText: Apply "Margin bottom" to any element with a template option.
+    }
+    advanced {
+        isAdvancedOption: true
+        identifier: REGION_MARGIN_BOTTOM
+    }
+)
+
+templateOptionGroup region-margin-left (
+    templateType: region
+    name: --------- left
+    sequence: 903
+    help {
+        helpText: Apply "Margin left" to any element with a template option.
+    }
+    advanced {
+        isAdvancedOption: true
+        identifier: REGION_MARGIN_LEFT
+    }
+)
+
+templateOptionGroup region-margin-right (
+    templateType: region
+    name: --------- right
+    sequence: 902
+    help {
+        helpText: Apply "Margin right" to any element with a template option.
+    }
+    advanced {
+        isAdvancedOption: true
+        identifier: REGION_MARGIN_RIGHT
+    }
+)
+
+templateOptionGroup region-margin-top (
+    templateType: region
+    name: Margin top
+    sequence: 900
+    help {
+        helpText: Apply "Margin top" to any element with a template option.
+    }
+    advanced {
+        isAdvancedOption: true
+        identifier: REGION_MARGIN_TOP
+    }
+)
+
+templateOptionGroup region-padding-bottom (
+    templateType: region
+    name: ----------- bottom
+    sequence: 911
+    help {
+        helpText: Apply "Padding bottom" to any element with a template option.
+    }
+    advanced {
+        isAdvancedOption: true
+        identifier: REGION_PADDING_BOTTOM
+    }
+)
+
+templateOptionGroup region-padding-left (
+    templateType: region
+    name: ----------- left
+    sequence: 913
+    help {
+        helpText: Apply "Padding left" to any element with a template option.
+    }
+    advanced {
+        isAdvancedOption: true
+        identifier: REGION_PADDING_LEFT
+    }
+)
+
+templateOptionGroup region-padding-right (
+    templateType: region
+    name: ----------- right
+    sequence: 912
+    help {
+        helpText: Apply "Padding right" to any element with a template option.
+    }
+    advanced {
+        isAdvancedOption: true
+        identifier: REGION_PADDING_RIGHT
+    }
+)
+
+templateOptionGroup region-padding-top (
+    templateType: region
+    name: Padding top
+    sequence: 910
+    help {
+        helpText: Apply "Padding top" to any element with a template option.
+    }
+    advanced {
+        isAdvancedOption: true
+        identifier: REGION_PADDING_TOP
+    }
+)
+
+templateOptionGroup shadow (
+    templateType: region
+    name: Shadow
+    sequence: 4
+    advanced {
+        isAdvancedOption: true
+        identifier: SHADOW
+    }
+)
+
+templateOptionGroup text-color-global (
+    templateType: region
+    name: Text Color - Global
+    sequence: 4
+    advanced {
+        identifier: TEXT_COLOR_GLOBAL
+    }
+)
+
+templateOptionGroup text-color-title (
+    templateType: region
+    name: Text Color - Title
+    sequence: 5
+    advanced {
+        identifier: TEXT_COLOR_TITLE
+    }
+)
+
+templateOptionGroup title-alignment (
+    templateType: region
+    name: Alignment - Title
+    sequence: 1
+    advanced {
+        identifier: TITLE_ALIGNMENT
+    }
+)
+
+templateOptionGroup title-size (
+    templateType: region
+    name: Title Size
+    sequence: 0
+    settings {
+        nullText: Default
+    }
+    help {
+        helpText: The font size of your region title
+    }
+    advanced {
+        identifier: TITLE_SIZE
+    }
+)
+
+templateOptionGroup card-columns (
+    templateType: report
+    name: Number of columns
+    sequence: 1
+    advanced {
+        identifier: CARD_COLUMNS
+    }
+)
+
+templateOptionGroup collapsible-behavior (
+    templateType: report
+    name: Collapsible Behavior
+    sequence: 1
+    advanced {
+        identifier: COLLAPSIBLE_BEHAVIOR
+    }
+)
+
+templateOptionGroup dropdown-width (
+    templateType: report
+    name: Dropdown Width
+    sequence: 10
+    advanced {
+        identifier: DROPDOWN_WIDTH
+    }
+)
+
+templateOptionGroup responsive-behavior (
+    templateType: report
+    name: Responsive Behavior
+    sequence: 1
+    advanced {
+        identifier: RESPONSIVE_BEHAVIOR
+    }
+)
+

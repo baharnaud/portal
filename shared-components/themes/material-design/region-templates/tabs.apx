@@ -1,0 +1,45 @@
+regionTemplate tabs (
+    name: Tabs
+    templateClass: navigationRegion
+    region {
+        template: <div id="#REGION_STATIC_ID#" class="ma-region ma-region-tabs #REGION_CSS_CLASSES#" #REGION_ATTRIBUTES#>#SUB_REGION_HEADERS##SUB_REGIONS#</div>
+    }
+    subRegions {
+        template: <div id="tab-#SUB_REGION_ID#">#SUB_REGION#</div>
+        header: <ul class="tabs tabs-fixed-width">#ENTRIES#</ul>
+        headerEntry: <li class="tab"><a href="#tab-#SUB_REGION_ID#">#SUB_REGION_TITLE#</a></li>
+    }
+    advanced {
+        identifier: TABS
+    }
+
+    templateOption remember-active-tab (
+        name: Remember Active Tab
+        sequence: 1
+        appearance {
+            cssClasses: js-useLocalStorage
+        }
+        advanced {
+            identifier: REMEMBER_ACTIVE_TAB
+        }
+    )
+
+    slot regionBody (
+        name: Region Body
+        staticId: BODY
+        supports {
+            items: true
+            buttons: true
+        }
+    )
+
+    slot subRegions (
+        name: Sub Regions
+        staticId: SUB_REGIONS
+        gridLayout {
+            gridSupport: false
+        }
+    )
+
+)
+

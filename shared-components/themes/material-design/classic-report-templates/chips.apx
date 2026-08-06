@@ -1,0 +1,55 @@
+classicReportTemplate chips (
+    name: Chips
+    templateClass: custom1
+    type: namedColumn
+    reportTemplate {
+        top: " "
+        bottom: " "
+    }
+    rowTemplate1 {
+        template:
+            ```html
+            <div class="chip">
+                #IMAGE#
+                #TEXT#
+                <i class="close fa fa-times" aria-hidden="true"></i>
+            </div>
+            ```
+        conditionType: plsqlExpression
+        plsqlExpression: :IND_CLOSABLE is not null AND :IMAGE is not null
+    }
+    rowTemplate2 {
+        template:
+            ```html
+            <div class="chip">
+                #IMAGE#
+                #TEXT#
+            </div>
+            ```
+        conditionType: plsqlExpression
+        plsqlExpression: :IMAGE is not null
+    }
+    rowTemplate3 {
+        template:
+            ```html
+            <div class="chip">
+                #TEXT#
+                <i class="close fa fa-times" aria-hidden="true"></i>
+            </div>
+            ```
+        conditionType: plsqlExpression
+        plsqlExpression: :IND_CLOSABLE is not null
+    }
+    rowTemplate4 {
+        template:
+            ```html
+            <div class="chip">
+                #TEXT#
+            </div>
+            ```
+    }
+    advanced {
+        identifier: CHIPS
+    }
+)
+

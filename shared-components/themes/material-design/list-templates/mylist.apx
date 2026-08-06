@@ -1,0 +1,37 @@
+listTemplate mylist (
+    name: MyList
+    templateClass: verticalUnorderedListWithoutBullets
+    list {
+        beforeEntries:
+            ```html
+            <ul id="lightSlider">
+                <li>
+                    <a href="#SLIDER_LINK">
+                        <img src="#IMG_THUMBNAIL#" alt="#IMG_NAME#"/>
+                    </a>
+                </li>
+            </ul>
+            ```
+        afterEntries: " "
+    }
+    entry {
+        current: <tr><td><img src=/i/#IMAGE# border=0 #IMAGE_ATTR#></td><td><a href="#LINK#">#TEXT#</a></td></tr>
+        noncurrent: <tr><td><img src=/i/#IMAGE# border=0 #IMAGE_ATTR#></td><td><a href="#LINK#">#TEXT#</a></td></tr>
+    }
+    javaScript {
+        executeWhenPageLoads:
+            ```javascript-browser
+            $(document).ready(function () {
+                            $("#lightSlider").lightSlider({autoWidth:true, enableDrag:false});
+            				$("#lightSlider img").click( function() {
+            						$('#picture').attr('src', $(this).data('src'));
+                                    $('#picture').attr('alt', $(this).attr('alt'));
+            				});
+                        });
+            ```
+    }
+    advanced {
+        identifier: MYLIST
+    }
+)
+

@@ -1,0 +1,130 @@
+listTemplate sidenav (
+    name: SideNav
+    templateClass: hierarchicalExpanding
+    list {
+        beforeEntries: <ul id="app-sidenav" class="sidenav">
+        afterEntries: </ul>
+    }
+    entry {
+        current:
+            ```html
+            <li class="sidenav-entry active">
+                <a href="#LINK#" class="truncate">
+                    <i class="#ICON_CSS_CLASSES#" aria-hidden="true"></i>
+                    #TEXT#
+                    <span class="badge #A02# truncate">#A01#</span>
+                </a>
+            </li>
+            ```
+        currentWithSublist:
+            ```html
+            <li class="sidenav-entry no-padding">
+                <ul class="collapsible ma-collapsible-expandable">
+                    <li>
+                        <a class="collapsible-header active truncate waves-effect">
+                            <i class="#ICON_CSS_CLASSES#" aria-hidden="true"></i>
+                            #TEXT#
+                            <span class="badge #A02# truncate">#A01#</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            ```
+        noncurrent:
+            ```html
+            <li class="sidenav-entry">
+                <a href="#LINK#" class="truncate">
+                    <i class="#ICON_CSS_CLASSES#" aria-hidden="true"></i>
+                    #TEXT#
+                    <span class="badge #A02# truncate">#A01#</span>
+                </a>
+            </li>
+            ```
+        noncurrentWithSublist:
+            ```html
+            <li class="sidenav-entry no-padding">
+                <ul class="collapsible ma-collapsible-expandable">
+                    <li class="sidenav-entry">
+                        <a class="collapsible-header truncate waves-effect">
+                            <i class="#ICON_CSS_CLASSES#" aria-hidden="true"></i>
+                            #TEXT#
+                            <span class="badge #A02# truncate">#A01#</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            ```
+    }
+    sublist {
+        beforeEntries:
+            ```html
+            <div class="collapsible-body">
+            <ul>
+            ```
+        afterEntries:
+            ```html
+            </ul>
+            </div>
+            ```
+    }
+    sublistEntry {
+        current:
+            ```html
+            <li class="sidenav-entry active">
+                <a href="#LINK#" class="truncate">
+                    <i class="#ICON_CSS_CLASSES#" aria-hidden="true"></i>
+                    #TEXT#
+                    <span class="badge #A02# truncate">#A01#</span>
+                </a>
+            </li>
+            ```
+        currentWithSublist:
+            ```html
+            <li class="no-padding">
+                <ul class="collapsible ma-collapsible-expandable">
+                    <li class="sidenav-entry">
+                        <a class="collapsible-header active truncate waves-effect">
+                            <i class="#ICON_CSS_CLASSES#" aria-hidden="true"></i>
+                            #TEXT#
+                            <span class="badge #A02# truncate">#A01#</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            ```
+        noncurrent:
+            ```html
+            <li class="sidenav-entry">
+                <a href="#LINK#" class="truncate">
+                    <i class="#ICON_CSS_CLASSES#" aria-hidden="true"></i>
+                    #TEXT#
+                    <span class="badge #A02# truncate">#A01#</span>
+                </a>
+            </li>
+            ```
+        noncurrentWithSublist:
+            ```html
+            <li class="sidenav-entry no-padding">
+                <ul class="collapsible ma-collapsible-expandable">
+                    <li>
+                        <a class="collapsible-header truncate waves-effect">
+                            <i class="#ICON_CSS_CLASSES#" aria-hidden="true"></i>
+                            #TEXT#
+                            <span class="badge #A02# truncate">#A01#</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            ```
+    }
+    javaScript {
+        executeWhenPageLoads: materialAPEX.sideNav.init();
+    }
+    attributeDescriptions {
+        a01: Badge
+    }
+    advanced {
+        identifier: SIDENAV
+    }
+)
+

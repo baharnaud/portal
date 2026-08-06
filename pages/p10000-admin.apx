@@ -1,0 +1,188 @@
+page 10000 (
+    name: Administration
+    alias: ADMIN
+    title: Administration
+    pageGroup: @administration
+    appearance {
+        pageTemplate: @standard
+        templateOptions: #DEFAULT#
+    }
+    navigation {
+        cursorFocus: doNotFocusCursor
+    }
+    security {
+        authorizationScheme: @droits-d-administration
+        deepLinking: false
+        formAutoComplete: false
+    }
+    help {
+        helpText:
+            ```html
+            <p>La page d'administration permet aux propriétaires de l'application (administrateurs) de configurer l'application et de tenir à jour les données communes qu'elle utilise.
+            En sélectionnant l'un des paramètres disponibles, les administrateurs peuvent potentiellement modifier l'affichage de l'application et/ou les fonctions disponibles pour les utilisateurs finals.</p>
+            <p>L'accès à cette page doit être exclusivement limité aux administrateurs.</p>
+            ```
+    }
+
+    region chemin-de-navigation (
+        name: Chemin de navigation
+        type: breadcrumb
+        source {
+            breadcrumb: @breadcrumb
+        }
+        layout {
+            sequence: 10
+            slot: breadcrumbBar
+        }
+        appearance {
+            template: @title-bar
+            templateOptions: [
+                #DEFAULT#
+                t-BreadcrumbRegion--useBreadcrumbTitle
+            ]
+        }
+        componentAppearance {
+            breadcrumbTemplate: @breadcrumb
+            templateOptions: #DEFAULT#
+        }
+    )
+
+    region colonne (
+        name: Colonne 2
+        type: staticContent
+        layout {
+            sequence: 20
+            slot: body
+            startNewRow: false
+        }
+        appearance {
+            template: @blank-with-attributes-no-grid
+            templateOptions: #DEFAULT#
+        }
+    )
+
+    region etat (
+        name: Etat
+        type: classicReport
+        source {
+            location: localDatabase
+            type: sqlQuery
+            sqlQuery:
+                ```sql
+                select l.display_value feedback_status, 
+                (select count(*) from apex_team_feedback f where f.application_id = :APP_ID and f.feedback_status = l.return_value) feedback_count 
+                from apex_application_lov_entries l
+                where l.application_id = :APP_ID
+                and l.list_of_values_name = 'FEEDBACK_STATUS'
+                order by 2 desc, 1
+                ```
+        }
+        layout {
+            sequence: 10
+            parentRegion: @informations-en-retour
+            slot: subRegions
+        }
+        appearance {
+            template: @standard
+            templateOptions: [
+                #DEFAULT#
+                t-Region--removeHeader js-removeLandmark
+                t-Region--stacked
+                t-Region--scrollBody
+                t-Region--noPadding
+            ]
+        }
+        componentAppearance {
+            template: @value-attribute-pairs-row
+            templateOptions: [
+                #DEFAULT#
+                t-AVPList--rightAligned
+            ]
+        }
+        performance {
+            maxRowsToProcess: 500
+        }
+        messages {
+            whenNoDataFound: aucune donnée n'a été trouvée
+        }
+
+        column FEEDBACK_COUNT (
+            reportColumnQueryId: 2
+            derivedColumn: N
+            heading {
+                heading: Feedback Count
+            }
+            layout {
+                sequence: 2
+            }
+            appearance {
+                formatMask: 999G999G999G999G999G999G990
+            }
+            sorting {
+                sortable: false
+            }
+        )
+
+        column FEEDBACK_STATUS (
+            reportColumnQueryId: 1
+            derivedColumn: N
+            heading {
+                heading: Feedback Status
+            }
+            layout {
+                sequence: 1
+            }
+            sorting {
+                sortable: false
+            }
+        )
+
+    )
+
+    region informations-en-retour (
+        name: Informations en retour
+        type: staticContent
+        layout {
+            sequence: 30
+            parentRegion: @colonne
+            slot: subRegions
+        }
+        appearance {
+            template: @standard
+            templateOptions: [
+                #DEFAULT#
+                t-Region--noPadding
+                t-Region--scrollBody
+            ]
+        }
+        config {
+            buildOption: @fonctionnalité-informations-en-retour
+        }
+    )
+
+    region informations-en-retour-2 (
+        name: Informations en retour
+        type: list
+        source {
+            list: @informations-en-retour
+        }
+        layout {
+            sequence: 20
+            parentRegion: @informations-en-retour
+            slot: subRegions
+        }
+        appearance {
+            template: @blank-with-attributes
+            templateOptions: #DEFAULT#
+        }
+        componentAppearance {
+            listTemplate: @media-list
+            templateOptions: [
+                #DEFAULT#
+                u-colors
+            ]
+        }
+    )
+
+)
+

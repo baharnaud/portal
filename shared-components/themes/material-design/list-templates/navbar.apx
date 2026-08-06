@@ -1,0 +1,61 @@
+listTemplate navbar (
+    name: Navbar
+    templateClass: tabbedNavigationList
+    list {
+        beforeEntries: <ul id="#LIST_ID#" class="right navbar-list #COMPONENT_CSS_CLASSES#">
+        afterEntries: </ul>
+    }
+    entry {
+        current:
+            ```html
+            <li class="active">
+                <a id="#LIST_ITEM_ID#" href="#LINK#" class="#A01#">
+                    <i class="#ICON_CSS_CLASSES# right-l" aria-hidden="true"></i>
+                    <span class="hide-on-med-and-down">#TEXT#</span>
+                </a>
+            </li>
+            ```
+        currentWithSublist:
+            ```html
+            <li class="active">
+                <a id="#LIST_ITEM_ID#" class="dropdown-trigger ma-dropdown--width-auto #A01#" href="#LINK#" data-target="#LIST_ITEM_ID#-menu">
+                    <span class="hide-on-med-and-down">#TEXT#</span>
+                    <i class="fa fa-caret-down" aria-hidden="true"></i>
+                </a>
+            </li>
+            ```
+        noncurrent:
+            ```html
+            <li>
+                <a id="#LIST_ITEM_ID#" href="#LINK#" class="#A01#">
+                    <i class="#ICON_CSS_CLASSES# right-l" aria-hidden="true"></i>
+                    <span class="hide-on-med-and-down">#TEXT#</span>
+                </a>
+            </li>
+            ```
+        noncurrentWithSublist:
+            ```html
+            <li>
+                <a id="#LIST_ITEM_ID#" class="dropdown-trigger ma-dropdown--width-auto #A01#" href="#LINK#" data-target="#LIST_ITEM_ID#-menu">
+                    <span class="hide-on-med-and-down">#TEXT#</span>
+                    <i class="fa fa-caret-down" aria-hidden="true"></i>
+                </a>
+            </li>
+            ```
+    }
+    sublist {
+        beforeEntries: <ul id="#PARENT_LIST_ITEM_ID#-menu" class="dropdown-content">
+        afterEntries: </ul>
+    }
+    sublistEntry {
+        current: <li><a href="#LINK#">#TEXT#</a></li>
+        noncurrent: <li><a href="#LINK#">#TEXT#</a></li>
+    }
+    attributeDescriptions {
+        a01: Button CSS Classes
+    }
+    advanced {
+        identifier: NAVBAR
+    }
+)
+

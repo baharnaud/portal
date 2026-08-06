@@ -1,0 +1,25 @@
+classicReportTemplate slidershow (
+    name: Slidershow
+    templateClass: standard
+    type: namedColumn
+    reportTemplate {
+        top: <div id="CrossFade">
+        bottom: </div>
+    }
+    rowTemplate1 {
+        template:
+            ```html
+             <img src="#IMG_SRC#" alt="#IMG_TITLE#"/>
+            <div class="intro">
+                <h1>#ARTICLE_TITLE#</h1>
+                <p>#ARTICLE_DESCRIPTION#</p>
+            
+             </div>
+            
+            ```
+    }
+    advanced {
+        identifier: SLIDERSHOW
+    }
+)
+

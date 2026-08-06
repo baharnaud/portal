@@ -1,0 +1,25 @@
+classicReportTemplate tags (
+    name: Tags
+    templateClass: standard
+    type: namedColumn
+    reportTemplate {
+        top: " "
+        bottom: " "
+    }
+    rowTemplate1 {
+        template:
+            ```html
+            <div class="widget-content cloud-label">
+                        <ul>
+                            <li>
+                                <a class="label-name" href="#">#TAG_NAME#</a>
+                            </li>
+                        </ul>
+            	</div>
+            ```
+    }
+    advanced {
+        identifier: TAGS
+    }
+)
+

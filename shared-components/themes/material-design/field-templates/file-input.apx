@@ -1,0 +1,38 @@
+fieldTemplate file-input (
+    name: File Input
+    templateClass: custom3
+    label {
+        before:
+            ```html
+                <span>
+            
+            ```
+        after:
+            ```html
+                </span>
+            
+            ```
+    }
+    fieldContainer {
+        beforeLabelAndItem:
+            ```html
+            <div id="#CURRENT_ITEM_NAME#_CONTAINER" class="file-field input-field #ITEM_CSS_CLASSES#">
+            <div class="btn">
+            
+            ```
+        afterLabelAndItem:
+            ```html
+            </div>
+            <div class="file-path-wrapper">
+                <input class="file-path validate" type="text">
+            </div>
+            </div>
+            
+            
+            ```
+    }
+    advanced {
+        identifier: FILE_INPUT
+    }
+)
+

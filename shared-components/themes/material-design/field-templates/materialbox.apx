@@ -1,0 +1,45 @@
+fieldTemplate materialbox (
+    name: Materialbox
+    templateClass: custom1
+    label {
+        before:
+            ```html
+                <label class="big-label">
+            
+            ```
+        after:
+            ```html
+                </label>
+            
+            ```
+    }
+    item {
+        before:
+            ```html
+                <div data-caption="#CURRENT_ITEM_HELP_TEXT# ">
+            
+            ```
+        after:
+            ```html
+                </div>
+            
+            ```
+    }
+    fieldContainer {
+        beforeLabelAndItem:
+            ```html
+            <div class="apex-materialbox">
+            
+            ```
+        afterLabelAndItem:
+            ```html
+            </div>
+            
+            
+            ```
+    }
+    advanced {
+        identifier: MATERIALBOX
+    }
+)
+

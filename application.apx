@@ -1,0 +1,104 @@
+app SERVIVE-EN-LIGNE (
+    name: PORTAIL CANDIDAT ORIMARC
+    version: Version 1.0
+    logo {
+        type: text
+        text: Servive en Ligne
+    }
+    navigation {
+        homeUrl: {
+            page: 1
+        }
+        loginUrl: {
+            page: LOGIN
+        }
+    }
+    navigationMenu {
+        listTemplate: @side-navigation-menu
+        templateOptions: [
+            #DEFAULT#
+            t-TreeNav--styleA
+            js-navCollapsed--hidden
+        ]
+        list: @menu-de-navigation-du-bureau
+    }
+    navigationBar {
+        list: @barre-de-navigation-du-bureau
+        listTemplate: @navigation-bar
+        templateOptions: #DEFAULT#
+    }
+    userInterface {
+        currentTheme: @universal-theme
+        globalPage: 0
+        addBuiltWithApexToFooter: false
+    }
+    appFormatMasks {
+        date: DS
+        timestamp: DS
+        timestampTimeZone: DS
+    }
+    css {
+        fileUrls: #APP_IMAGES#app-icon.css?version=#APP_VERSION#
+    }
+    authentication {
+        scheme: @authentification-application-express
+        publicUser: APEX_PUBLIC_USER
+    }
+    security {
+        referrerPolicy: strictOriginWhenCrossOrigin
+    }
+    sessionStateProtection {
+        checksumSalt: 9528BF883B242BB38E6C5A3D49CB32A4B21CDF34C26056419DD9391953C2471C
+        acceptPre202UrlChecksums: false
+    }
+    sessionManagement {
+        sessionStateCommits: immediate
+    }
+    globalization {
+        primaryLanguage: fr
+        documentDirection: leftToRight
+    }
+    progressiveWebApp {
+        enable: false
+    }
+    rowSearch {
+        tokenize: false
+    }
+    reportPrinting {
+        type: useInstanceSettings
+    }
+    runtime {
+        allowFeedback: true
+        compatibilityMode: 21.2
+        accessibleReadOnlyItems: false
+    }
+    advanced {
+        passEcid: false
+        modernizeApp: true
+        appBuilderIconName: app-icon.svg
+    }
+    comments {
+        comments: Application créée à l'aide de l'assistant Création d'application 2020.08.03.
+    }
+
+    substitution APP_NAME (
+        value {
+            staticValue: Servive en Ligne
+        }
+    )
+
+    appSetting FEEDBACK_ATTACHMENTS_YN (
+        value {
+            staticValue: Y
+            onUpgradeKeepValue: true
+        }
+        validation {
+            validValues: Y, N
+        }
+        config {
+            buildOption: @fonctionnalité-informations-en-retour
+        }
+    )
+
+)
+

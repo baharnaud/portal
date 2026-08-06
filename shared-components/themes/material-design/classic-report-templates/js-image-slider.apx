@@ -1,0 +1,29 @@
+classicReportTemplate js-image-slider (
+    name: js image slider
+    templateClass: custom1
+    type: namedColumn
+    reportTemplate {
+        top:
+            ```html
+             <div id="sliderFrame">
+                 <div id="slider">
+            ```
+        bottom:
+            ```html
+            </div>
+            </div>
+            ```
+    }
+    rowTemplate1 {
+        template:
+            ```html
+            <a href="#LINK_MARKER#" target="_blank">
+                            <img src="#IMG_SRC#" alt="#IMG_ALT#" style="width:700px; height:306px;"/>
+            </a>
+            ```
+    }
+    advanced {
+        identifier: JS_IMAGE_SLIDER
+    }
+)
+

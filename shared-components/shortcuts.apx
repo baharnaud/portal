@@ -1,0 +1,7 @@
+shortcut DELETE_CONFIRM_MSG (
+    source {
+        type: jsEscapeSingleQuotes
+        text: Voulez-vous effectuer cette action de suppression ?
+    }
+)
+

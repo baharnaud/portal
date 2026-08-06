@@ -1,0 +1,275 @@
+regionTemplate blockquote (
+    name: Blockquote
+    templateClass: bracketedRegion
+    templateOptions {
+        default: h6
+    }
+    region {
+        template:
+            ```html
+            <blockquote id="#REGION_STATIC_ID#" class="ma-region ma-region-blockquote #REGION_CSS_CLASSES#" #REGION_ATTRIBUTES#>
+            	<div class="ma-flex-left">#PREVIOUS#</div>
+            
+            	<div class="ma-flex-content">
+            		<div class="ma-region-header">
+            			<div class="ma-flex-content">
+            				<div class="ma-region-title"><i class="#ICON_CSS_CLASSES#" aria-hidden="true"></i>#TITLE#</div>
+            			</div>
+            			<div class="ma-flex-right">#EDIT#</div>
+            		</div>
+            
+            		<div class="ma-region-buttons ma-flex-justify">
+            			<div class="ma-flex-left">#COPY#</div>
+            			<div class="ma-flex-content"></div>
+            			<div class="ma-flex-right">#EXPAND#</div>
+            		</div>
+            
+            		<div class="ma-region-body t-Region-body">#BODY##SUB_REGIONS#</div>
+            
+            		<div class="ma-region-buttons ma-flex-justify">
+            			<div class="ma-flex-left">#CLOSE##HELP#</div>
+            			<div class="ma-flex-center ma-flex-content">#CHANGE#</div>
+            			<div class="ma-flex-right">#DELETE##CREATE##CREATE2#</div>
+            		</div>
+            	</div>
+            
+            	<div class="ma-flex-right">#NEXT#</div>
+            </blockquote>
+            ```
+    }
+    advanced {
+        identifier: BLOCKQUOTE
+    }
+
+    templateOption h1 (
+        name: H1
+        group: @region/title-size
+        sequence: 1
+        appearance {
+            cssClasses: h1
+        }
+        advanced {
+            identifier: H1
+        }
+    )
+
+    templateOption h2 (
+        name: H2
+        group: @region/title-size
+        sequence: 2
+        appearance {
+            cssClasses: h2
+        }
+        advanced {
+            identifier: H2
+        }
+    )
+
+    templateOption h3 (
+        name: H3
+        group: @region/title-size
+        sequence: 3
+        appearance {
+            cssClasses: h3
+        }
+        advanced {
+            identifier: H3
+        }
+    )
+
+    templateOption h4 (
+        name: H4
+        group: @region/title-size
+        sequence: 4
+        appearance {
+            cssClasses: h4
+        }
+        advanced {
+            identifier: H4
+        }
+    )
+
+    templateOption h5 (
+        name: H5
+        group: @region/title-size
+        sequence: 5
+        appearance {
+            cssClasses: h5
+        }
+        advanced {
+            identifier: H5
+        }
+    )
+
+    templateOption h6 (
+        name: H6
+        group: @region/title-size
+        sequence: 6
+        appearance {
+            cssClasses: h6
+        }
+        advanced {
+            identifier: H6
+        }
+    )
+
+    templateOption hidden (
+        name: Hidden
+        group: @region/title-size
+        sequence: 0
+        appearance {
+            cssClasses: hide-title
+        }
+        advanced {
+            identifier: HIDDEN
+        }
+    )
+
+    slot change (
+        name: Change
+        staticId: CHANGE
+        supports {
+            regions: false
+            buttons: true
+        }
+        gridLayout {
+            gridSupport: false
+        }
+    )
+
+    slot close (
+        name: Close
+        staticId: CLOSE
+        supports {
+            regions: false
+            buttons: true
+        }
+        gridLayout {
+            gridSupport: false
+        }
+    )
+
+    slot copy (
+        name: Copy
+        staticId: COPY
+        supports {
+            regions: false
+            buttons: true
+        }
+        gridLayout {
+            gridSupport: false
+        }
+    )
+
+    slot create (
+        name: Create
+        staticId: CREATE
+        supports {
+            regions: false
+            buttons: true
+        }
+        gridLayout {
+            gridSupport: false
+        }
+    )
+
+    slot create2 (
+        name: Create2
+        staticId: CREATE2
+        supports {
+            regions: false
+            buttons: true
+        }
+        gridLayout {
+            gridSupport: false
+        }
+    )
+
+    slot delete (
+        name: Delete
+        staticId: DELETE
+        supports {
+            regions: false
+            buttons: true
+        }
+        gridLayout {
+            gridSupport: false
+        }
+    )
+
+    slot edit (
+        name: Edit
+        staticId: EDIT
+        supports {
+            regions: false
+            buttons: true
+        }
+        gridLayout {
+            gridSupport: false
+        }
+    )
+
+    slot expand (
+        name: Expand
+        staticId: EXPAND
+        supports {
+            regions: false
+            buttons: true
+        }
+        gridLayout {
+            gridSupport: false
+        }
+    )
+
+    slot help (
+        name: Help
+        staticId: HELP
+        supports {
+            regions: false
+            buttons: true
+        }
+        gridLayout {
+            gridSupport: false
+        }
+    )
+
+    slot next (
+        name: Next
+        staticId: NEXT
+        supports {
+            regions: false
+            buttons: true
+        }
+        gridLayout {
+            gridSupport: false
+        }
+    )
+
+    slot previous (
+        name: Previous
+        staticId: PREVIOUS
+        supports {
+            regions: false
+            buttons: true
+        }
+        gridLayout {
+            gridSupport: false
+        }
+    )
+
+    slot regionBody (
+        name: Region Body
+        staticId: BODY
+        supports {
+            items: true
+            buttons: true
+        }
+    )
+
+    slot subRegions (
+        name: Sub Regions
+        staticId: SUB_REGIONS
+    )
+
+)
+

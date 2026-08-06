@@ -1,0 +1,28 @@
+#tiv {
+	    margin: 0px;
+	    width: 100%;
+	    height: auto;
+	    position: fixed;
+	    left: 0;
+	    bottom: 0;
+	    z-index: 500;
+	    background-color: #000;
+	}
+
+	#flash_info table {
+	    background-color: transparent;
+	    border-collapse: collapse;
+	    border-spacing: 0;
+	}
+
+	#flash_info td, #flash_info th {
+	    padding: 0;
+	}
+
+	.cad_inf {
+	    background-color: #C00;
+	    color: #FFF;
+	    padding: 0px 10px;
+	    font-family: 'Oswald';
+	    font-weight: bold;
+	}

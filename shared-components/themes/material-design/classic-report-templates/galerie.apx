@@ -1,0 +1,41 @@
+classicReportTemplate galerie (
+    name: Galerie
+    templateClass: standard
+    type: namedColumn
+    reportTemplate {
+        top:
+            ```html
+            <div class="container-fluid" data-aos="fade" data-aos-delay="500">
+              <div class="swiper-container images-carousel">
+                <div class="swiper-wrapper">
+            ```
+        bottom:
+            ```html
+             </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"><span aria-hidden="true" class="fa fa-arrow-left-alt" style="background: rgba(0, 0, 0, 0.6); padding: 8px; font-size: 20px; color: #fff;"></span></div>
+                <div class="swiper-button-next"><span aria-hidden="true" class="fa fa-arrow-right-alt" style="background: rgba(0, 0, 0, 0.6); padding: 8px; font-size: 20px; color: #fff;"></span></div>
+                <div class="swiper-scrollbar"></div>
+              </div>
+            </div>
+            ```
+    }
+    rowTemplate1 {
+        template:
+            ```html
+            <div class="swiper-slide">
+              <div class="image-wrap">
+                <div class="image-info">
+                  <h2 class="mb-3">#TITRE_GALERIE#</h2>
+                  <a href="#LINK#" class="btn btn-outline-white py-2 px-4 default-btn">Plus de photos</a>
+                </div>
+                <img src="#IMG_SRC#" alt="Image">
+              </div>
+            </div>
+            ```
+    }
+    advanced {
+        identifier: GALERIE
+    }
+)
+

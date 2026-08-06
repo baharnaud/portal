@@ -1,0 +1,124 @@
+/* debut style pour les sujets*/
+a.topictitle{
+  display: inline;
+  font-weight: bold;
+  font-size: 1.2em;
+  text-decoration: none;
+  color: #666666;
+}
+a.username-coloured{
+  color: #AA0000;
+  font-weight: bold;
+  display: inline !important;
+  padding: 0;
+  text-decoration: none;
+
+}
+/* fin style pour les sujets*/
+
+/* debut style pour les posts*/
+.forum-post {
+    position: relative;
+    margin-bottom: 1.875rem;
+    font-size: 15px;
+}
+a.forum-post {
+    text-decoration: none;
+    color: inherit;
+}
+.forum-post_avatar {
+	    position: absolute;
+	    padding: 3px;
+	    top: 10px;
+	    left: 10px;
+	    width: 54px;
+	    height: 54px;
+	    background-color: #fff;
+	    border-radius: 54px;
+	    -webkit-box-shadow: 0 1px 9px #e0e0e0,inset 0 0 2px hsla(0,0%,84%,.75);
+	    box-shadow: 0 1px 9px #e0e0e0,inset 0 0 2px hsla(0,0%,84%,.75);
+	}
+  .forum-post_body {
+	    border: 1px solid #ededed;
+	    background-color: #fff;
+	    padding: 20px 20px 0;
+	    margin: 0 10px 0 70px;
+	    border-radius: 3px;
+	    -webkit-box-shadow: 0 4px 4px hsla(0,0%,95%,.56);
+	    box-shadow: 0 4px 4px hsla(0,0%,95%,.56);
+	}
+  .forum-post_author {
+    font-weight: 700;
+}
+.forum-post_actions, .forum-post_date {
+	    color: #9e9e9e;
+	    font-size: .7rem;
+}
+.danger {
+	    color: #c0392b;
+}
+.forum-post_actions a {
+    text-decoration: underline;
+}
+.forum-post_text {
+    margin: 1rem 0;
+}
+.topic-report p {
+    margin: 1rem 0;
+}
+.forum-post form {
+    margin-bottom: 1rem;
+}
+.form-group {
+    margin-bottom: 1rem;
+    position: relative;
+}
+.grey .form-control {
+    background-color: #fff;
+}
+textarea.form-control {
+    padding: 20px;
+    -webkit-transition-duration: .3s;
+    transition-duration: .3s;
+}
+.form-control {
+	    padding: 0 20px;
+	    position: relative;
+	    width: 100%;
+	    height: 50px;
+	    font-size: 16px;
+	    color: #393f49;
+	    background-color: #fafafa;
+	    border: none;
+	    outline: none;
+	    border-radius: 3px;
+	    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.2);
+	    box-shadow: inset 0 1px 1px rgba(0,0,0,.2);
+	}
+  .btn-submit {
+	    margin-bottom: 1.875rem;
+	    display: inline-block;
+	    min-height: 40px;
+	    padding: 0 15px;
+	    line-height: 36px;
+	    color: #fff;
+	    text-align: center;
+	    text-decoration: none !important;
+	    font-weight: 700;
+	    background-color: #78ab4e;
+	    border: 2px solid transparent;
+	    cursor: pointer;
+	    -webkit-transition: .3s;
+	    transition: .3s;
+	        transition-duration: 0.3s;
+	    border-radius: 3px;
+	    -webkit-transition-duration: .3s;
+	    transition-duration: .3s;
+	    -webkit-appearance: none;
+}
+.btn-submit:hover{
+    border: 2px solid #78ab4e;
+    color: #78ab4e;
+    background-color: transparent;
+}
+/* fin style pour les posts*/

@@ -1,0 +1,48 @@
+classicReportTemplate slider (
+    name: Slider
+    templateClass: custom4
+    type: namedColumn
+    reportTemplate {
+        top:
+            ```html
+            <div id="#REGION_STATIC_ID#_report" class="slider #COMPONENT_CSS_CLASSES#">
+            <ul class="slides">
+            
+            ```
+        bottom:
+            ```html
+            </ul>
+            </div>
+            
+            ```
+    }
+    rowTemplate1 {
+        template:
+            ```html
+            <li>
+                <img src="#IMG#" alt="#TITLE#">
+                <div class="caption">
+                    <h3>#TITLE#</h3>
+                    <h5><a href="#LINK#" style="float:right">#DESCRIPTION#</a></h5>
+                </div>
+            </li>
+            
+            ```
+    }
+    advanced {
+        identifier: SLIDER
+    }
+
+    templateOption slider-fullscreen (
+        name: Fullscreen
+        sequence: 1
+        appearance {
+            cssClasses: fullscreen
+        }
+        advanced {
+            identifier: SLIDER_FULLSCREEN
+        }
+    )
+
+)
+

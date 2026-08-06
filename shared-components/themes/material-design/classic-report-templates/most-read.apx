@@ -1,0 +1,25 @@
+classicReportTemplate most-read (
+    name: Most Read
+    templateClass: standard
+    type: namedColumn
+    reportTemplate {
+        top: <div class="aside-widget">
+        bottom: </div>
+    }
+    rowTemplate1 {
+        template:
+            ```html
+            <div class="post post-widget">
+                <a class="post-img" href="#LINK#"><img src="#IMG_SRC#" alt=""></a>
+                <div class="post-body">
+                    <h3 class="post-title"><a href="#LINK#">#TITLE#</a></h3>
+                </div>
+            </div>
+            
+            ```
+    }
+    advanced {
+        identifier: MOST_READ
+    }
+)
+

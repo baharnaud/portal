@@ -1,0 +1,72 @@
+classicReportTemplate collapsible (
+    name: Collapsible
+    templateClass: custom2
+    type: namedColumn
+    templateOptions {
+        preset: ma-collapsible-accordion
+    }
+    reportTemplate {
+        top: <ul class="collapsible #COMPONENT_CSS_CLASSES#">
+        bottom: </ul>
+    }
+    rowTemplate1 {
+        template:
+            ```html
+            <li class="active">
+              <div class="collapsible-header"><i class="fa #ICON_CSS_CLASSES#" aria-hidden="true"></i>#TITLE#</div>
+              <div class="collapsible-body"><span>#DESCRIPTION#</span></div>
+            </li>
+            ```
+        conditionType: plsqlExpression
+        plsqlExpression: :ACTIVE_YN = 'Y'
+    }
+    rowTemplate2 {
+        template:
+            ```html
+            <li>
+              <div class="collapsible-header"><i class="fa #ICON_CSS_CLASSES#" aria-hidden="true"></i>#TITLE#</div>
+              <div class="collapsible-body"><span>#DESCRIPTION#</span></div>
+            </li>
+            ```
+    }
+    advanced {
+        identifier: COLLAPSIBLE
+    }
+
+    templateOption popout (
+        name: Popout
+        sequence: 1
+        appearance {
+            cssClasses: popout
+        }
+        advanced {
+            identifier: POPOUT
+        }
+    )
+
+    templateOption accordion (
+        name: Accordion
+        group: @report/collapsible-behavior
+        sequence: 1
+        appearance {
+            cssClasses: ma-collapsible-accordion
+        }
+        advanced {
+            identifier: ACCORDION
+        }
+    )
+
+    templateOption expandable (
+        name: Expandable
+        group: @report/collapsible-behavior
+        sequence: 2
+        appearance {
+            cssClasses: ma-collapsible-expandable
+        }
+        advanced {
+            identifier: EXPANDABLE
+        }
+    )
+
+)
+

@@ -1,0 +1,268 @@
+/*
+* @Author: MANNOUAN MICHEL
+* @Date:   2019-01-17 08:57:30
+* @Last Modified by:   MANNOUAN MICHEL
+* @Last Modified time: 2019-01-17 14:04:50
+*/
+
+
+/**************************************************** Article Element Style ***************************************************/
+
+a, abbr, acronym, address, applet, b, big, blockquote, body, caption, 
+center, cite, code, dd, del, dfn, div, dl, dt, em, fieldset, font, form, 
+h1, h2, h3, h4, h5, h6, html, i, iframe, img, ins, kbd, label, legend, li, 
+object, p, pre, q, s, samp, small, span, strike, strong, sub, sup, table, 
+tbody, td, tfoot, th, thead, tr, tt, u, ul, var {
+    padding: 0;
+    border: 0;
+        border-top-color: currentcolor;
+        border-top-style: none;
+        border-top-width: 0px;
+        border-right-color: currentcolor;
+        border-right-style: none;
+        border-right-width: 0px;
+        border-bottom-color: currentcolor;
+        border-bottom-style: none;
+        border-bottom-width: 0px;
+        border-left-color: currentcolor;
+        border-left-style: none;
+        border-left-width: 0px;
+        border-image-outset: 0;
+        border-image-repeat: stretch;
+        border-image-slice: 100%;
+        border-image-source: none;
+        border-image-width: 1;
+    outline: 0;
+    vertical-align: baseline;
+    background: 0 0;
+        background-color: rgba(0, 0, 0, 0);
+        background-position-x: 0px;
+        background-position-y: 0px;
+        background-repeat: repeat;
+        background-attachment: scroll;
+        background-image: none;
+        background-size: auto;
+        background-origin: padding-box;
+        background-clip: border-box;
+    text-decoration: none;
+        text-decoration-line: none;
+        text-decoration-style: solid;
+        text-decoration-color: currentcolor;
+}
+
+.blog-post {
+	display: block;
+	overflow: hidden;
+	word-wrap: break-word;
+}
+
+.item-post h1.post-title {
+    color: #333333;
+    font-size: 27px;
+    line-height: 1.5em;
+    font-weight: 700;
+    position: relative;
+    display: block;
+    margin: 10px 0;
+    padding: 0;
+}
+
+.post-meta {
+    overflow: hidden;
+    color: #aaa;
+    font-size: 13px;
+    font-weight: 400;
+    padding: 0 1px;
+}
+
+.post-meta .post-author, .post-meta .post-date {
+    float: left;
+    display: inline-block;
+    margin: 0;
+}
+
+.post-author {
+    font-weight: 700;
+}
+
+.post-meta a {
+    color: #333333;
+    transition: color .17s;
+}
+
+a, a:visited {
+    text-decoration: none;
+}
+
+a {
+    color: #ff3d00;
+}
+
+.post-meta .post-author::after {
+    content: '-';
+    margin: 0 4px;
+}
+
+.item-post .post-body {
+    width: 100%;
+    font-size: 15px;
+    line-height: 1.5em;
+    overflow: hidden;
+    padding: 20px 0 0;
+    margin: 10px 0 0;
+    border-top: 1px dashed #ebebeb;
+}
+
+.item-post .post-body img {
+    max-width: 100%;
+}
+
+img {
+    border: none;
+    position: relative;
+}
+
+
+
+/**************************************************** Article Element Tag Style *********************************************/
+
+
+.post-footer {
+    position: relative;
+    float: left;
+    width: 100%;
+    margin: 20px 0 0;
+}
+
+.post-labels {
+    overflow: hidden;
+    height: auto;
+    position: relative;
+    margin: 0 0 20px;
+    padding: 0;
+}
+
+.post-labels a {
+    margin: 0 0 0 5px;
+    transition: all .17s ease;
+}
+
+.post-labels a {
+    float: left;
+    height: 22px;
+    background-color: #f2f2f2;
+    color: #333333;
+    font-size: 12px;
+    line-height: 22px;
+    font-weight: 400;
+    margin: 0;
+    padding: 0 10px;
+    border-radius: 2px;
+}
+
+/**************************************************** Article Element Share Style *********************************************/
+
+.post-share {
+    position: relative;
+    overflow: hidden;
+    line-height: 0;
+    margin: 0 0 30px;
+}
+
+ul.share-links {
+    position: relative;
+}
+
+ul {
+    list-style-position: inside;
+    font-weight: 400;
+    list-style: none;
+}
+
+.share-links li.facebook, .share-links li.twitter {
+    width: 20%;
+}
+
+.share-links li {
+    width: 32px;
+    float: left;
+    box-sizing: border-box;
+    margin: 0 5px 0 0;
+}
+
+ul li {
+    list-style: none;
+}
+
+.social-color .facebook a {
+    background-color: #3b5999;
+}
+
+.share-links li a {
+    float: left;
+    display: inline-block;
+    cursor: pointer;
+    width: 100%;
+    height: 32px;
+    line-height: 32px;
+    color: #fff;
+    font-weight: 400;
+    font-size: 13px;
+    text-align: center;
+    box-sizing: border-box;
+    opacity: 1;
+    border-radius: 2px;
+    transition: all .17s ease;
+}
+
+.social .facebook a::before {
+    content: "\f09a";
+}
+
+.share-links li a::before {
+    float: left;
+    display: block;
+    width: 32px;
+    background-color: rgba(0,0,0,0.05);
+    text-align: center;
+    line-height: 32px;
+}
+
+.social a::before {
+    display: inline-block;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.social-color .twitter a {
+    background-color: #00acee;
+}
+
+.social .twitter a::before {
+    content: "\f099";
+}
+
+.social-color .gplus a {
+    background-color: #db4a39;
+}
+
+.social .gplus a::before {
+    content: "\f0d5";
+}
+
+.social-color .linkedin a {
+    background-color: #0077b5;
+}
+
+.social .linkedin a::before {
+    content: "\f0e1";
+}
+
+.social-color .email a {
+    background-color: #888;
+}
+
+.social .email a::before {
+    content: "\f0e0";
+}

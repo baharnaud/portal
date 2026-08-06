@@ -1,0 +1,64 @@
+popupLovTemplate search (
+    name: Search
+    templateClass: standard
+    searchField {
+        beforeField: <div class="m-a-1">
+        afterField: </div>
+        width: 20
+        maxWidth: 100
+        filterTextAttributes: class="" style="width:auto;"
+    }
+    findButton {
+        text: Search
+        attributes: class="btn m-l-1 m-r-1"
+    }
+    closeButton {
+        text: Close
+        attributes: class="btn-flat"
+    }
+    nextButton {
+        text: Next >
+        attributes: class="btn-flat"
+    }
+    previousButton {
+        text: < Previous
+        attributes: class="btn-flat"
+    }
+    window {
+        scrollBars: 1
+        resizable: 1
+        width: 480
+        height: 480
+    }
+    pagination {
+        text: <div class="collection-item">Row(s) #FIRST_ROW# - #LAST_ROW#</div>
+        rowsPerPage: 100
+    }
+    resultSet {
+        before: <div class="collection">
+        after: </div>
+    }
+    page {
+        head:
+            ```html
+            <!DOCTYPE html>
+            <html lang="&BROWSER_LANGUAGE.">
+            <head>
+            <title>#TITLE#</title>
+            #APEX_CSS#
+            #THEME_CSS#
+            #THEME_STYLE_CSS#
+            #FAVICONS#
+            #APEX_JAVASCRIPT#
+            #THEME_JAVASCRIPT#
+            <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+            </head>
+            ```
+        bodyAttributes: onload="first_field()" class="ma-popuplov-modal container"
+        footer: <script type="text/javascript" src="#THEME_IMAGES#js/finalize#MIN#.js"></script>
+    }
+    advanced {
+        identifier: winlov
+    }
+)
+

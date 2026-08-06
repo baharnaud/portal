@@ -1,0 +1,45 @@
+regionTemplate modal (
+    name: Modal
+    templateClass: borderlessRegion
+    region {
+        template:
+            ```html
+            <div id="#REGION_STATIC_ID#" class="ma-region region modal #REGION_CSS_CLASSES#">
+            	<div class="modal-content">
+            		<h4 class="modal-title"><i class="#ICON_CSS_CLASSES#" aria-hidden="true"></i>#TITLE#</h4>
+            		<div class="modal-inner-content">#BODY#</div>
+            	</div>
+            </div>
+            ```
+    }
+    advanced {
+        identifier: MODAL
+    }
+
+    templateOption bottom-sheet (
+        name: Bottom Sheet
+        sequence: 1
+        appearance {
+            cssClasses: bottom-sheet
+        }
+        advanced {
+            identifier: BOTTOM_SHEET
+        }
+    )
+
+    slot regionBody (
+        name: Region Body
+        staticId: BODY
+        supports {
+            items: true
+            buttons: true
+        }
+    )
+
+    slot subRegions (
+        name: Sub Regions
+        staticId: SUB_REGIONS
+    )
+
+)
+

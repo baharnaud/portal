@@ -1,0 +1,48 @@
+classicReportTemplate détails-galerie (
+    name: Détails Galerie
+    templateClass: standard
+    type: namedColumn
+    reportTemplate {
+        top:
+            ```html
+            <div class="site-section"  data-aos="fade">
+                <div class="container-fluid">
+                  <div class="rows" id="lightgallery">
+            ```
+        bottom:
+            ```html
+            </div>
+                </div>
+                    </div>
+            ```
+    }
+    rowTemplate1 {
+        template:
+            ```html
+            <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 video" data-poster="" data-src="#YTB_LINK#" data-sub-html="<h4>#TITRE_IMG#</h4>">
+                <a href="#">
+                    <img class="img-responsive" src="#COVER#">
+                    <div class="demo-gallery-poster">
+                        <img src="&APP_IMAGES.play-button.png">
+                    </div>
+                </a>
+            </div>
+            ```
+        conditionType: plsqlExpression
+        plsqlExpression: :YTB_LINK is not null
+    }
+    rowTemplate2 {
+        template:
+            ```html
+            <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 item" data-aos="fade" data-src="#IMG_SRC#" data-sub-html="<h4>#TITRE_IMG#</h4><p>#DECRIPTION#</p>">
+                <a href="#"><img src="#IMG_MIN#" alt="IMage" class="img-fluid"></a>
+            </div>
+            ```
+        conditionType: plsqlExpression
+        plsqlExpression: :IMG_SRC IS NOT NULL
+    }
+    advanced {
+        identifier: DÉTAILS_GALERIE
+    }
+)
+

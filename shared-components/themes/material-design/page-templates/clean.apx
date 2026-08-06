@@ -1,0 +1,170 @@
+pageTemplate clean (
+    name: Clean
+    templateClass: login
+    templateOptions {
+        default: main-container
+    }
+    page {
+        header:
+            ```html
+            <!DOCTYPE html>
+            <html class="no-js #RTL_CLASS# page-&APP_PAGE_ID. app-&APP_ALIAS." lang="&BROWSER_LANGUAGE." #TEXT_DIRECTION#>
+            <head>
+            	<title>#TITLE#</title>
+            
+            	<!-- Meta -->
+            	<meta http-equiv="x-ua-compatible" content="IE=edge" />
+            	<meta charset="utf-8">
+            	<meta name="author" content="Vincent Morneau">
+            	<meta name="description" content="Material Design Theme for APEX">
+            	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            
+            	#APEX_CSS#
+            	#THEME_CSS#
+            	#TEMPLATE_CSS#
+            	#THEME_STYLE_CSS#
+            	#APPLICATION_CSS#
+            	#PAGE_CSS#
+            	#FAVICONS#
+            	#HEAD#
+            </head>
+            <body id="#PAGE_STATIC_ID#" class="#PAGE_CSS_CLASSES#" #TEXT_DIRECTION# #ONLOAD#>
+            ```
+        body:
+            ```html
+            #FORM_OPEN#
+            
+            <!-- Item Container -->
+            #REGION_POSITION_01#
+            
+            <div class="ma-main-container m-t-3">
+            #BODY#
+            </div>
+            
+            <div id="ma-notification-container">
+            #SUCCESS_MESSAGE##NOTIFICATION_MESSAGE##GLOBAL_NOTIFICATION#
+            </div>
+            
+            #FORM_CLOSE#
+            ```
+        footer:
+            ```html
+            #FORM_CLOSE#
+            #DEVELOPER_TOOLBAR#
+            #APEX_JAVASCRIPT#
+            #GENERATED_CSS#
+            #THEME_JAVASCRIPT#
+            #TEMPLATE_JAVASCRIPT#
+            #APPLICATION_JAVASCRIPT#
+            #PAGE_JAVASCRIPT#
+            #GENERATED_JAVASCRIPT#
+            <script type="text/javascript" src="#THEME_IMAGES#js/finalize#MIN#.js"></script>
+            </body>
+            </html>
+            ```
+    }
+    subtemplate {
+        successMessage:
+            ```html
+            <div class="t-Body-alert">
+              <div class="t-Alert t-Alert--defaultIcons t-Alert--success t-Alert--horizontal t-Alert--page t-Alert--colorBG" id="t_Alert_Success" role="alert">
+                <div class="t-Alert-wrap">
+                  <div class="t-Alert-icon">
+            			<i aria-hidden="true" class="fa fa-check"></i>
+                  </div>
+                  <div class="t-Alert-content">
+                    <div class="t-Alert-header">
+                      <span class="t-Alert-title">#SUCCESS_MESSAGE#</span>
+                    </div>
+                  </div>
+                  <div class="t-Alert-buttons">
+                    <button class="t-Button t-Button--noUI t-Button--icon t-Button--closeAlert btn-flat" type="button" title="#CLOSE_NOTIFICATION#"><i aria-hidden="true" class="fa fa-times panel-close"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            ```
+        notification:
+            ```html
+            <div class="t-Body-alert">
+              <div class="t-Alert t-Alert--defaultIcons t-Alert--warning t-Alert--horizontal t-Alert--page" id="t_Alert_Success" role="alert">
+                <div class="t-Alert-wrap">
+                  <div class="t-Alert-icon">
+                     <i aria-hidden="true" class="fa fa-warning"></i>
+                  </div>
+                  <div class="t-Alert-content">
+                    <div class="t-Alert-header">
+                      <span class="t-Alert-title">#MESSAGE#</span>
+                    </div>
+                  </div>
+                  <div class="t-Alert-buttons">
+                    <button class="t-Button t-Button--noUI t-Button--icon t-Button--closeAlert btn-flat" type="button" title="#CLOSE_NOTIFICATION#"><i aria-hidden="true" class="fa fa-times panel-close"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            ```
+    }
+    layout {
+        maxColumns: 12
+        alwaysUseMaxColumns: true
+        containerTemplate: <div class="ma-container">#ROWS#</div>
+        rowTemplate: <div class="row">#COLUMNS#</div>
+        columnTemplate: <div class="col s12 m#COLUMN_SPAN_NUMBER# #CSS_CLASSES#" #ATTRIBUTES#>#CONTENT#</div>
+    }
+    errorPage {
+        template:
+            ```html
+            <div class="row m-t-3">
+            	<div class="col s12 m8 offset-m2">
+            		<div class="card">
+            			<div class="card-image center">
+            				<i class="material-icons xlarge red-text text-lighten-1 m-t-1">error</i>
+            			</div>
+            			<div class="card-content grey-text">
+            				<p>#MESSAGE#</p>
+            				<p>#ADDITIONAL_INFO#</p>
+            				<p>#TECHNICAL_INFO#</p>
+            			</div>
+            			<div class="card-action">
+            				<a href="#BACK_LINK#" class="btn-flat waves-effect waves-light">#OK#</a>
+            			</div>
+            		</div>
+            	</div>
+            </div>
+            ```
+    }
+    advanced {
+        identifier: CLEAN
+    }
+
+    templateOption container (
+        name: Wrap Page in a Container
+        sequence: 1
+        appearance {
+            cssClasses: main-container
+        }
+        advanced {
+            identifier: CONTAINER
+        }
+    )
+
+    slot itemContainer (
+        name: Item Container
+        staticId: REGION_POSITION_01
+        gridLayout {
+            gridSupport: false
+        }
+    )
+
+    slot pageBody (
+        name: Page Body
+        staticId: BODY
+        supports {
+            items: true
+            buttons: true
+        }
+    )
+
+)
+

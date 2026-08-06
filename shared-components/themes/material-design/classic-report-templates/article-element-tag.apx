@@ -1,0 +1,36 @@
+classicReportTemplate article-element-tag (
+    name: Article_element_tag
+    templateClass: standard
+    type: namedColumn
+    reportTemplate {
+        top: " "
+        bottom: " "
+    }
+    rowTemplate1 {
+        template:
+            ```html
+            <!-- blog-post -->
+            <div class="blog-post hentry item-post">
+                    <!-- POST FOOTER -->
+                    <div class="post-footer">
+                        <!-- POST LABEL -->
+                        <div class="post-labels">
+                            <div class="label-head Label">
+                                <a class="label-link" href="#" rel="tag">#TAGS#</a>
+                            </div>
+                        </div>
+                        <!-- POST LABEL -->
+            
+                    </div>
+                    <!-- POST FOOTER END-->
+            </div>
+            <!-- blog-post -->
+            ```
+        conditionType: plsqlExpression
+        plsqlExpression: :TAGS IS NOT NULL
+    }
+    advanced {
+        identifier: ARTICLE_ELEMENT_TAG
+    }
+)
+

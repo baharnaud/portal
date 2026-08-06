@@ -1,0 +1,1013 @@
+page 2 (
+    name: Créer un Candidat
+    alias: ANDIDAT
+    title: Créer un Candidat
+    appearance {
+        pageMode: modalDialog
+        dialogTemplate: @modal-dialog
+        templateOptions: #DEFAULT#
+    }
+    dialog {
+        resizable: false
+    }
+    navigation {
+        cursorFocus: doNotFocusCursor
+    }
+    javaScript {
+        functionAndGlobalVariableDeclaration: var htmldb_delete_message='"DELETE_CONFIRM_MSG"';
+    }
+    css {
+        inline:
+            ```css
+            #P2_NOM ,#P2_PRENOMS,#P2_AUTREPRENOMS,#P2_SITUATIONMATRIMONIALE,#P2_TITRE,#P2_DATENAISSANCE,#P2_IDPAYS,#P2_MOT_PASSE,#P2_CONFIRMER{
+              border: 3px solid #000;
+            }
+            #P2_NOM_LABEL,#P2_PRENOMS_LABEL,#P2_SITUATIONMATRIMONIALE_LABEL,#P2_AUTREPRENOMS_LABEL,#P2_TITRE_LABEL,
+            #P2_DATENAISSANCE_LABEL,#P2_IDPAYS_LABEL,#P2_MOT_PASSE_LABEL,#P2_CONFIRMER_LABEL,#P2_GENRE_LABEL {
+              font-size: 18px;
+              color:#000;
+            }
+            marquee {
+              color: blue;
+              font-size: 18px;
+              font-style: oblique;
+              font-weight: bold;
+            }
+            #P2_MAT_1 {
+              font-size: 18px;
+              color: red;
+              font-family: open sans;
+              font-weight: 500;
+            }
+            #P2_MAT_1_LABEL {
+              color: #000;
+              font-size: 18px;
+              text-transform: uppercase;
+              font-weight: bold;
+            }
+            ```
+    }
+    security {
+        authentication: public
+        pageAccessProtection: argumentsMustHaveChecksum
+        formAutoComplete: false
+    }
+
+    region boutons (
+        name: Boutons
+        type: staticContent
+        layout {
+            sequence: 20
+            slot: dialogFooter
+        }
+        appearance {
+            template: @buttons-container
+            templateOptions: #DEFAULT#
+        }
+        settings {
+            outputAs: text
+        }
+    )
+
+    region candidat (
+        name: Candidat
+        type: form
+        source {
+            location: localDatabase
+            tableName: ADHERENT
+        }
+        layout {
+            sequence: 10
+            slot: contentBody
+        }
+        appearance {
+            template: @blank-with-attributes
+            templateOptions: #DEFAULT#
+        }
+        edit {
+            enabled: true
+            allowedOperations: [
+                add
+                update
+                delete
+            ]
+        }
+    )
+
+    region chemin-de-navigation (
+        name: Chemin de navigation
+        type: breadcrumb
+        source {
+            breadcrumb: @breadcrumb
+        }
+        layout {
+            sequence: 10
+            slot: dialogHeader
+        }
+        appearance {
+            template: @title-bar
+            templateOptions: [
+                #DEFAULT#
+                t-BreadcrumbRegion--useBreadcrumbTitle
+            ]
+        }
+        serverSideCondition {
+            type: never
+        }
+        componentAppearance {
+            breadcrumbTemplate: @breadcrumb
+            templateOptions: #DEFAULT#
+        }
+    )
+
+    pageItem P2_ACTIF (
+        type: hidden
+        settings {
+            valueProtected: false
+        }
+        layout {
+            sequence: 210
+            region: @candidat
+            slot: regionBody
+        }
+        source {
+            formRegion: @candidat
+            column: ACTIF
+            dataType: varchar2
+        }
+        default {
+            type: static
+            staticValue: o
+        }
+        security {
+            encryptSessionState: false
+        }
+    )
+
+    pageItem P2_AUTREPRENOMS (
+        type: textField
+        label {
+            label: Email
+            alignment: left
+        }
+        settings {
+            subtype: email
+            trimSpaces: none
+        }
+        layout {
+            sequence: 90
+            region: @candidat
+            slot: regionBody
+            alignment: left
+        }
+        appearance {
+            template: @required-above
+            templateOptions: #DEFAULT#
+            width: 32
+        }
+        validation {
+            maxLength: 200
+        }
+        source {
+            formRegion: @candidat
+            column: EMAIL
+            dataType: varchar2
+        }
+        security {
+            encryptSessionState: false
+        }
+    )
+
+    pageItem P2_CONFIRMER (
+        type: password
+        label {
+            label: Confirmer Mot de passe
+            alignment: left
+        }
+        layout {
+            sequence: 180
+            region: @candidat
+            slot: regionBody
+            alignment: left
+            startNewRow: false
+        }
+        appearance {
+            template: @required-above
+            templateOptions: #DEFAULT#
+            width: 30
+        }
+        validation {
+            valueRequired: true
+        }
+        security {
+            encryptSessionState: false
+        }
+    )
+
+    pageItem P2_DATENAISSANCE (
+        type: datePickerJquery
+        label {
+            label: Date de naissance
+            alignment: left
+        }
+        settings {
+            navigationListFor: monthAndYear
+            yearRange: -130:+0
+        }
+        layout {
+            sequence: 130
+            region: @candidat
+            slot: regionBody
+            alignment: left
+        }
+        appearance {
+            template: @required-above
+            templateOptions: #DEFAULT#
+            width: 32
+        }
+        validation {
+            valueRequired: true
+            maxLength: 10
+        }
+        source {
+            formRegion: @candidat
+            column: DATENAISSANCE
+            dataType: date
+        }
+        security {
+            encryptSessionState: false
+        }
+    )
+
+    pageItem P2_GENRE (
+        type: radioGroup
+        label {
+            label: Genre
+            alignment: left
+        }
+        settings {
+            noOfCols: 2
+        }
+        lov {
+            type: sharedComponent
+            lov: @genre
+            displayNullValue: false
+        }
+        layout {
+            sequence: 110
+            region: @candidat
+            slot: regionBody
+            alignment: left
+        }
+        appearance {
+            template: @required-above
+            templateOptions: #DEFAULT#
+        }
+        validation {
+            valueRequired: true
+        }
+        source {
+            formRegion: @candidat
+            column: GENRE
+            dataType: varchar2
+        }
+        security {
+            encryptSessionState: false
+        }
+    )
+
+    pageItem P2_IDADHERENT (
+        type: hidden
+        layout {
+            sequence: 50
+            region: @candidat
+            slot: regionBody
+        }
+        source {
+            formRegion: @candidat
+            column: IDADHERENT
+            dataType: number
+            primaryKey: true
+        }
+        security {
+            sessionStateProtection: checksumRequiredSessionLevel
+            encryptSessionState: false
+        }
+    )
+
+    pageItem P2_IDENTREPRISE (
+        type: hidden
+        settings {
+            valueProtected: false
+        }
+        layout {
+            sequence: 190
+            region: @candidat
+            slot: regionBody
+        }
+        source {
+            formRegion: @candidat
+            column: IDENTREPRISE
+            dataType: number
+        }
+        default {
+            type: static
+            staticValue: 214
+        }
+    )
+
+    pageItem P2_IDNATIONNALITE (
+        type: hidden
+        settings {
+            valueProtected: false
+        }
+        layout {
+            sequence: 160
+            region: @candidat
+            slot: regionBody
+        }
+        source {
+            formRegion: @candidat
+            column: IDNATIONNALITE
+            dataType: number
+        }
+        security {
+            encryptSessionState: false
+        }
+    )
+
+    pageItem P2_IDPAYS (
+        type: popupLov
+        label {
+            label: Pays
+            alignment: left
+        }
+        lov {
+            type: sharedComponent
+            lov: @pays
+        }
+        layout {
+            sequence: 140
+            region: @candidat
+            slot: regionBody
+            alignment: left
+            startNewRow: false
+        }
+        appearance {
+            template: @optional-above
+            templateOptions: #DEFAULT#
+            width: 30
+        }
+        source {
+            formRegion: @candidat
+            column: IDPAYS
+            dataType: number
+        }
+        security {
+            encryptSessionState: false
+        }
+    )
+
+    pageItem P2_IDTYPEPERSONNE (
+        type: hidden
+        settings {
+            valueProtected: false
+        }
+        layout {
+            sequence: 200
+            region: @candidat
+            slot: regionBody
+        }
+        source {
+            formRegion: @candidat
+            column: IDTYPEPERSONNE
+            dataType: number
+        }
+        default {
+            type: static
+            staticValue: 183
+        }
+        security {
+            encryptSessionState: false
+        }
+    )
+
+    pageItem P2_LIEUNAISSANE (
+        type: hidden
+        settings {
+            valueProtected: false
+        }
+        layout {
+            sequence: 150
+            region: @candidat
+            slot: regionBody
+        }
+        source {
+            formRegion: @candidat
+            column: LIEUNAISSANE
+            dataType: varchar2
+        }
+        security {
+            encryptSessionState: false
+        }
+    )
+
+    pageItem P2_MAT (
+        type: hidden
+        settings {
+            valueProtected: false
+        }
+        layout {
+            sequence: 20
+            region: @candidat
+            slot: regionBody
+        }
+        security {
+            encryptSessionState: false
+        }
+    )
+
+    pageItem P2_MATRICULE (
+        type: hidden
+        settings {
+            valueProtected: false
+        }
+        layout {
+            sequence: 60
+            region: @candidat
+            slot: regionBody
+        }
+        source {
+            formRegion: @candidat
+            column: MATRICULE
+            dataType: varchar2
+        }
+        security {
+            encryptSessionState: false
+        }
+    )
+
+    pageItem P2_MAT_1 (
+        type: displayOnly
+        label {
+            label: "Matricule  "
+            alignment: left
+        }
+        settings {
+            sendOnPageSubmit: false
+        }
+        layout {
+            sequence: 30
+            region: @candidat
+            slot: regionBody
+            alignment: left
+            columnSpan: 4
+        }
+        appearance {
+            template: @optional-above
+            templateOptions: #DEFAULT#
+        }
+        security {
+            encryptSessionState: false
+        }
+    )
+
+    pageItem P2_MOT_PASSE (
+        type: password
+        label {
+            label: Mot Passe
+            alignment: left
+        }
+        layout {
+            sequence: 170
+            region: @candidat
+            slot: regionBody
+            alignment: left
+        }
+        appearance {
+            template: @required-above
+            templateOptions: #DEFAULT#
+            width: 32
+        }
+        validation {
+            valueRequired: true
+            maxLength: 50
+        }
+        source {
+            formRegion: @candidat
+            column: MOT_PASSE
+            dataType: varchar2
+        }
+        security {
+            encryptSessionState: false
+        }
+    )
+
+    pageItem P2_NOM (
+        type: textField
+        label {
+            label: Nom
+            alignment: left
+        }
+        settings {
+            trimSpaces: none
+        }
+        layout {
+            sequence: 70
+            region: @candidat
+            slot: regionBody
+            alignment: left
+        }
+        appearance {
+            template: @required-above
+            templateOptions: #DEFAULT#
+            width: 32
+        }
+        validation {
+            valueRequired: true
+            maxLength: 50
+        }
+        source {
+            formRegion: @candidat
+            column: NOM
+            dataType: varchar2
+        }
+        security {
+            encryptSessionState: false
+        }
+    )
+
+    pageItem P2_PRENOMS (
+        type: textField
+        label {
+            label: Prenoms
+            alignment: left
+        }
+        settings {
+            trimSpaces: none
+        }
+        layout {
+            sequence: 80
+            region: @candidat
+            slot: regionBody
+            alignment: left
+            startNewRow: false
+        }
+        appearance {
+            template: @required-above
+            templateOptions: #DEFAULT#
+            width: 32
+        }
+        validation {
+            valueRequired: true
+            maxLength: 80
+        }
+        source {
+            formRegion: @candidat
+            column: PRENOMS
+            dataType: varchar2
+        }
+        security {
+            encryptSessionState: false
+        }
+    )
+
+    pageItem P2_SESSION (
+        type: hidden
+        settings {
+            valueProtected: false
+        }
+        layout {
+            sequence: 10
+            region: @candidat
+            slot: regionBody
+        }
+        default {
+            type: expression
+            plsqlExpression: :APP_SESSION
+        }
+    )
+
+    pageItem P2_SITUATIONMATRIMONIALE (
+        type: selectList
+        label {
+            label: Situation Matrimoniale
+            alignment: left
+        }
+        lov {
+            type: sharedComponent
+            lov: @situation-matrimoniale
+        }
+        layout {
+            sequence: 100
+            region: @candidat
+            slot: regionBody
+            alignment: left
+            startNewRow: false
+        }
+        appearance {
+            template: @required-above
+            templateOptions: #DEFAULT#
+            height: 1
+        }
+        validation {
+            valueRequired: true
+        }
+        source {
+            formRegion: @candidat
+            column: SITUATIONMATRIMONIALE
+            dataType: varchar2
+        }
+        security {
+            encryptSessionState: false
+        }
+    )
+
+    pageItem P2_TITRE (
+        type: selectList
+        label {
+            label: Titre
+            alignment: left
+        }
+        lov {
+            type: sharedComponent
+            lov: @titre
+        }
+        layout {
+            sequence: 120
+            region: @candidat
+            slot: regionBody
+            alignment: left
+            startNewRow: false
+        }
+        appearance {
+            template: @required-above
+            templateOptions: #DEFAULT#
+            height: 1
+        }
+        validation {
+            valueRequired: true
+        }
+        source {
+            formRegion: @candidat
+            column: TITRE
+            dataType: varchar2
+        }
+        security {
+            encryptSessionState: false
+        }
+    )
+
+    pageItem P2_UTILISATEUR (
+        type: displayOnly
+        label {
+            label: <MARQUEE SCROLLAMOUNT="2">Votre matricule sera votre login veuillez le conserver ! </MARQUEE>
+            alignment: left
+        }
+        settings {
+            sendOnPageSubmit: false
+        }
+        layout {
+            sequence: 40
+            region: @candidat
+            slot: regionBody
+            alignment: left
+            startNewRow: false
+        }
+        appearance {
+            template: @optional-above
+            templateOptions: #DEFAULT#
+        }
+    )
+
+    button cancel (
+        buttonName: CANCEL
+        label: Retour
+        layout {
+            sequence: 10
+            region: @boutons
+            slot: close
+        }
+        appearance {
+            buttonTemplate: @text-with-icon
+            templateOptions: [
+                #DEFAULT#
+                t-Button--primary
+                t-Button--iconRight
+            ]
+            icon: fa-reply
+        }
+        behavior {
+            action: definedByDynamicAction
+        }
+    )
+
+    button create (
+        buttonName: CREATE
+        label: Valider
+        layout {
+            sequence: 40
+            region: @boutons
+            slot: next
+        }
+        appearance {
+            buttonTemplate: @text-with-icon
+            hot: true
+            templateOptions: [
+                #DEFAULT#
+                t-Button--success
+                t-Button--iconRight
+            ]
+            icon: fa-check
+        }
+        behavior {
+            warnOnUnsavedChanges: doNotCheck
+            databaseAction: insert
+            requiresConfirmation: true
+        }
+        confirmation {
+            message: Voulez-vous valider ?
+            style: success
+        }
+        serverSideCondition {
+            type: itemIsNull
+            item: P2_IDADHERENT
+        }
+    )
+
+    button delete (
+        buttonName: DELETE
+        label: Delete
+        layout {
+            sequence: 20
+            region: @boutons
+            slot: delete
+        }
+        appearance {
+            buttonTemplate: @text
+            templateOptions: #DEFAULT#
+        }
+        behavior {
+            action: redirectUrl
+            targetUrl: javascript:apex.confirm(htmldb_delete_message,'DELETE');
+            executeValidations: false
+            warnOnUnsavedChanges: doNotCheck
+            databaseAction: delete
+        }
+        serverSideCondition {
+            type: itemIsNotNull
+            item: P2_IDADHERENT
+        }
+    )
+
+    button save (
+        buttonName: SAVE
+        label: Apply Changes
+        layout {
+            sequence: 30
+            region: @boutons
+            slot: next
+        }
+        appearance {
+            buttonTemplate: @text
+            hot: true
+            templateOptions: #DEFAULT#
+        }
+        behavior {
+            warnOnUnsavedChanges: doNotCheck
+            databaseAction: update
+        }
+        serverSideCondition {
+            type: itemIsNotNull
+            item: P2_IDADHERENT
+        }
+    )
+
+    dynamicAction affect-matr (
+        name: affect matr
+        execution {
+            sequence: 30
+        }
+        when {
+            selectionType: items
+            items: P2_MAT
+        }
+
+        action native-set-value (
+            action: setValue
+            settings {
+                type: plsqlExpression
+                plsqlExpression: :P2_MAT
+                itemsToSubmit: P2_MAT
+            }
+            affectedElements {
+                selectionType: items
+                items: P2_MAT_1
+            }
+            execution {
+                sequence: 10
+            }
+        )
+
+    )
+
+    dynamicAction cancel-dialog (
+        name: Cancel Dialog
+        execution {
+            sequence: 10
+        }
+        when {
+            event: click
+            selectionType: button
+            button: @cancel
+        }
+
+        action native-dialog-cancel (
+            action: cancelDialog
+            execution {
+                sequence: 10
+                fireOnInit: false
+            }
+        )
+
+    )
+
+    dynamicAction creer-un-matricule (
+        name: CREER un Matricule
+        execution {
+            sequence: 20
+        }
+        when {
+            event: ready
+        }
+
+        action native-set-value (
+            action: setValue
+            settings {
+                type: plsqlFunctionBody
+                plsqlFunctionBody:
+                    ```plsql
+                    declare
+                    
+                        v_sqt number;
+                        
+                    begin
+                    
+                    
+                    select MATRICULE_SQT.nextval into v_sqt from dual;
+                    
+                    return 'CAND00'||v_sqt;
+                    
+                    end;
+                    ```
+            }
+            affectedElements {
+                selectionType: items
+                items: [
+                    P2_MATRICULE
+                    P2_MAT
+                ]
+            }
+            execution {
+                sequence: 10
+            }
+        )
+
+    )
+
+    validation email (
+        name: email
+        execution {
+            sequence: 20
+        }
+        validation {
+            type: functionBody
+            plsqlFunctionBody:
+                ```plsql
+                declare
+                    v_nb number;
+                begin
+                
+                select count(*) into v_nb from ADHERENT where upper(email) = upper(:P2_AUTREPRENOMS);
+                
+                if(v_nb > 0)then
+                    return 'Un compte utilisant cet eamil existe';
+                end if;
+                
+                end;
+                ```
+        }
+        error {
+            associatedItem: @P2_AUTREPRENOMS
+        }
+        serverSideCondition {
+            whenButtonPressed: @create
+        }
+    )
+
+    validation mot-de-passe-différent (
+        name: mot de passe différent
+        execution {
+            sequence: 10
+        }
+        validation {
+            type: functionBody
+            plsqlFunctionBody:
+                ```plsql
+                if(:P2_MOT_PASSE !=:P2_CONFIRMER )then
+                
+                    return 'Les deux mots de passes sont différent';
+                
+                end if;
+                ```
+        }
+        error {
+            associatedItem: @P2_MOT_PASSE
+        }
+        serverSideCondition {
+            whenButtonPressed: @create
+        }
+    )
+
+    process fermer-la-boîte-de-dialogue (
+        name: Fermer la boîte de dialogue
+        type: closeDialog
+        settings {
+            itemsToReturn: P2_MAT
+            showSuccessMessages: false
+        }
+        execution {
+            sequence: 40
+        }
+        advanced {
+            executionMappingIdentifier: 207183713907254442
+        }
+        serverSideCondition {
+            type: never
+        }
+    )
+
+    process initialiser-le-panneau-candidat (
+        name: Initialiser le panneau Candidat
+        type: formInitialization
+        formRegion: @candidat
+        execution {
+            sequence: 10
+            point: beforeHeader
+        }
+        advanced {
+            executionMappingIdentifier: 207182930173254440
+        }
+    )
+
+    process modifier (
+        name: MODIFIER
+        type: executeCode
+        source {
+            plsqlCode: update ADHERENT set IDADHERENT2 = IDADHERENT,Date_Effet = sysdate	 where IDADHERENT =:P2_IDADHERENT;
+        }
+        execution {
+            sequence: 20
+        }
+        advanced {
+            executionMappingIdentifier: 207796164465740667
+        }
+        serverSideCondition {
+            whenButtonPressed: @create
+        }
+    )
+
+    process traiter-le-panneau-candidat (
+        name: Traiter le panneau Candidat
+        type: formAutoRowProcessing
+        formRegion: @candidat
+        execution {
+            sequence: 10
+        }
+        advanced {
+            executionMappingIdentifier: 207183304212254442
+        }
+    )
+
+    branch (
+        name: Aller à la page http://192.168.1.129:9494/ords/f?p=110
+        execution {
+            sequence: 10
+        }
+        behavior {
+            target: {
+                type: otherApp
+                app: 101
+                page: 9999
+                items: {
+                    P9999_SESSION: &P2_SESSION.
+                }
+            }
+        }
+        serverSideCondition {
+            whenButtonPressed: @create
+        }
+    )
+
+)
+

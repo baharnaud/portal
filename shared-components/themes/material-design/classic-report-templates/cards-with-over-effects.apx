@@ -1,0 +1,41 @@
+classicReportTemplate cards-with-over-effects (
+    name: Cards with Over Effects
+    templateClass: custom1
+    type: namedColumn
+    reportTemplate {
+        top: " <div class=\"rowcard\">"
+        bottom:
+            ```html
+            </div>
+            <tfoot class="right">
+                <div>#EXTERNAL_LINK##CSV_LINK#</div>
+                <div class="report-pagination">#PAGINATION#</div>
+            </tfoot>
+            ```
+    }
+    rowTemplate1 {
+        template:
+            ```html
+            <div class="example-2 cardn">
+                <div class="wrapper" style="background-image: url(#NEW_IMG_SRC#); background-position: center; background-size:cover; background-repeat: no-repeat;">  
+                    <div class="data">
+                        <div class="content">
+                            <h6 class="title"><a href="">#TITLE#</a></h6>
+                            <p class="text">#PERIODE#</p>
+                            <a href="#ART_LINK#" class="button">Télécharger</a>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+            ```
+    }
+    pagination {
+        template: <span class="instructiontext"></span>
+        nextSet: <a href="#LINK#"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+        previousSet: <a href="#LINK#"><i class="fa fa-angle-double-left" aria-hidden="true"></i></a>
+    }
+    advanced {
+        identifier: CARDS_WITH_OVER_EFFECTS
+    }
+)
+

@@ -1,0 +1,64 @@
+classicReportTemplate card-jobowl (
+    name: Card JobOwl
+    templateClass: standard
+    type: namedColumn
+    reportTemplate {
+        top:
+            ```html
+            <div class="owl-stage-outer">
+                <div class="owl-stage" style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s; width: 100%;"> 
+            ```
+        bottom:
+            ```html
+            </div>
+                </div>
+            <tfoot class="right">
+                <div class="report-pagination">#PAGINATION#</div>
+            </tfoot>
+            
+            
+            ```
+    }
+    rowTemplate1 {
+        template:
+            ```html
+            <div class="owl-item" style="width: 350px; margin-right: 30px; float: left;">
+                <div class="items" style="margin-bottom: 20px;">
+                    <div class="item-img">
+                        <img src="#IMG_SRC#" alt="">
+                    </div>
+                    <div class="item-content-wrapper">
+                        <div class="item-content">
+                            <h3 class="item-title"><a href="#">#TITLE#</a></h3>
+                            <p class="item-desc">
+                                #SHORT_DESCRIPTION#
+                            </p>
+                        </div>
+                        <div class="row no-gutters">
+                            <div class="col-8">
+                                <a href="#LINK#" class="button-fill-gray">LIRE PLUS</a>
+                            </div>
+                            <div class="col-4 text-right">
+                                <div class="item-like">
+                                    <span class="item-num fa #ICON_COMMENT#">&nbsp;&nbsp;#NBRE_COMMENT#</span>&nbsp;&nbsp;
+                                    <!--<span class="fa #ICON_COMMENT#"></span>-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            ```
+    }
+    pagination {
+        template: <span class="instructiontext" style="display:none;">#TEXT#</span>
+        nextPage: <a href="#LINK#" title="Suivant"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+        previousPage: <a href="#LINK#" title="Précédent"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
+        nextSet: <a href="#LINK#" title="Suivant"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+        previousSet: <a href="#LINK#" title="Précédent"><i class="fa fa-angle-double-left" aria-hidden="true"></i></a>
+    }
+    advanced {
+        identifier: CARD_JOBOWL
+    }
+)
+

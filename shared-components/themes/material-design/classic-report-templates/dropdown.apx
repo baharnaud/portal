@@ -1,0 +1,72 @@
+classicReportTemplate dropdown (
+    name: Dropdown
+    templateClass: oneColumnUnorderedList
+    type: namedColumn
+    templateOptions {
+        preset: ma-dropdown--width-constrained
+    }
+    reportTemplate {
+        top:
+            ```html
+            <a class="btn dropdown-trigger #COMPONENT_CSS_CLASSES#" href="#!" data-target="#REGION_STATIC_ID#-report">
+                #REGION_TITLE#
+                <i class="fa fa-caret-down right" aria-hidden="true"></i>
+            </a>
+            <ul id="#REGION_STATIC_ID#-report" class="dropdown-content">
+            ```
+        bottom: </ul>
+    }
+    rowTemplate1 {
+        template:
+            ```html
+            <li>
+                <a href="#TARGET#">
+                    #DISPLAY#
+                    <span class="new badge">#BADGE#</span>
+                </a>
+            </li>
+            ```
+        conditionType: plsqlExpression
+        plsqlExpression: :NEW_BADGE is not null
+    }
+    rowTemplate2 {
+        template:
+            ```html
+            <li>
+                <a href="#TARGET#">
+                    #DISPLAY#
+                    <span class="badge">#BADGE#</span>
+                </a>
+            </li>
+            ```
+    }
+    advanced {
+        identifier: DROPDOWN
+    }
+
+    templateOption dropdown-width-auto (
+        name: Auto
+        group: @report/dropdown-width
+        sequence: 20
+        appearance {
+            cssClasses: ma-dropdown--width-auto
+        }
+        advanced {
+            identifier: DROPDOWN_WIDTH_AUTO
+        }
+    )
+
+    templateOption dropdown-width-constrained (
+        name: Same as button (trigger)
+        group: @report/dropdown-width
+        sequence: 10
+        appearance {
+            cssClasses: ma-dropdown--width-constrained
+        }
+        advanced {
+            identifier: DROPDOWN_WIDTH_CONSTRAINED
+        }
+    )
+
+)
+

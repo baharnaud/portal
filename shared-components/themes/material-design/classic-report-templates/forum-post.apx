@@ -1,0 +1,37 @@
+classicReportTemplate forum-post (
+    name: Forum post
+    templateClass: custom1
+    type: namedColumn
+    reportTemplate {
+        top: " "
+        bottom: " "
+    }
+    rowTemplate1 {
+        template:
+            ```html
+            <div class="forum-post js-forum-post" data-topic="" data-user="" data-solver="">
+                <a href="#USER_LINK#">  	<img class="forum-post_avatar" src="#USER_AVATAR#" alt="Default"></a>
+                <div class="forum-post_body">
+                    <a class="forum-post_author" href="#USER_LINK#">#AUTEUR#</a>
+                    		<a href="#LINK_POST#" class="forum-post_date js-vue">
+                                <span class="js-vue">				<abbr class="timeago">#TIMEAGO#</abbr> </span>
+                    </a>
+                    		<span class="forum-post_actions">
+                                	<span class="danger">
+                                        <a href="#" class="js-report">Signaler</a>
+                                </span>
+                    </span>
+                    <div class="forum-post_text">
+                        	<div class="forum-post_edit">
+            		    	            <p>#CONTENT#</p>
+            		            </div>
+                    </div>
+                </div>
+            </div>
+            ```
+    }
+    advanced {
+        identifier: FORUM_POST
+    }
+)
+

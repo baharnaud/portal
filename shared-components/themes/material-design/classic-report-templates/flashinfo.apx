@@ -1,0 +1,42 @@
+classicReportTemplate flashinfo (
+    name: FlashInfo
+    templateClass: standard
+    type: namedColumn
+    reportTemplate {
+        top:
+            ```html
+            <!-- flash info fixe -->
+            <div id="tiv">
+                <div id="flash_info" style="width:100%; padding:0px; margin:0px">
+                    		<table cellspacing="0" cellpadding="0" border="0">
+                        			<tbody>
+                            				<tr>  
+                                					<td class="cad_inf">FLASH INFO &nbsp;</td>                                               
+                                					<td>                                                   
+                                    						<marquee direction="left" scrollamount="3.5" onmouseover="this.stop()" onmouseout="this.start()" style="font-size:15px; padding:3px;" width="100%">
+            ```
+        bottom:
+            ```html
+                                    </marquee>
+                                					</td>
+                            				</tr>
+            			            </tbody>
+            		        </table>
+            	    </div>
+            </div>
+            ```
+    }
+    rowTemplate1 {
+        template:
+            ```html
+            &nbsp;
+            							<span class="type-info" style="background-color:#C00; color:#FFF; font-weight:600; padding:4px 4px 5px 4px">#TYPE_FLASH_INFO#</span>  
+            							<span class="content-info" style="color:#FFF; font-weight:normal;">#FLASH_INFO_CONTENT# &nbsp;							</span>
+            							&nbsp;
+            ```
+    }
+    advanced {
+        identifier: FLASHINFO
+    }
+)
+

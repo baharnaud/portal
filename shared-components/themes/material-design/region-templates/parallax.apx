@@ -1,0 +1,33 @@
+regionTemplate parallax (
+    name: Parallax
+    templateClass: custom2
+    region {
+        template:
+            ```html
+            <div id="#REGION_STATIC_ID#" class="ma-region parallax-container #REGION_CSS_CLASSES#" #REGION_ATTRIBUTES#>
+            	<div class="parallax">#BODY#</div>
+            	<div class="parallax-content">#SUB_REGION_HEADERS##SUB_REGIONS#</div>
+            </div>
+            
+            ```
+    }
+    advanced {
+        identifier: PARALLAX
+    }
+
+    slot regionBody (
+        name: Region Body
+        staticId: BODY
+        supports {
+            items: true
+            buttons: true
+        }
+    )
+
+    slot subRegions (
+        name: Sub Regions
+        staticId: SUB_REGIONS
+    )
+
+)
+

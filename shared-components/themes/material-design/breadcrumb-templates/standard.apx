@@ -1,0 +1,24 @@
+breadcrumbTemplate standard (
+    name: Standard
+    templateClass: breadcrumb
+    breadcrumb {
+        beforeEntries:
+            ```html
+            <div class="nav-breadcrumbs">
+            <div class="nav-wrapper m-l-1">
+            ```
+        afterEntries:
+            ```html
+            </div>
+            </div>
+            ```
+    }
+    entry {
+        currentPage: <a href="#LINK#" class="breadcrumb">#NAME#</a>
+        nonCurrentPage: <a href="#LINK#" class="breadcrumb">#NAME#</a>
+    }
+    advanced {
+        identifier: BREADCRUMB
+    }
+)
+

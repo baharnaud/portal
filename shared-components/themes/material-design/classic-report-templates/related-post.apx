@@ -1,0 +1,37 @@
+classicReportTemplate related-post (
+    name: Related_post
+    templateClass: standard
+    type: namedColumn
+    reportTemplate {
+        top: " "
+        bottom: " "
+    }
+    rowTemplate1 {
+        template:
+            ```html
+            <div class="widget-content">
+                            <div class="post">
+                                <div class="post-content">
+                                    <a class="post-image-link" href="">
+                                        <img alt="" class="post-thumb" src="#ARTICLE_IMAGE#">
+                                    </a>
+            
+                                    <div class="post-info">
+                                        <h2 class="post-title">
+                                            <a href="#ARTICLE_LINK#">#ARTICLE_TITLE#</a>
+                                        </h2>
+            
+                                        <div class="post-meta">
+                                            <span class="post-date published" datetime="2016-08-23T15:00:00-07:00">#ARTICLE_DATE#</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+            		</div>
+            ```
+    }
+    advanced {
+        identifier: RELATED_POST
+    }
+)
+
